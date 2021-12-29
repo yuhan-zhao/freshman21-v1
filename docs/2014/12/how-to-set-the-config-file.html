@@ -7,24 +7,24 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width initial-scale=1">
 
-<meta property="og:title" content="articles">
-<title>articles</title>
-<meta property="og:description" content="HuskDev is Yuhan's personal blog.">
-<meta property="og:url" content="http://localhost:4000/topics/articles/">
+<meta property="og:title" content="How to set the config.yml file">
+<title>How to set the config.yml file</title>
+<meta property="og:description" content="The config.yml file in the Freshman21 theme includes five parts.First part is the site info.title: Freshman21 # blog titletagline: Another Jekyll theme, Fres...">
+<meta property="og:url" content="http://localhost:4000/2014/12/how-to-set-the-config-file.html">
 <meta property="og:site_name" content="HuskyDev">
 <meta property="og:locale" content="">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@">
 <meta name="twitter:creator" content="@">
-<meta name="twitter:title" content="articles">
-<meta name="twitter:description" content="HuskDev is Yuhan's personal blog.">
-<meta name="twitter:url" content="http://localhost:4000/topics/articles/">
+<meta name="twitter:title" content="How to set the config.yml file">
+<meta name="twitter:description" content="The config.yml file in the Freshman21 theme includes five parts.First part is the site info.title: Freshman21 # blog titletagline: Another Jekyll theme, Fres...">
+<meta name="twitter:url" content="http://localhost:4000/2014/12/how-to-set-the-config-file.html">
 
 <meta name="keywords" content="Yuhan, blog, HuskyDev">
 
 <link rel="icon" href="/freshman21-v1/assets/images/favicon.ico">
 <link rel="stylesheet" href="/freshman21-v1/assets/css/main.css">
-<link rel="canonical" href="http://localhost:4000/topics/articles/">
+<link rel="canonical" href="http://localhost:4000/2014/12/how-to-set-the-config-file.html">
 <link rel="alternate" type="application/atom+xml" title="HuskyDev" href="http://localhost:4000/feed.xml" />
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -108,7 +108,7 @@
       <a href="mailto:yuhan-zhao@outlook.com" title="mailto: yuhan-zhao@outlook.com" class="icon-link"><i class="fa fa-envelope"></i></a>
     
     
-      <a href="/freshman21-v1/topics/articles/index.htmlfeed.xml" title="RSS feed" class="icon-link"><i class="fa fa-rss"></i></a>
+      <a href="/freshman21-v1/2014/12/how-to-set-the-config-file.htmlfeed.xml" title="RSS feed" class="icon-link"><i class="fa fa-rss"></i></a>
     
   </div>
 </nav>
@@ -116,46 +116,27 @@
   
 
     <div class="page-content col-sm-8">
-      <!--No "post" class defined in css. Only used for group things.-->
-<div class="post" itemscope itemtype="http://schema.org/BlogPosting" >
+      <div class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <!--step 1: print pagniation title except for Blog page.-->
-  
-    
-    
-      <header class="topic-archive-header">
-        <h3 class="post-title">Archive | articles</h3>
-      </header>
-    
-  
-  
-  <!--step 2: print pagination post title-->
-   
-    <img src="/freshman21-v1/assets/images/husky_logo_crop.png" height="100" style="float: left; margin-right: 15px;">
-    
-    <header class="post-header">
-      <h1 itemprop="name" class="post-title">
-        <a itemprop="url" class="post-link" href="/freshman21-v1/2014/12/how-to-set-the-config-file.html"><b>How to set the config.yml file</b></a>
-      </h1>
-      <meta itemprop="keywords" content="configure" />
-      <p class="post-meta">
-        Posted on
-        <time itemprop="datePublished" datetime="2014-12-19">
-          Dec 19, 2014
-        </time>
-        &nbsp;in
-        
-          <a href="/freshman21-v1/categories/#articles"><b>articles</b></a>, 
-        
-          <a href="/freshman21-v1/categories/#Howto"><b>Howto</b></a>
-        
-      </p>
-    </header>
+  <header class="post-header">
+    <h1 itemprop="name" class="post-title"><b>How to set the config.yml file</b></h1>
+    <meta itemprop="keywords" content="configure" />
+    <p class="post-meta">
+      Posted on
+      <time itemprop="datePublished" datetime="2014-12-19">
+        Dec 19, 2014
+      </time>
+      &nbsp;in
+      
+        <a href="/freshman21-v1/categories/#articles"><b>articles</b></a>, 
+      
+        <a href="/freshman21-v1/categories/#Howto"><b>Howto</b></a>
+         
+    </p>
+  </header>
 
-    <p>For page-paginate test only (temporary)</p>
-    <!--step 3: print pagination post excerpt content-->
-    <article class="post-content" itemprop="articleBody">
-      <p>The <a href="https://github.com/yulijia/freshman21/blob/master/_config.yml">config.yml file</a> in the Freshman21 theme includes five parts.</p>
+  <article class="post-content" itemprop="articleBody">
+    <p>The <a href="https://github.com/yulijia/freshman21/blob/master/_config.yml">config.yml file</a> in the Freshman21 theme includes five parts.</p>
 
 <p><strong>First part</strong> is the site info.</p>
 
@@ -169,67 +150,95 @@
 <span class="na">baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/freshman21"</span> <span class="c1"># the subpath of your site, e.g. /blog</span>
 <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http://yulijia.net/freshman21"</span> <span class="c1"># the base hostname &amp; protocol for your site</span>
 </code></pre></div></div>
+<!--more-->
+<p><strong>Part 2</strong>, Personal info and site tools info, twitter, github, aboutme and aboutme_photo only appears on the sidebar aboutme-box, you can <q>Hide</q> in two ways <sup><a href="#[1]">[1]</a></sup>:</p>
 
-      <p><a href="/freshman21-v1/2014/12/how-to-set-the-config-file.html">(Continue reading ...)</a></p>
-    </article> <br><br><!--hr /-->
-   
-    <img src="/freshman21-v1/assets/images/husky_logo_crop.png" height="100" style="float: left; margin-right: 15px;">
-    
-    <header class="post-header">
-      <h1 itemprop="name" class="post-title">
-        <a itemprop="url" class="post-link" href="/freshman21-v1/2014/12/freshman21-structure.html"><b>Theme structure</b></a>
-      </h1>
-      <meta itemprop="keywords" content="structure" />
-      <p class="post-meta">
-        Posted on
-        <time itemprop="datePublished" datetime="2014-12-19">
-          Dec 19, 2014
-        </time>
-        &nbsp;in
-        
-          <a href="/freshman21-v1/categories/#articles"><b>articles</b></a>, 
-        
-          <a href="/freshman21-v1/categories/#Howto"><b>Howto</b></a>
-        
-      </p>
-    </header>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">twitter_username</span><span class="pi">:</span> <span class="c1">#your twitter handle  </span>
+<span class="na">github_username</span><span class="pi">:</span>  <span class="c1">#your github account</span>
+<span class="na">disqus_shortname</span><span class="pi">:</span> <span class="c1">#disqus shortname</span>
+<span class="na">favicon</span><span class="pi">:</span>     <span class="s2">"</span><span class="s">images/favicon.ico"</span>
+<span class="na">aboutme</span><span class="pi">:</span> <span class="s">Hi, this is Lijia Yu. I made the Freshman21 theme. Please enjoy it.</span> <span class="c1"># these are shown on aboutme-box(sidebar).</span>
+<span class="na">aboutme_photo</span><span class="pi">:</span> <span class="s">https://i.imgur.com/15BT1.jpg</span> <span class="c1"># your personal photo.</span>
+</code></pre></div></div>
 
-    <p>For page-paginate test only (temporary)</p>
-    <!--step 3: print pagination post excerpt content-->
-    <article class="post-content" itemprop="articleBody">
-      <h2 id="1the-structure-of-freshman21-theme">1.The structure of freshman21 theme</h2>
+<p><strong>Part3</strong>, Site setting:</p>
 
-<p>You can see the simplest way of adding a page is just to add an HTML ( or markdown ) file in the root directory with a suitable name for the page you want to create. For example, aahome.md is the homepage link, about.md is the about page.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">ShowContactInfo</span><span class="pi">:</span> <span class="s2">"</span><span class="s">True"</span> <span class="c1"># Personal Info (twitter,github,email) can be seen on aboutme-sidebar, those info only shown where ShowContactInfo == True</span>
+<span class="na">default_column</span><span class="pi">:</span> <span class="s2">"</span><span class="s">two"</span> <span class="c1"># blog style: two columns, if default_column != "two", you will see a one column blog.</span>
+<span class="na">default_locale</span><span class="pi">:</span> <span class="s2">"</span><span class="s">en"</span> <span class="c1"># blog sidebar language set, only include: English(en) and Chinese (cn)</span>
+</code></pre></div></div>
 
-<p>All sidebar boxes html files are in the <code>_include</code> directory, their name begin with upper case. You can chose which sidebar boxes appears in the main page on the <q>sidebar.html</q> in the <code>_includes</code> directory.</p>
+<p><strong>Part4</strong>, Blogroll info, only <em>name</em> tags can shown on the page.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">Blogroll</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Freshman</span>
+        <span class="na">href</span><span class="pi">:</span> <span class="s">http://yulijia.net/freshman</span>
+        <span class="na">title</span><span class="pi">:</span> <span class="s">Another Jekyll blog theme</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">author's website</span>
+        <span class="na">href</span><span class="pi">:</span> <span class="s">http://yulijia.net/</span>
+        <span class="na">title</span><span class="pi">:</span> <span class="s">Lijia Yu's website</span>
+</code></pre></div></div>
+
+<p><strong>Part5</strong>, Build settings</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">markdown</span><span class="pi">:</span> <span class="s">kramdown</span>
+<span class="na">highlighter</span><span class="pi">:</span> <span class="s">pygments</span> <span class="c1"># highlight</span>
+<span class="na">paginate</span><span class="pi">:</span> <span class="m">5</span>  <span class="c1"># how many post can seen in the main page</span>
+</code></pre></div></div>
+
+<p>=====</p>
+
+<ul style="list-style-type:none;"> 
+<li id="[1]"> [1], you can set those info at <strong>Part3</strong> or just delete the <q>aboutme.html</q> at <q>sidebar.html</q> in <code>_include</code> folder. </li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-2"</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!--{ % include Aboutme.html % }--&gt;</span>
+   { % include Copyright_Notice.html % }
+   { % include Recent_Posts.html % }
+   { % include Categories.html % }
+   { % include Tags.html % }
+   { % include Blogroll.html % }
+   { % include Archives.html % }
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
 
 
-      <p><a href="/freshman21-v1/2014/12/freshman21-structure.html">(Continue reading ...)</a></p>
-    </article> <br><br><!--hr /-->
-  
-
-</div> 
-
-<!--using JS for implementation-->
-<div class="pager-container">
-
-  <div class="pager-text-col">
-    <p>Page 1 of 3</p>
-  </div>
-
-  <div class="pager-icon-col" id="pager-icon-col">
-    <script src="/freshman21-v1/assets/js/pagination.js"></script>
-    <script>
-      curr_page, total_pages, pageurl, base
-      var curr_page = parseInt('1');
-      var total_pages = parseInt('3');
-      var pageurl = '/topics/articles/index.html';
-      var base = '/freshman21-v1';
-      mytest(curr_page, total_pages, pageurl, base);
-    </script>
-    
-  </div>
+  </article>
+  <hr />
 </div>
+
+
+<section class="pager">
+  <ul>
+    
+    <li class="previous"><a href="/freshman21-v1/2014/12/freshman21-structure.html" title="Theme structure">&laquo; Previous</a></li>
+    
+    
+    <li class="next"><a href="/freshman21-v1/2015/03/2.0version.html" title="2.0 version">Next &raquo;</a></li>
+    
+  </ul>
+</section>
+
+<div id="disqus_thread"></div>
+
+<script type="text/javascript">
+
+  var disqus_developer = 1;
+
+var disqus_shortname ='';
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
     </div>
     <div class="page-content col-sm-2">
 
