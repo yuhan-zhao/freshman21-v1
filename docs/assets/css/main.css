@@ -130,7 +130,7 @@ cite { font-style: italic; text-decoration: underline; }
 
 .nav-icon-col { float: right; width: 20%; }
 
-.dropdown { position: relative; display: inline-block; }
+.dropdown { z-index: 1; position: relative; display: inline-block; }
 
 .dropdown-content { display: none; position: absolute; min-width: 160px; background-color: #fff; border: 1px solid #e8e8e8; }
 
@@ -138,9 +138,9 @@ cite { font-style: italic; text-decoration: underline; }
 
 .dropdown-content ul li { padding: 8px 20px; }
 
-.dropdown-content ul li a { color: #828282; }
+.dropdown-content a { color: #828282; }
 
-.dropdown-content ul li a:hover { color: #111; }
+.dropdown-content a:hover { color: #111; }
 
 .dropdown:hover .dropdown-content { display: block; }
 
@@ -221,7 +221,7 @@ cite { font-style: italic; text-decoration: underline; }
 
 .pager-container p { font-size: 14px; }
 
-.pager-container a { text-decoration: none; color: #111; }
+.pager-container a { text-decoration: none; color: #111; font-size: 14px; }
 
 .pager-container a:hover { color: #3d77e3; text-decoration: none; }
 

@@ -39,9 +39,7 @@
 
 <div class="container">
 
-  
-
-<header class="site-header">
+  <header class="site-header">
   <img src="/freshman21-v1/assets/images/husky_logo_crop.png">
   <h1 class="site-title"><a href="/freshman21-v1/">HuskyDev</a></h1>
   <h3 class="site-title-tagline">Yuhan's Blog</h3>
@@ -151,6 +149,23 @@
 <p>Note that { int | string } convert integer to strings.</p>
 
 <p>Also, we need to find a way to write liquid in code block.</p>
+
+<h2 id="publish-github-page-with-no-jekyll">Publish github page with no jekyll</h2>
+<p>Github page only accepts specific jekyll plugins. Some plugins such as <code class="language-plaintext highlighter-rouge">jekyll-paginate-v2</code> cannot be recgnized by github pages. Therefore, one way to publish github page is to <strong>publish the generated pages to Github</strong> instead of letting github complie pages online. The generated pages are in <code class="language-plaintext highlighter-rouge">_site</code> folder.</p>
+
+<p>We should note two things when using jekyll to generate pages and publish to github:</p>
+<ul>
+  <li>in <code class="language-plaintext highlighter-rouge">_config.yaml</code>, set <code class="language-plaintext highlighter-rouge">baseurl: /your-repo-name</code></li>
+  <li>include an empty file named <code class="language-plaintext highlighter-rouge">.nojekyll</code> in the <code class="language-plaintext highlighter-rouge">_site</code> folder</li>
+  <li>change <code class="language-plaintext highlighter-rouge">_site</code> to <code class="language-plaintext highlighter-rouge">docs</code>. Or move everything out of the <code class="language-plaintext highlighter-rouge">_site</code> folder.</li>
+</ul>
+
+<h3 id="set-z-index-to-overlay">set <code class="language-plaintext highlighter-rouge">z-index</code> to overlay</h3>
+<p>The dropdown menu has <code class="language-plaintext highlighter-rouge">position: relative</code>. However, the two column layout also have the same property. Therefore, the two column layout may overlay the dropdown menu. To solve the problem, we have two ways:</p>
+<ul>
+  <li>Set <code class="language-plaintext highlighter-rouge">position: static</code> to the two column layout. (May not feasible in some scenarios)</li>
+  <li>Set <code class="language-plaintext highlighter-rouge">z-index</code> of the dropdown menu higher than the two column layout.</li>
+</ul>
 
   </article>
   <hr />

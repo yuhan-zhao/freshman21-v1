@@ -5,8 +5,8 @@
     <description>HuskDev is Yuhan's personal blog.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/zfeed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Dec 2021 16:46:34 -0500</pubDate>
-    <lastBuildDate>Wed, 29 Dec 2021 16:46:34 -0500</lastBuildDate>
+    <pubDate>Wed, 29 Dec 2021 18:48:43 -0500</pubDate>
+    <lastBuildDate>Wed, 29 Dec 2021 18:48:43 -0500</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
     
       <item>
@@ -66,6 +66,23 @@
 &lt;p&gt;Note that { int | string } convert integer to strings.&lt;/p&gt;
 
 &lt;p&gt;Also, we need to find a way to write liquid in code block.&lt;/p&gt;
+
+&lt;h2 id=&quot;publish-github-page-with-no-jekyll&quot;&gt;Publish github page with no jekyll&lt;/h2&gt;
+&lt;p&gt;Github page only accepts specific jekyll plugins. Some plugins such as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll-paginate-v2&lt;/code&gt; cannot be recgnized by github pages. Therefore, one way to publish github page is to &lt;strong&gt;publish the generated pages to Github&lt;/strong&gt; instead of letting github complie pages online. The generated pages are in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_site&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;We should note two things when using jekyll to generate pages and publish to github:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yaml&lt;/code&gt;, set &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;baseurl: /your-repo-name&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;include an empty file named &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.nojekyll&lt;/code&gt; in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_site&lt;/code&gt; folder&lt;/li&gt;
+  &lt;li&gt;change &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_site&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docs&lt;/code&gt;. Or move everything out of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_site&lt;/code&gt; folder.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;set-z-index-to-overlay&quot;&gt;set &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;z-index&lt;/code&gt; to overlay&lt;/h3&gt;
+&lt;p&gt;The dropdown menu has &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;position: relative&lt;/code&gt;. However, the two column layout also have the same property. Therefore, the two column layout may overlay the dropdown menu. To solve the problem, we have two ways:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Set &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;position: static&lt;/code&gt; to the two column layout. (May not feasible in some scenarios)&lt;/li&gt;
+  &lt;li&gt;Set &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;z-index&lt;/code&gt; of the dropdown menu higher than the two column layout.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Fri, 10 Dec 2021 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/2021/12/jekyll-notes.html</link>
