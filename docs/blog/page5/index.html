@@ -85,7 +85,9 @@
             
               <li><a href="/freshman21-v1/topics/optimization">Optimization</a></li>
             
-              <li><a href="/freshman21-v1/topics/deep learning">Deep Learning</a></li>
+              <li><a href="/freshman21-v1/topics/web">Web</a></li>
+            
+              <li><a href="/freshman21-v1/topics/programming">Programming</a></li>
             
             </ul>
           </div>
@@ -126,196 +128,27 @@
   <!--step 2: print pagination post title-->
    
     
+      
+      
+      
+      <img src="/freshman21-v1/assets/images/blog/2014/2014-12-19-logo.png" height="100" width="100" style="float: left; margin-right: 15px;">
     
-    
-    
-    
-    
-    
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-    <img src="/freshman21-v1/assets/images/default-logo.png" height="100" style="float: left; margin-right: 15px;">
     
     <header class="post-header">
       <h1 itemprop="name" class="post-title">
-        <a itemprop="url" class="post-link" href="/freshman21-v1/2014/12/simple-post.html"><b>Sample Post</b></a>
+        <a itemprop="url" class="post-link" href="/freshman21-v1/2014/12/how-to-set-the-config-file.html"><b>How to set the config.yml file</b></a>
       </h1>
-      <meta itemprop="keywords" content="sample-post" />
+      <meta itemprop="keywords" content="configure" />
       <p class="post-meta">
         Posted on
-        <time itemprop="datePublished" datetime="2014-12-13">
-          Dec 13, 2014
+        <time itemprop="datePublished" datetime="2014-12-19">
+          Dec 19, 2014
         </time>
         &nbsp;in
         
-          <a href="/freshman21-v1/categories/#articles"><b>articles</b></a>
+          <a href="/freshman21-v1/categories/#articles"><b>articles</b></a>, 
+        
+          <a href="/freshman21-v1/categories/#Howto"><b>Howto</b></a>
         
       </p>
     </header>
@@ -323,201 +156,46 @@
     <p>For page-paginate test only (temporary)</p>
     <!--step 3: print pagination post excerpt content-->
     <article class="post-content" itemprop="articleBody">
-      Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more.
-      <p><a href="/freshman21-v1/2014/12/simple-post.html">(Continue reading ...)</a></p>
+      <p>The <a href="https://github.com/yulijia/freshman21/blob/master/_config.yml">config.yml file</a> in the Freshman21 theme includes five parts.</p>
+
+<p><strong>First part</strong> is the site info.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">Freshman21</span> <span class="c1"># blog title</span>
+<span class="na">tagline</span><span class="pi">:</span> <span class="s">Another Jekyll theme, Freshman twenty-first</span> <span class="c1"># blog sub-titile</span>
+<span class="na">author</span><span class="pi">:</span> <span class="s">Lijia YU</span> <span class="c1"># author name</span>
+<span class="na">email</span><span class="pi">:</span> <span class="s">yu@lijiayu.net</span> <span class="c1"># author email</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Freshman21</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Jekyll</span><span class="nv"> </span><span class="s">blog</span><span class="nv"> </span><span class="s">theme."</span> <span class="c1"># You can edit this line in _config.yml. It will appear in your document head meta and in </span>
+<span class="s">your feed.xml site description</span>
+<span class="na">keywords</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Jekyll,</span><span class="nv"> </span><span class="s">theme,</span><span class="nv"> </span><span class="s">Freshman21"</span> <span class="c1"># html meta keywords</span>
+<span class="na">baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/freshman21"</span> <span class="c1"># the subpath of your site, e.g. /blog</span>
+<span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http://yulijia.net/freshman21"</span> <span class="c1"># the base hostname &amp; protocol for your site</span>
+</code></pre></div></div>
+
+      <p><a href="/freshman21-v1/2014/12/how-to-set-the-config-file.html">(Continue reading ...)</a></p>
     </article> <br><br><!--hr /-->
    
     
+      
+      
+      
+      <img src="/freshman21-v1/assets/images/blog/2014/2014-12-19-logo.png" height="100" width="100" style="float: left; margin-right: 15px;">
     
-    
-    
-    
-    
-    
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-      
-    
-    <img src="/freshman21-v1/assets/images/default-logo.png" height="100" style="float: left; margin-right: 15px;">
     
     <header class="post-header">
       <h1 itemprop="name" class="post-title">
-        <a itemprop="url" class="post-link" href="/freshman21-v1/2013/10/milu.html"><b>Père David's deer</b></a>
+        <a itemprop="url" class="post-link" href="/freshman21-v1/2014/12/freshman21-structure.html"><b>Theme structure</b></a>
       </h1>
-      <meta itemprop="keywords" content="Père David's deer,milu,Elaphurus davidianus" />
+      <meta itemprop="keywords" content="structure" />
       <p class="post-meta">
         Posted on
-        <time itemprop="datePublished" datetime="2013-10-10">
-          Oct 10, 2013
+        <time itemprop="datePublished" datetime="2014-12-19">
+          Dec 19, 2014
         </time>
         &nbsp;in
         
-          <a href="/freshman21-v1/categories/#articles"><b>articles</b></a>
+          <a href="/freshman21-v1/categories/#articles"><b>articles</b></a>, 
+        
+          <a href="/freshman21-v1/categories/#Howto"><b>Howto</b></a>
         
       </p>
     </header>
@@ -525,13 +203,14 @@
     <p>For page-paginate test only (temporary)</p>
     <!--step 3: print pagination post excerpt content-->
     <article class="post-content" itemprop="articleBody">
-      <p>Père David’s deer (Elaphurus davidianus), also known as the milu (Chinese: 麋鹿; pinyin: mílù) or elaphure, is a species of deer that is currently extinct in the wild—all known specimens are found only in captivity. 
-This semiaquatic animal prefers marshland, and is native to the subtropics of China. 
-It grazes mainly on grass and aquatic plants. 
-It is the only extant member of the genus Elaphurus. 
-Based on genetic comparisons, Père David’s deer is closely related to the deer of the genus Cervus, leading many experts to suggest merging Elaphurus into Cervus<sup>[1]</sup> or demoting Elaphurus to a subgenus of Cervus.</p>
+      <h2 id="1the-structure-of-freshman21-theme">1.The structure of freshman21 theme</h2>
 
-      <p><a href="/freshman21-v1/2013/10/milu.html">(Continue reading ...)</a></p>
+<p>You can see the simplest way of adding a page is just to add an HTML ( or markdown ) file in the root directory with a suitable name for the page you want to create. For example, aahome.md is the homepage link, about.md is the about page.</p>
+
+<p>All sidebar boxes html files are in the <code>_include</code> directory, their name begin with upper case. You can chose which sidebar boxes appears in the main page on the <q>sidebar.html</q> in the <code>_includes</code> directory.</p>
+
+
+      <p><a href="/freshman21-v1/2014/12/freshman21-structure.html">(Continue reading ...)</a></p>
     </article> <br><br><!--hr /-->
   
 
@@ -541,7 +220,7 @@ Based on genetic comparisons, Père David’s deer is closely related to the dee
 <div class="pager-container">
 
   <div class="pager-text-col">
-    <p>Page 5 of 5</p>
+    <p>Page 5 of 7</p>
   </div>
 
   <div class="pager-icon-col" id="pager-icon-col">
@@ -549,7 +228,7 @@ Based on genetic comparisons, Père David’s deer is closely related to the dee
     <script>
       curr_page, total_pages, pageurl, base
       var curr_page = parseInt('5');
-      var total_pages = parseInt('5');
+      var total_pages = parseInt('7');
       var pageurl = '/blog/page5/index.html';
       var base = '/freshman21-v1';
       mytest(curr_page, total_pages, pageurl, base);
@@ -576,15 +255,15 @@ Based on genetic comparisons, Père David’s deer is closely related to the dee
   </li>
   
   <li>
-  <a href="/freshman21-v1/2021/12/jekyll-notes.html" title="jekyll notes" rel="bookmark">jekyll notes</a>
+  <a href="/freshman21-v1/2021/12/ssg-jekyll.html" title="Static Site Generators and Introduction to Jelly" rel="bookmark">Static Site Generators and Introduction to Jelly</a>
   </li>
   
   <li>
-  <a href="/freshman21-v1/2021/10/wellcome.html" title="Welcome to Jekyll!" rel="bookmark">Welcome to Jekyll!</a>
+  <a href="/freshman21-v1/2021/12/blog-related.html" title="Build Up My Own Blog" rel="bookmark">Build Up My Own Blog</a>
   </li>
   
   <li>
-  <a href="/freshman21-v1/2015/03/2.0version.html" title="2.0 version" rel="bookmark">2.0 version</a>
+  <a href="/freshman21-v1/2021/12/static-dynamic-web.html" title="Static vs Dynamic Web Pages" rel="bookmark">Static vs Dynamic Web Pages</a>
   </li>
   
 </div>
@@ -604,6 +283,10 @@ Based on genetic comparisons, Père David’s deer is closely related to the dee
     <li><a href="/freshman21-v1/categories/#update" title="update" rel="1">update (1)</a></li>
   
     <li><a href="/freshman21-v1/categories/#Notes" title="Notes" rel="3">Notes (3)</a></li>
+  
+    <li><a href="/freshman21-v1/categories/#Web" title="Web" rel="3">Web (3)</a></li>
+  
+    <li><a href="/freshman21-v1/categories/#Programming" title="Programming" rel="2">Programming (2)</a></li>
   
 </div>
 
@@ -637,9 +320,27 @@ Based on genetic comparisons, Père David’s deer is closely related to the dee
   
     <a href="/freshman21-v1/tags/#test" title="test" rel="1">test</a> &nbsp;
   
-    <a href="/freshman21-v1/tags/#jekyll" title="jekyll" rel="3">jekyll</a> &nbsp;
+    <a href="/freshman21-v1/tags/#jekyll" title="jekyll" rel="5">jekyll</a> &nbsp;
   
-    <a href="/freshman21-v1/tags/#html" title="html" rel="3">html</a> &nbsp;
+    <a href="/freshman21-v1/tags/#html" title="html" rel="5">html</a> &nbsp;
+  
+    <a href="/freshman21-v1/tags/#tutorial" title="tutorial" rel="1">tutorial</a> &nbsp;
+  
+    <a href="/freshman21-v1/tags/#static web" title="static web" rel="1">static web</a> &nbsp;
+  
+    <a href="/freshman21-v1/tags/#dynamic web" title="dynamic web" rel="1">dynamic web</a> &nbsp;
+  
+    <a href="/freshman21-v1/tags/#php" title="php" rel="1">php</a> &nbsp;
+  
+    <a href="/freshman21-v1/tags/#web programming" title="web programming" rel="2">web programming</a> &nbsp;
+  
+    <a href="/freshman21-v1/tags/#css" title="css" rel="2">css</a> &nbsp;
+  
+    <a href="/freshman21-v1/tags/#SSG" title="SSG" rel="1">SSG</a> &nbsp;
+  
+    <a href="/freshman21-v1/tags/#static site generator" title="static site generator" rel="1">static site generator</a> &nbsp;
+  
+    <a href="/freshman21-v1/tags/#github pages" title="github pages" rel="1">github pages</a> &nbsp;
   
 </div>
 
@@ -653,6 +354,15 @@ Based on genetic comparisons, Père David’s deer is closely related to the dee
       
       
       <li id="2021" > <a href="/freshman21-v1/archives/#2021">2021</a></li>
+    
+  
+    
+    
+  
+    
+    
+  
+    
     
   
     

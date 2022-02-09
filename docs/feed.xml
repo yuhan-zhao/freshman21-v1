@@ -5,8 +5,8 @@
     <description>HuskDev is Yuhan's personal blog.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/zfeed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Dec 2021 18:48:43 -0500</pubDate>
-    <lastBuildDate>Wed, 29 Dec 2021 18:48:43 -0500</lastBuildDate>
+    <pubDate>Mon, 07 Feb 2022 22:45:17 -0500</pubDate>
+    <lastBuildDate>Mon, 07 Feb 2022 22:45:17 -0500</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
     
       <item>
@@ -44,6 +44,767 @@
         
         
         <category>Notes</category>
+        
+      </item>
+    
+      <item>
+        <title>Static Site Generators and Introduction to Jelly</title>
+        <description>&lt;p&gt;I have discussed the difference between static and dynamic web pages in [xxx]. In this post, I will write some of my understanding of Jekyll and static site generators.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;static-site-generators&quot;&gt;Static Site Generators&lt;/h2&gt;
+
+&lt;p&gt;Static site generators (SSGs) are the software that generates and publish static HTML files from dynamic writing. In other words, they achieve two goals:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;automate static web page generation;&lt;/li&gt;
+  &lt;li&gt;publish the generated web pages locally for preview.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;some-background-of-html&quot;&gt;Some Background of HTML&lt;/h3&gt;
+
+&lt;p&gt;Every static web page is a complete HTML file. A simple example of a complete HTML file is like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Page Title&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;This is a Heading&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This is a paragraph.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The web page title and the style sheet for display are defined in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt;, and the content is written in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt;. In short, an HTML file has to follow some rules to be displayed by the browser correctly. We refer to &lt;a href=&quot;https://www.w3schools.com/html/&quot;&gt;HTML Tutorial&lt;/a&gt; to learn more about the HTML basics.&lt;/p&gt;
+
+&lt;h3 id=&quot;ssg-as-a-tool&quot;&gt;SSG as a Tool&lt;/h3&gt;
+
+&lt;p&gt;It can be tedious and troublesome to write HTML files directly, especially when the page content is long. There are so many types of websites. In blogging, what we need is the blog content. The interactions with the website and other fancy components are less required. The primary objective is to display the blog content nicely on a web page. Now SSGs can help. So the idea behind SSGs is simple: use templates to facilitate blog writing and automate web page generation.&lt;/p&gt;
+
+&lt;p&gt;In SSGs, we can first create some templates for future display. Then we only need to focus on writing the content (usually in markdown files). SSGs will put the content to the template and generate a complete HTML file for display. After SSGs generate all the page files, we can put them to some web server, for example, GitHub, so that people can access your pages from the Internet.&lt;/p&gt;
+
+&lt;p&gt;Another advantage of SSGs is that they can publish the web pages locally. It turns your computer to a local server so that you can view the web pages through the browser as if you view the page from a real server. It is extremely helpful for debugging.&lt;/p&gt;
+
+&lt;p&gt;There are many SSGs available. For example, &lt;a href=&quot;[https://nextjs.org](https://nextjs.org/)&quot;&gt;Next.js&lt;/a&gt;, &lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;, &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;. &lt;a href=&quot;https://www.gatsbyjs.com/&quot;&gt;Gatsby&lt;/a&gt;, &lt;a href=&quot;https://nuxtjs.org/&quot;&gt;Nuxt&lt;/a&gt;. Any of them does a good job.&lt;/p&gt;
+
+&lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is one of the most popular SSGs. It is written in &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt; and is supported by &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;, which is also one of the reasons I choose Jekyll to write my blog.&lt;/p&gt;
+
+&lt;p&gt;The Jekyll document is comprehensive and instructive. So I do encourage people to read the documentation if they decide to use it. Here, I will introduce Jekyll from my perspective and provide a general idea of how Jekyll works.&lt;/p&gt;
+
+&lt;h3 id=&quot;prerequisites-and-installation&quot;&gt;Prerequisites and Installation&lt;/h3&gt;
+
+&lt;p&gt;Since jekyll is software written in Ruby, we first need to make sure the Ruby programming language is installed in our computer. It comes with Linux distrirbutions. We can check it using the command&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ruby &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;		&lt;span class=&quot;c&quot;&gt;# display ruby version info&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We can also follow the &lt;a href=&quot;https://jekyllrb.com/docs/&quot;&gt;Quickstart&lt;/a&gt; in Jekyll documentation to create a quick jekyll project and view it in the browser.&lt;/p&gt;
+
+&lt;h3 id=&quot;directory-structure&quot;&gt;Directory Structure&lt;/h3&gt;
+
+&lt;p&gt;Jekyll creates a series of directories. So it is important to understand the use of each directory so that we can create the pages we want. A typical jekyll directory is like the following (from Jekyll documentation):&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.
+├── _config.yml
+├── _data
+│   └── members.yml
+├── _drafts
+│   └── on-simplicity-in-technology.md
+├── _includes
+│   ├── footer.html
+│   └── header.html
+├── _layouts
+│   ├── default.html
+│   └── post.html
+├── _posts
+│   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
+│   └── 2009-04-26-barcamp-boston-4-roundup.md
+├── _sass
+│   ├── _base.scss
+│   └── _layout.scss
+├── _site
+├── .jekyll-cache
+├── .jekyll-metadata
+└── index.html # can also be an 'index.md' with valid front matter
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; is the directory where we write our blog contents. The content is usually written with &lt;a href=&quot;https://www.markdownguide.org/&quot;&gt;Markdown&lt;/a&gt;. Each file corresponds to an individual post page and each filename should follow the convention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.md&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_draft&lt;/code&gt; is the directory to store the drafts. We can understand it as the unpublished &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_post&lt;/code&gt; directory. The files in this directory will not be translated into HTML file.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The above two directories are the most frequently edited ones after we set page templates.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_layout&lt;/code&gt; directory stores all template layouts. It is written in HTML and is the skeleton for web pages. We can specify multiple templates for different use. Normally, we have a basic layout named &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;default.html&lt;/code&gt;. It has to be a complete HTML file. Other templates (for example &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;post.html&lt;/code&gt;) can inherit from it and does not need to be a complete HTML file.&lt;/p&gt;
+
+    &lt;p&gt;We show an example of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;default.html&lt;/code&gt; as follows. The template has to include &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;html&amp;gt;&lt;/code&gt; element to show it is a complete HTML file. However, the template does not need to include every detail. We can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;include&lt;/code&gt; command to make the template more consise.&lt;/p&gt;
+
+    &lt;p&gt;```html
+&amp;lt;!DOCTYPE html&amp;gt;&lt;/p&gt;
+    &lt;html&gt;
+&lt;head&gt;
+
+&lt;/head&gt;&lt;/html&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;meta charset=&quot;utf-8&quot; /&gt;
+
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width initial-scale=1&quot; /&gt;
+
+&lt;meta property=&quot;og:title&quot; content=&quot;Static Site Generators and Introduction to Jelly&quot; /&gt;
+
+&lt;title&gt;Static Site Generators and Introduction to Jelly&lt;/title&gt;
+&lt;meta property=&quot;og:description&quot; content=&quot;I have discussed the difference between static and dynamic web pages in [xxx]. In this post, I will write some of my understanding of Jekyll and static site ...&quot; /&gt;
+
+&lt;meta property=&quot;og:url&quot; content=&quot;http://localhost:4000/2021/12/ssg-jekyll.html&quot; /&gt;
+
+&lt;meta property=&quot;og:site_name&quot; content=&quot;HuskyDev&quot; /&gt;
+
+&lt;meta property=&quot;og:locale&quot; content=&quot;&quot; /&gt;
+
+&lt;meta name=&quot;twitter:card&quot; content=&quot;summary&quot; /&gt;
+
+&lt;meta name=&quot;twitter:site&quot; content=&quot;@&quot; /&gt;
+
+&lt;meta name=&quot;twitter:creator&quot; content=&quot;@&quot; /&gt;
+
+&lt;meta name=&quot;twitter:title&quot; content=&quot;Static Site Generators and Introduction to Jelly&quot; /&gt;
+
+&lt;meta name=&quot;twitter:description&quot; content=&quot;I have discussed the difference between static and dynamic web pages in [xxx]. In this post, I will write some of my understanding of Jekyll and static site ...&quot; /&gt;
+
+&lt;meta name=&quot;twitter:url&quot; content=&quot;http://localhost:4000/2021/12/ssg-jekyll.html&quot; /&gt;
+
+&lt;meta name=&quot;keywords&quot; content=&quot;Yuhan, blog, HuskyDev&quot; /&gt;
+
+&lt;link rel=&quot;icon&quot; href=&quot;/freshman21-v1/assets/images/favicon.ico&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/freshman21-v1/assets/css/main.css&quot; /&gt;
+
+&lt;link rel=&quot;canonical&quot; href=&quot;http://localhost:4000/2021/12/ssg-jekyll.html&quot; /&gt;
+
+&lt;link rel=&quot;alternate&quot; type=&quot;application/atom+xml&quot; title=&quot;HuskyDev&quot; href=&quot;http://localhost:4000/feed.xml&quot; /&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt;
+
+&lt;!--link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot;--&gt;
+
+&lt;p&gt;&amp;lt;/head&amp;gt;&lt;/p&gt;
+
+&lt;body&gt;
+      
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;header class=&quot;site-header&quot;&gt;
+  &lt;img src=&quot;/freshman21-v1/assets/images/husky_logo_crop.png&quot; /&gt;
+  &lt;h1 class=&quot;site-title&quot;&gt;&lt;a href=&quot;/freshman21-v1/&quot;&gt;HuskyDev&lt;/a&gt;&lt;/h1&gt;
+  &lt;h3 class=&quot;site-title-tagline&quot;&gt;Yuhan's Blog&lt;/h3&gt;
+&lt;/header&gt;
+
+&lt;nav class=&quot;wrapper nav-container&quot;&gt;
+  &lt;div class=&quot;nav-text-col&quot;&gt;
+    
+      
+        &lt;a class=&quot;page-link&quot; href=&quot;/freshman21-v1/&quot;&gt;Home&lt;/a&gt;
+      
+      
+    
+      
+        
+        &lt;a class=&quot;page-link&quot; href=&quot;/freshman21-v1/blog/&quot;&gt;Blog&lt;/a&gt;
+      
+    
+      
+        
+        &lt;a class=&quot;page-link&quot; href=&quot;/freshman21-v1/categories/&quot;&gt;Categories&lt;/a&gt;
+      
+    
+      
+        
+        &lt;a class=&quot;page-link&quot; href=&quot;/freshman21-v1/research/&quot;&gt;Research&lt;/a&gt;
+      
+    
+      
+        
+        &lt;a class=&quot;page-link&quot; href=&quot;/freshman21-v1/projects/&quot;&gt;Projects&lt;/a&gt;
+      
+    
+      
+        &lt;div class=&quot;dropdown&quot;&gt;
+          &lt;a href=&quot;javascript:void(0)&quot; class=&quot;page-link&quot;&gt;Topics&lt;/a&gt;
+          &lt;div class=&quot;dropdown-content&quot;&gt;
+            &lt;ul&gt;
+            
+              &lt;li&gt;&lt;a href=&quot;/freshman21-v1/topics/articles&quot;&gt;articles&lt;/a&gt;&lt;/li&gt;
+            
+              &lt;li&gt;&lt;a href=&quot;/freshman21-v1/topics/notes&quot;&gt;Notes&lt;/a&gt;&lt;/li&gt;
+            
+              &lt;li&gt;&lt;a href=&quot;/freshman21-v1/topics/optimization&quot;&gt;Optimization&lt;/a&gt;&lt;/li&gt;
+            
+              &lt;li&gt;&lt;a href=&quot;/freshman21-v1/topics/web&quot;&gt;Web&lt;/a&gt;&lt;/li&gt;
+            
+              &lt;li&gt;&lt;a href=&quot;/freshman21-v1/topics/programming&quot;&gt;Programming&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      
+      
+    
+  &lt;/div&gt;
+
+  &lt;div class=&quot;nav-icon-col&quot;&gt;
+    
+    &lt;a href=&quot;https://www.linkedin.com/in/yhzhao&quot; title=&quot;LinkedIn: https://www.linkedin.com/in/yhzhao&quot; class=&quot;icon-link&quot;&gt;&lt;i class=&quot;fa fa-linkedin&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    
+    
+      &lt;a href=&quot;https://github.com/yuhan-zhao&quot; title=&quot;GithubID: yuhan-zhao&quot; class=&quot;icon-link&quot;&gt;&lt;i class=&quot;fa fa-github&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    
+    
+      &lt;a href=&quot;mailto:yuhan-zhao@outlook.com&quot; title=&quot;mailto: yuhan-zhao@outlook.com&quot; class=&quot;icon-link&quot;&gt;&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    
+    
+      &lt;a href=&quot;/freshman21-v1/2021/12/ssg-jekyll.htmlfeed.xml&quot; title=&quot;RSS feed&quot; class=&quot;icon-link&quot;&gt;&lt;i class=&quot;fa fa-rss&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    
+  &lt;/div&gt;
+&lt;/nav&gt;
+      &lt;div class=&quot;page-content wrapper&quot;&gt;
+        &lt;div class=&quot;post&quot; itemscope=&quot;&quot; itemtype=&quot;http://schema.org/BlogPosting&quot;&gt;
+
+  &lt;header class=&quot;post-header&quot;&gt;
+    &lt;h1 itemprop=&quot;name&quot; class=&quot;post-title&quot;&gt;&lt;b&gt;Build Up My Own Blog&lt;/b&gt;&lt;/h1&gt;
+    &lt;meta itemprop=&quot;keywords&quot; content=&quot;web programming,jekyll,html,css&quot; /&gt;
+    &lt;p class=&quot;post-meta&quot;&gt;
+      Posted on
+      &lt;time itemprop=&quot;datePublished&quot; datetime=&quot;2021-12-23&quot;&gt;
+        Dec 23, 2021
+      &lt;/time&gt;
+      &amp;nbsp;in
+      
+        &lt;a href=&quot;/freshman21-v1/categories/#Programming&quot;&gt;&lt;b&gt;Programming&lt;/b&gt;&lt;/a&gt;, 
+      
+        &lt;a href=&quot;/freshman21-v1/categories/#Web&quot;&gt;&lt;b&gt;Web&lt;/b&gt;&lt;/a&gt;
+         
+    &lt;/p&gt;
+  &lt;/header&gt;
+
+  &lt;article class=&quot;post-content&quot; itemprop=&quot;articleBody&quot;&gt;
+    &lt;p&gt;I have always been eager to build my personal blog from sketch. Now it comes true! This is not as simple as I thought before. So I think it is better take some notes about what I have learned along the way. 
+&lt;!--more--&gt;
+Since I have zero background in web programming, some of the notes may be too easy for experts. Also, there are aubndnat reserouces in the Internet and I will refer to the ones which helped me during the learning.&lt;/p&gt;
+
+&lt;p&gt;So let me start from how to select the tools.&lt;/p&gt;
+
+&lt;h2 id=&quot;static-site-generators&quot;&gt;Static Site Generators&lt;/h2&gt;
+
+&lt;p&gt;When the web server processes our request to show some webpage, it returns the HTML file stored in the serve, so that our browser can display the content. The HTML file has to be complete to be displayed in the browser. Normally, an HTML file needs to follow some format rules and contains the &lt;strong&gt;head&lt;/strong&gt; and &lt;strong&gt;body&lt;/strong&gt; elements. For example,&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Page Title&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;This is a Heading&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This is a paragraph.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We can refer to &lt;a href=&quot;https://www.w3schools.com/html/&quot;&gt;HTML Tutorial&lt;/a&gt; to learn the HTML basics. The style sheet for display is defined in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Therefore, each webpage corresponds to an HTML file. When we open different pages, we actually receive different HTML files.&lt;/p&gt;
+
+&lt;p&gt;This can be troublesome because HTML files are in general lengthy and complex. Besides, we also have to determine which element to use in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt; and how to display them. For example, if we want to write multiple paragraph in HTML, we have to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;p&amp;gt;&lt;/code&gt; for each paragraph. Writing HTML directly is never easy. If we want to create multiple pages, for example, writing two different blogs, then we have to create two exhausting HTML files.&lt;/p&gt;
+
+&lt;p&gt;Do we have some other ways to save our work?&lt;/p&gt;
+
+&lt;p&gt;The answer is positive. In fact we can use templates to manage the same layout. If we want to write two blogs, the only difference between the two is actually the content. Therefore, we can define some templates to use so that we only need to focus on writing our blogs instead of worrying about writing a complete HTML file. This is what a site generator does: automating the site generation.&lt;/p&gt;
+
+&lt;p&gt;Before talking about the static site generator, we should first figure out what are static and dynamic website. There are two tutorial on GitLab talking a static and dybnamic website, which I think is useful.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://about.gitlab.com/blog/2016/06/03/ssg-overview-gitlab-pages-part-1-dynamic-x-static/&quot;&gt;SSGs Part 1: A Static vs Dynamic Website&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://about.gitlab.com/blog/2016/06/10/ssg-overview-gitlab-pages-part-2/&quot;&gt;SSGs Part 2: What are modern static site generators&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In short, a dynamic website support user interactions such as online calculation and manipulating data. The user operations are processed by the web server. Then the result is generated and sent back to the user. In a static website, users simply look the pre-generated content, and there are no interactions.&lt;/p&gt;
+
+&lt;p&gt;The static site generator, as the name suggests, generates pre-written HTML files for users to refer to. The SSG is very suitable for personal blog website because there are few interactions when we read blogs. The major objective of a blog website is to present the content to users. It is an automation tool that allow people only focus on the important part of write a blog: the content.&lt;/p&gt;
+
+&lt;p&gt;There are many SSGs available. For example, &lt;a href=&quot;[https://nextjs.org](https://nextjs.org/)&quot;&gt;Next.js&lt;/a&gt;, &lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;, &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;. &lt;a href=&quot;https://www.gatsbyjs.com/&quot;&gt;Gatsby&lt;/a&gt;, &lt;a href=&quot;https://nuxtjs.org/&quot;&gt;Nuxt&lt;/a&gt;. Any of them does a good job.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://elextutorial.com/learn-php/dynamic-vs-static-website-static-website-dynamic-website-definition/#:~:text=The%20dynamic%20web%20page%20code%20written%20in%20the%20PHP%20server,is%20served%20to%20the%20user.&quot;&gt;Dynamic vs Static Website&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
+
+&lt;p&gt;The reason I choose Jekyll, well…, is because the Github only support it when I do the first search. I know that WordPress has a lot of fantastic templates to choose. But I still have to buy a domain name. Why not use the free resource? Besides, it is not exciting to use template at all. I want to create my own website.&lt;/p&gt;
+
+
+  &lt;/article&gt;
+  &lt;hr /&gt;
+&lt;/div&gt;
+
+
+&lt;section class=&quot;pager&quot;&gt;
+  &lt;ul&gt;
+    
+    &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/freshman21-v1/2021/12/static-dynamic-web.html&quot; title=&quot;Static vs Dynamic Web Pages&quot;&gt;&amp;laquo; Previous&lt;/a&gt;&lt;/li&gt;
+    
+    
+    &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/freshman21-v1/2021/12/ssg-jekyll.html&quot; title=&quot;Static Site Generators and Introduction to Jelly&quot;&gt;Next &amp;raquo;&lt;/a&gt;&lt;/li&gt;
+    
+  &lt;/ul&gt;
+&lt;/section&gt;
+
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+  var disqus_developer = 1;
+
+var disqus_shortname ='';
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+&lt;/script&gt;
+
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+
+
+
+      &lt;/div&gt;
+      &lt;footer class=&quot;site-footer&quot;&gt;
+
+  &lt;p&gt;Copyright &amp;copy; &lt;a href=&quot;/freshman21-v1/&quot;&gt;HuskyDev&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;Powered by &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll&lt;/a&gt; 
+  on 
+  &lt;a href=&quot;https://github.com/&quot;&gt;Github&lt;/a&gt;
+  | Inspired by Theme &lt;a href=&quot;https://github.com/yulijia/freshman21/&quot;&gt;Freshman21&lt;/a&gt; 
+  | Design by &lt;a href=&quot;/freshman21-v1/&quot;&gt;Yuhan&lt;/a&gt;  
+&amp;lt;/footer&amp;gt;
+
+    &amp;lt;/div&amp;gt;
+      
+  &amp;lt;/body&amp;gt;
+  &amp;lt;/html&amp;gt;
+  ```
+
+  Other template files can inherit from `default.html`. They add more details to `default.html` to form the new template. An example of `post.html` template is shown in the following. They do **not** need to be a complete HTML file.
+
+  ```html
+  ---
+  layout: default
+  ---
+  &lt;div class=&quot;post&quot;&gt;
+  
+    &lt;header class=&quot;post-header&quot;&gt;
+      &lt;h1 class=&quot;post-title&quot;&gt;Static Site Generators and Introduction to Jelly&lt;/h1&gt;
+    &lt;/header&gt;
+  
+    &lt;article class=&quot;post-content&quot;&gt; 
+      &lt;div class=&quot;post&quot; itemscope=&quot;&quot; itemtype=&quot;http://schema.org/BlogPosting&quot;&gt;
+
+  &lt;header class=&quot;post-header&quot;&gt;
+    &lt;h1 itemprop=&quot;name&quot; class=&quot;post-title&quot;&gt;&lt;b&gt;Build Up My Own Blog&lt;/b&gt;&lt;/h1&gt;
+    &lt;meta itemprop=&quot;keywords&quot; content=&quot;web programming,jekyll,html,css&quot; /&gt;
+    &lt;p class=&quot;post-meta&quot;&gt;
+      Posted on
+      &lt;time itemprop=&quot;datePublished&quot; datetime=&quot;2021-12-23&quot;&gt;
+        Dec 23, 2021
+      &lt;/time&gt;
+      &amp;nbsp;in
+      
+        &lt;a href=&quot;/freshman21-v1/categories/#Programming&quot;&gt;&lt;b&gt;Programming&lt;/b&gt;&lt;/a&gt;, 
+      
+        &lt;a href=&quot;/freshman21-v1/categories/#Web&quot;&gt;&lt;b&gt;Web&lt;/b&gt;&lt;/a&gt;
+         
+    &lt;/p&gt;
+  &lt;/header&gt;
+
+  &lt;article class=&quot;post-content&quot; itemprop=&quot;articleBody&quot;&gt;
+    &lt;p&gt;I have always been eager to build my personal blog from sketch. Now it comes true! This is not as simple as I thought before. So I think it is better take some notes about what I have learned along the way. 
+&lt;!--more--&gt;
+Since I have zero background in web programming, some of the notes may be too easy for experts. Also, there are aubndnat reserouces in the Internet and I will refer to the ones which helped me during the learning.&lt;/p&gt;
+
+&lt;p&gt;So let me start from how to select the tools.&lt;/p&gt;
+
+&lt;h2 id=&quot;static-site-generators&quot;&gt;Static Site Generators&lt;/h2&gt;
+
+&lt;p&gt;When the web server processes our request to show some webpage, it returns the HTML file stored in the serve, so that our browser can display the content. The HTML file has to be complete to be displayed in the browser. Normally, an HTML file needs to follow some format rules and contains the &lt;strong&gt;head&lt;/strong&gt; and &lt;strong&gt;body&lt;/strong&gt; elements. For example,&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Page Title&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;This is a Heading&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This is a paragraph.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We can refer to &lt;a href=&quot;https://www.w3schools.com/html/&quot;&gt;HTML Tutorial&lt;/a&gt; to learn the HTML basics. The style sheet for display is defined in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Therefore, each webpage corresponds to an HTML file. When we open different pages, we actually receive different HTML files.&lt;/p&gt;
+
+&lt;p&gt;This can be troublesome because HTML files are in general lengthy and complex. Besides, we also have to determine which element to use in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt; and how to display them. For example, if we want to write multiple paragraph in HTML, we have to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;p&amp;gt;&lt;/code&gt; for each paragraph. Writing HTML directly is never easy. If we want to create multiple pages, for example, writing two different blogs, then we have to create two exhausting HTML files.&lt;/p&gt;
+
+&lt;p&gt;Do we have some other ways to save our work?&lt;/p&gt;
+
+&lt;p&gt;The answer is positive. In fact we can use templates to manage the same layout. If we want to write two blogs, the only difference between the two is actually the content. Therefore, we can define some templates to use so that we only need to focus on writing our blogs instead of worrying about writing a complete HTML file. This is what a site generator does: automating the site generation.&lt;/p&gt;
+
+&lt;p&gt;Before talking about the static site generator, we should first figure out what are static and dynamic website. There are two tutorial on GitLab talking a static and dybnamic website, which I think is useful.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://about.gitlab.com/blog/2016/06/03/ssg-overview-gitlab-pages-part-1-dynamic-x-static/&quot;&gt;SSGs Part 1: A Static vs Dynamic Website&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://about.gitlab.com/blog/2016/06/10/ssg-overview-gitlab-pages-part-2/&quot;&gt;SSGs Part 2: What are modern static site generators&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In short, a dynamic website support user interactions such as online calculation and manipulating data. The user operations are processed by the web server. Then the result is generated and sent back to the user. In a static website, users simply look the pre-generated content, and there are no interactions.&lt;/p&gt;
+
+&lt;p&gt;The static site generator, as the name suggests, generates pre-written HTML files for users to refer to. The SSG is very suitable for personal blog website because there are few interactions when we read blogs. The major objective of a blog website is to present the content to users. It is an automation tool that allow people only focus on the important part of write a blog: the content.&lt;/p&gt;
+
+&lt;p&gt;There are many SSGs available. For example, &lt;a href=&quot;[https://nextjs.org](https://nextjs.org/)&quot;&gt;Next.js&lt;/a&gt;, &lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;, &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;. &lt;a href=&quot;https://www.gatsbyjs.com/&quot;&gt;Gatsby&lt;/a&gt;, &lt;a href=&quot;https://nuxtjs.org/&quot;&gt;Nuxt&lt;/a&gt;. Any of them does a good job.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://elextutorial.com/learn-php/dynamic-vs-static-website-static-website-dynamic-website-definition/#:~:text=The%20dynamic%20web%20page%20code%20written%20in%20the%20PHP%20server,is%20served%20to%20the%20user.&quot;&gt;Dynamic vs Static Website&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
+
+&lt;p&gt;The reason I choose Jekyll, well…, is because the Github only support it when I do the first search. I know that WordPress has a lot of fantastic templates to choose. But I still have to buy a domain name. Why not use the free resource? Besides, it is not exciting to use template at all. I want to create my own website.&lt;/p&gt;
+
+
+  &lt;/article&gt;
+  &lt;hr /&gt;
+&lt;/div&gt;
+
+
+&lt;section class=&quot;pager&quot;&gt;
+  &lt;ul&gt;
+    
+    &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/freshman21-v1/2021/12/static-dynamic-web.html&quot; title=&quot;Static vs Dynamic Web Pages&quot;&gt;&amp;laquo; Previous&lt;/a&gt;&lt;/li&gt;
+    
+    
+    &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/freshman21-v1/2021/12/ssg-jekyll.html&quot; title=&quot;Static Site Generators and Introduction to Jelly&quot;&gt;Next &amp;raquo;&lt;/a&gt;&lt;/li&gt;
+    
+  &lt;/ul&gt;
+&lt;/section&gt;
+
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+  var disqus_developer = 1;
+
+var disqus_shortname ='';
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+&lt;/script&gt;
+
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+
+
+
+    &lt;/article&gt;
+  
+    
+    &lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+  var disqus_developer = 1;
+
+var disqus_shortname ='';
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+&lt;/script&gt;
+
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+
+    
+  
+  &lt;/div&gt; 
+  ```
+
+- `_include` directory stores the frequently used HTML snippets which are used by `include` command. For example, the `footer.html` can be the following.
+
+  ```html
+  &lt;footer class=&quot;site-footer&quot;&gt;
+    &lt;p&gt;Copyright &amp;copy; &lt;a href=&quot;/freshman21-v1/&quot;&gt;HuskyDev&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;Powered by &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll&lt;/a&gt; 
+  &amp;lt;/footer&amp;gt;
+  ```
+
+- `_sass` directory stores the style sheets (CSS files) for HTML files. These files determine the display format of HTML file. We refer to [CSS Tutorial](https://www.w3schools.com/css/) to learn more about the CSS basics. 
+
+The above three directories are related to web page templates and display style. After completing the template, we can simple call which template to use in each post file. Jekyll will generate the corresponding HTML file with the desired template for us.
+
+- `_config.yml` is the configuration file for Jekyll. We can define user-defined variables in this file.
+- `index.html` or `index.md` is the index page. For web server, there is always an index page for each directory. By default, the web server will send the index page back to the user if the user does not specify in detail which HTML file to look for.
+
+- `_site` directory stores all the generated web pages. We can put `_site` directory to the server, for example GitHub. Then the blog website is ready to view.
+
+### Templating Language
+
+&amp;gt; A templating language basically is a language which allows defining placeholders that should later on be replaced for the purpose of implementing designs. Obviously modern template languages not only support placeholders, but also loops and conditions which are often necessary for designing a web page.
+&amp;gt;
+&amp;gt; *From [Stack Overflow: What is a templating language?](https://stackoverflow.com/questions/4026597/what-is-a-templating-language)*
+
+Jekyll uses the [Liquid](https://shopify.github.io/liquid/) templating language to process templates. We can think the templating language as a &quot;scripting language&quot; in HTML files. It defines how Jekyll process the HTML files and generate the final version. 
+
+**Note:** The templating language is different from other real scripting language such as JavaScript and Python. The browser cannot read it. All the template statements will be replaced by HTML after Jekyll process them. So in the final versions of the generated HTML file, there is no templating Language.
+
+Liquid has ample functions such as `include` function and other string processing functions, which facilitate the static web page writing.
+
+### Front Matter and Variables
+
+The front matter is specified by `---` block at the front of each file. If we add the front matter to a file, it means that we want Jekyll to process this file. The process can be including other HTML snippets, or replacing template statements. 
+
+The front matter specifies variables for processing. For example, in `post.html`  layout, we add `layout` variable to the front matter. So Jekyll will first substitute the HTML snippets and then put every thing to back to the `default.html` template to generate the final HTML file.
+
+Some global variables are reserved by Jekyll, for example, `layout`, `content`, `site`, `page`. See [Jekyll Variables](https://jekyllrb.com/docs/variables/) for more information. These variables are useful when we write the template HTML files.
+
+We can also define local variables (user-defined variables) in the front matter and reference it. For example, we define `mylogo-link` variable in the following post file:
+
+```markdown
+---
+mylogo_link: https://path/to/image/.png
+---
+```
+
+Then we can reference this variable in the file by writting ``.
+
+We can also define variables in `_config.yml`. The variables are in the `site` domain and can be accessed by ``.
+
+### Summary
+
+We have introduced the general framework of Jekyll and the idea of how Jekyll works. In the future posts, I will write more details about Jekyll usage and the problems I have met when I use Jekyll.
+
+
+
+## Resources
+
+There are some resources discussing the functions of SSGs:
+
+ [GitLab SSGs Part 2: What are modern static site generators](https://about.gitlab.com/blog/2016/06/10/ssg-overview-gitlab-pages-part-2/) 
+&lt;/p&gt;&lt;/footer&gt;&lt;/p&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/body&gt;
+</description>
+        <pubDate>Fri, 24 Dec 2021 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/2021/12/ssg-jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/12/ssg-jekyll.html</guid>
+        
+        <category>web programming</category>
+        
+        <category>SSG</category>
+        
+        <category>static site generator</category>
+        
+        <category>jekyll</category>
+        
+        <category>html</category>
+        
+        <category>css</category>
+        
+        <category>github pages</category>
+        
+        
+        <category>Programming</category>
+        
+        <category>Web</category>
+        
+      </item>
+    
+      <item>
+        <title>Build Up My Own Blog</title>
+        <description>&lt;p&gt;I have always been eager to build my personal blog from sketch. Now it comes true! This is not as simple as I thought before. So I think it is better take some notes about what I have learned along the way. 
+&lt;!--more--&gt;
+Since I have zero background in web programming, some of the notes may be too easy for experts. Also, there are aubndnat reserouces in the Internet and I will refer to the ones which helped me during the learning.&lt;/p&gt;
+
+&lt;p&gt;So let me start from how to select the tools.&lt;/p&gt;
+
+&lt;h2 id=&quot;static-site-generators&quot;&gt;Static Site Generators&lt;/h2&gt;
+
+&lt;p&gt;When the web server processes our request to show some webpage, it returns the HTML file stored in the serve, so that our browser can display the content. The HTML file has to be complete to be displayed in the browser. Normally, an HTML file needs to follow some format rules and contains the &lt;strong&gt;head&lt;/strong&gt; and &lt;strong&gt;body&lt;/strong&gt; elements. For example,&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Page Title&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;This is a Heading&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This is a paragraph.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We can refer to &lt;a href=&quot;https://www.w3schools.com/html/&quot;&gt;HTML Tutorial&lt;/a&gt; to learn the HTML basics. The style sheet for display is defined in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Therefore, each webpage corresponds to an HTML file. When we open different pages, we actually receive different HTML files.&lt;/p&gt;
+
+&lt;p&gt;This can be troublesome because HTML files are in general lengthy and complex. Besides, we also have to determine which element to use in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt; and how to display them. For example, if we want to write multiple paragraph in HTML, we have to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;p&amp;gt;&lt;/code&gt; for each paragraph. Writing HTML directly is never easy. If we want to create multiple pages, for example, writing two different blogs, then we have to create two exhausting HTML files.&lt;/p&gt;
+
+&lt;p&gt;Do we have some other ways to save our work?&lt;/p&gt;
+
+&lt;p&gt;The answer is positive. In fact we can use templates to manage the same layout. If we want to write two blogs, the only difference between the two is actually the content. Therefore, we can define some templates to use so that we only need to focus on writing our blogs instead of worrying about writing a complete HTML file. This is what a site generator does: automating the site generation.&lt;/p&gt;
+
+&lt;p&gt;Before talking about the static site generator, we should first figure out what are static and dynamic website. There are two tutorial on GitLab talking a static and dybnamic website, which I think is useful.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://about.gitlab.com/blog/2016/06/03/ssg-overview-gitlab-pages-part-1-dynamic-x-static/&quot;&gt;SSGs Part 1: A Static vs Dynamic Website&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://about.gitlab.com/blog/2016/06/10/ssg-overview-gitlab-pages-part-2/&quot;&gt;SSGs Part 2: What are modern static site generators&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In short, a dynamic website support user interactions such as online calculation and manipulating data. The user operations are processed by the web server. Then the result is generated and sent back to the user. In a static website, users simply look the pre-generated content, and there are no interactions.&lt;/p&gt;
+
+&lt;p&gt;The static site generator, as the name suggests, generates pre-written HTML files for users to refer to. The SSG is very suitable for personal blog website because there are few interactions when we read blogs. The major objective of a blog website is to present the content to users. It is an automation tool that allow people only focus on the important part of write a blog: the content.&lt;/p&gt;
+
+&lt;p&gt;There are many SSGs available. For example, &lt;a href=&quot;[https://nextjs.org](https://nextjs.org/)&quot;&gt;Next.js&lt;/a&gt;, &lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;, &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;. &lt;a href=&quot;https://www.gatsbyjs.com/&quot;&gt;Gatsby&lt;/a&gt;, &lt;a href=&quot;https://nuxtjs.org/&quot;&gt;Nuxt&lt;/a&gt;. Any of them does a good job.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://elextutorial.com/learn-php/dynamic-vs-static-website-static-website-dynamic-website-definition/#:~:text=The%20dynamic%20web%20page%20code%20written%20in%20the%20PHP%20server,is%20served%20to%20the%20user.&quot;&gt;Dynamic vs Static Website&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
+
+&lt;p&gt;The reason I choose Jekyll, well…, is because the Github only support it when I do the first search. I know that WordPress has a lot of fantastic templates to choose. But I still have to buy a domain name. Why not use the free resource? Besides, it is not exciting to use template at all. I want to create my own website.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 23 Dec 2021 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/2021/12/blog-related.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/12/blog-related.html</guid>
+        
+        <category>web programming</category>
+        
+        <category>jekyll</category>
+        
+        <category>html</category>
+        
+        <category>css</category>
+        
+        
+        <category>Programming</category>
+        
+        <category>Web</category>
+        
+      </item>
+    
+      <item>
+        <title>Static vs Dynamic Web Pages</title>
+        <description>&lt;p&gt;When we send HTTP requests to the web server, the web server responds to the request and sends the page file (usually with a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.html&lt;/code&gt; extension) back so that we can view the entire web page in the browser. The way the web server processes and generates the web pages categorizes the web pages into &lt;strong&gt;static&lt;/strong&gt; and &lt;strong&gt;dynamic&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;static-web-pages&quot;&gt;Static Web Pages&lt;/h2&gt;
+
+&lt;p&gt;A static web page is a page file stored in the web server. Normally, static web pages are stored with a  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.html&lt;/code&gt; file extension. Each web page has a unique URL (Uniform Resource Locator). When we request a static web page, the web server finds the page file in the file system and sends it back. The server will not do any processing of the page file.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/freshman21-v1/assets/images/blog/2021/2021-12-22-static.png&quot; height=&quot;130&quot; /&gt;
+    &lt;figcaption&gt;Fig.1: Static web pages served by the web server.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;dynamic-web-pages&quot;&gt;Dynamic Web Pages&lt;/h2&gt;
+
+&lt;p&gt;The web server responds to dynamic web pages after pre-processing. The dynamic web page is stored in a page file with code. The code instructs the web server to pre-process the page file, generates the corresponding HTML file, and then sends it back to the user.&lt;/p&gt;
+
+&lt;p&gt;The pre-processing depends on what code the web server uses. The most common programming language for web server development is &lt;a href=&quot;https://www.php.net/&quot;&gt;PHP&lt;/a&gt;. There are other server-side languages such as Python and C#.&lt;/p&gt;
+
+&lt;p&gt;We take PhP for example. A dynamic web page written with PhP language is stored in a page file with a  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.php&lt;/code&gt; extension. When we request a dynamic web page, the web server first processes the PHP page file and generates the HTML file. Then the server sends the HTML file back to the user.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/freshman21-v1/assets/images/blog/2021/2021-12-22-dynamic.png&quot; height=&quot;180&quot; /&gt;
+    &lt;figcaption&gt;Fig.2: Dynamic web pages served by the web server.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;A simple dynamic web page file with PHP looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This example shows PHP block and its processed output.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;cp&quot;&gt;&amp;lt;?php
+            echo &quot;String Output from PHP Block.&quot;;
+        ?&amp;gt;&lt;/span&gt;
+         
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This PHP code prints addition of two number in the 
+        processed HTML output.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;cp&quot;&gt;&amp;lt;?php
+            echo 1+1;
+        ?&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;static-vs-dynamic&quot;&gt;Static vs Dynamic&lt;/h2&gt;
+
+&lt;p&gt;The user can only view the existing page content on a static web page. Therefore, it is more suitable for blogs and news websites. In addition, it is also more secure because the user cannot modify anything on the web page.&lt;/p&gt;
+
+&lt;p&gt;A dynamic web page provides more interactions between the user and the website. The code adds more flexibility to the web server to process the web page. It is more suitable for interactive websites such as Google. Let’s consider two examples.&lt;/p&gt;
+
+&lt;p&gt;The first example is the stock price query. If we want to check the stock price right now, we request the web server. The web server receives the request and checks the latest database for the stock price. Then the server generates the HTML page file and sends it back. If the stock price web page is static, which means they are pre-generated and stored in the server, we either cannot find the latest stock price, or the web server has to constantly update the page file to ensure the data is in time. Either way, it is not convenient.&lt;/p&gt;
+
+&lt;p&gt;The second example is online computing. If we want to perform complex computation, for example, integration, on the web server, we need to input the data first on the website. The web page has to be dynamic. Otherwise, the web server cannot even know what we input on the page. Let along process the input.&lt;/p&gt;
+
+&lt;h2 id=&quot;resource&quot;&gt;Resource&lt;/h2&gt;
+
+&lt;p&gt;Some useful materials also introduce this topic:&lt;/p&gt;
+
+&lt;p&gt;[1] &lt;a href=&quot;https://elextutorial.com/learn-php/dynamic-vs-static-website-static-website-dynamic-website-definition/#:~:text=The%20dynamic%20web%20page%20code%20written%20in%20the%20PHP%20server,is%20served%20to%20the%20user.&quot;&gt;Elextutorial Tutorial: Dynamic vs Static Website&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[2] &lt;a href=&quot;https://about.gitlab.com/blog/2016/06/03/ssg-overview-gitlab-pages-part-1-dynamic-x-static/&quot;&gt;GitLab SSGs Part 1: A Static vs Dynamic Website&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 22 Dec 2021 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/2021/12/static-dynamic-web.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/12/static-dynamic-web.html</guid>
+        
+        <category>tutorial</category>
+        
+        <category>static web</category>
+        
+        <category>dynamic web</category>
+        
+        <category>php</category>
+        
+        
+        <category>Web</category>
         
       </item>
     
@@ -442,250 +1203,6 @@ No link for tags. Tags appear in the last with&lt;/p&gt;
         <category>articles</category>
         
         <category>Howto</category>
-        
-      </item>
-    
-      <item>
-        <title>How to install this theme</title>
-        <description>&lt;h2 id=&quot;how-to-install-freshman-theme&quot;&gt;How to install Freshman theme?&lt;/h2&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# please make sure you have already installed git tools and ruby tools(gem)&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;sass
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/yulijia/freshman21.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Then, change the folder name to you own github page name, forexample&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;mv &lt;/span&gt;freshman thisisyouname.github.io
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-        <pubDate>Thu, 18 Dec 2014 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/2014/12/how-to-install.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2014/12/how-to-install.html</guid>
-        
-        <category>sample-post</category>
-        
-        
-        <category>articles</category>
-        
-      </item>
-    
-      <item>
-        <title>Sample Post</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#heading&quot; id=&quot;markdown-toc-heading&quot;&gt;Heading&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#body-text&quot; id=&quot;markdown-toc-body-text&quot;&gt;Body text&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#blockquotes&quot; id=&quot;markdown-toc-blockquotes&quot;&gt;Blockquotes&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#list-types&quot; id=&quot;markdown-toc-list-types&quot;&gt;List Types&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#ordered-lists&quot; id=&quot;markdown-toc-ordered-lists&quot;&gt;Ordered Lists&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#unordered-lists&quot; id=&quot;markdown-toc-unordered-lists&quot;&gt;Unordered Lists&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#tables&quot; id=&quot;markdown-toc-tables&quot;&gt;Tables&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#code-snippets&quot; id=&quot;markdown-toc-code-snippets&quot;&gt;Code Snippets&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#highlight-with-line-number&quot; id=&quot;markdown-toc-highlight-with-line-number&quot;&gt;highlight with line number.&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#highlight-using-triple-backticks&quot; id=&quot;markdown-toc-highlight-using-triple-backticks&quot;&gt;highlight using triple backticks&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#latex&quot; id=&quot;markdown-toc-latex&quot;&gt;\(\LaTeX\)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#q-tag&quot; id=&quot;markdown-toc-q-tag&quot;&gt;&amp;lt;q&amp;gt; tag&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This is a sample post.&lt;/p&gt;
-
-&lt;p&gt;Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.&lt;/p&gt;
-
-&lt;h2 id=&quot;heading&quot;&gt;Heading&lt;/h2&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Heading 1
-
-## Heading 2
-
-### Heading 3
-
-#### Heading 4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;body-text&quot;&gt;Body text&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;This is strong&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;This is figure&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Mdc4szJl.jpg&quot; alt=&quot;Elaphurus davidianus&quot; title=&quot;Père David's deer&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;This is emphasized&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;53 = 125. Water is H&lt;sub&gt;2&lt;/sub&gt;O.&lt;/p&gt;
-
-&lt;p&gt;The New York Times &lt;cite&gt;(That’s a citation)&lt;/cite&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;u&gt;Underline&lt;/u&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;del&gt;HTML and CSS are our tools&lt;/del&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Justification:
-This species is listed as Extinct in the Wild, as all populations are still under captive management. The captive population in China has increased in recent years, and the possibility remains that free-ranging populations can be established some time in the near future. When that happens, its Red List status will need to be reassessed.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I follow up the quest. Despite of day and night and death and hell.&lt;/p&gt;
-  &lt;center&gt; -- Idylls of the King, Tennyson &lt;/center&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;list-types&quot;&gt;List Types&lt;/h2&gt;
-
-&lt;h3 id=&quot;ordered-lists&quot;&gt;Ordered Lists&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Item one
-    &lt;ol&gt;
-      &lt;li&gt;sub item one&lt;/li&gt;
-      &lt;li&gt;sub item two&lt;/li&gt;
-      &lt;li&gt;sub item three&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Item two&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;unordered-lists&quot;&gt;Unordered Lists&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Item one&lt;/li&gt;
-  &lt;li&gt;Item two&lt;/li&gt;
-  &lt;li&gt;Item three&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;tables&quot;&gt;Tables&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Header1&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Header2&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Header3&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;cell1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;cell2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;cell3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;cell4&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;cell5&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;cell6&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;cell7&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;cell8&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;cell9&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Kingdom&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Phylum&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Class&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Order&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Family&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;ANIMALIA&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;CHORDATA&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;MAMMALIA&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;CETARTIODACTYLA&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;CERVIDAE&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;code-snippets&quot;&gt;Code Snippets&lt;/h2&gt;
-
-&lt;p&gt;Syntax highlighting via Pygments&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-240px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h4 id=&quot;highlight-with-line-number&quot;&gt;highlight with line number.&lt;/h4&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h4 id=&quot;highlight-using-triple-backticks&quot;&gt;highlight using triple backticks&lt;/h4&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;latex&quot;&gt;\(\LaTeX\)&lt;/h2&gt;
-
-&lt;p&gt;you can use latex with &lt;q&gt;double $$ &lt;/q&gt;&lt;/p&gt;
-
-\[e^{i\pi}+1=0\]
-
-&lt;h2 id=&quot;q-tag&quot;&gt;&amp;lt;q&amp;gt; tag&lt;/h2&gt;
-
-&lt;p&gt;here is a &amp;lt;q&amp;gt; q tag &amp;lt;/q&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;here is a &lt;q&gt; q tag &lt;/q&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 13 Dec 2014 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/2014/12/simple-post.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2014/12/simple-post.html</guid>
-        
-        <category>sample-post</category>
-        
-        
-        <category>articles</category>
-        
-      </item>
-    
-      <item>
-        <title>Père David's deer</title>
-        <description>&lt;p&gt;Père David’s deer (Elaphurus davidianus), also known as the milu (Chinese: 麋鹿; pinyin: mílù) or elaphure, is a species of deer that is currently extinct in the wild—all known specimens are found only in captivity. 
-This semiaquatic animal prefers marshland, and is native to the subtropics of China. 
-It grazes mainly on grass and aquatic plants. 
-It is the only extant member of the genus Elaphurus. 
-Based on genetic comparisons, Père David’s deer is closely related to the deer of the genus Cervus, leading many experts to suggest merging Elaphurus into Cervus&lt;sup&gt;[1]&lt;/sup&gt; or demoting Elaphurus to a subgenus of Cervus.&lt;/p&gt;
-
-&lt;p&gt;[1] &lt;strong&gt;Pitra, C.; Fickel, J.; Meijaard, E.; Groves, C. (1 December 2004).&lt;/strong&gt; &lt;a href=&quot;http://arts.anu.edu.au/grovco/pitra%20deer.pdf&quot;&gt;“Evolution and phylogeny of old world deer”&lt;/a&gt;. &lt;em&gt;Molecular Phylogenetics and Evolution&lt;/em&gt; &lt;strong&gt;33&lt;/strong&gt; (3): 880–895.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 10 Oct 2013 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2013/10/milu.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2013/10/milu.html</guid>
-        
-        <category>Père David's deer</category>
-        
-        <category>milu</category>
-        
-        <category>Elaphurus davidianus</category>
-        
-        
-        <category>articles</category>
         
       </item>
     

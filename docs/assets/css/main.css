@@ -99,6 +99,13 @@ hr { margin-bottom: 30px; border: 0; border-bottom: 1px solid #ccc; }
 
 cite { font-style: italic; text-decoration: underline; }
 
+/** Figure and Figcaption */
+figure { padding: 20px 0 20px 0; margin: auto; }
+
+figure img { margin-left: auto; margin-right: auto; }
+
+figcaption { color: #828282; text-align: center; padding: 2px; }
+
 /** Site header */
 .site-header { position: relative; margin-top: 10px; margin-bottom: 10px; }
 
@@ -132,9 +139,9 @@ cite { font-style: italic; text-decoration: underline; }
 
 .dropdown { z-index: 1; position: relative; display: inline-block; }
 
-.dropdown-content { display: none; position: absolute; min-width: 160px; background-color: #fff; border: 1px solid #e8e8e8; }
+.dropdown-content { display: none; position: absolute; min-width: 160px; background-color: #fff; }
 
-.dropdown-content ul { list-style-type: none; margin: 0; padding: 0; }
+.dropdown-content ul { list-style-type: none; border: 1px solid #e8e8e8; margin: 18px 0 0 0; padding: 0; }
 
 .dropdown-content ul li { padding: 8px 20px; }
 

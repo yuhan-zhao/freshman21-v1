@@ -7,24 +7,24 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width initial-scale=1">
 
-<meta property="og:title" content="test notes 1">
-<title>test notes 1</title>
-<meta property="og:description" content="This is test 1">
-<meta property="og:url" content="http://localhost:4000/2021/12/test-1.html">
+<meta property="og:title" content="Static vs Dynamic Web Pages">
+<title>Static vs Dynamic Web Pages</title>
+<meta property="og:description" content="When we send HTTP requests to the web server, the web server responds to the request and sends the page file (usually with a .html extension) back so that we...">
+<meta property="og:url" content="http://localhost:4000/2021/12/static-dynamic-web.html">
 <meta property="og:site_name" content="HuskyDev">
 <meta property="og:locale" content="">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@">
 <meta name="twitter:creator" content="@">
-<meta name="twitter:title" content="test notes 1">
-<meta name="twitter:description" content="This is test 1">
-<meta name="twitter:url" content="http://localhost:4000/2021/12/test-1.html">
+<meta name="twitter:title" content="Static vs Dynamic Web Pages">
+<meta name="twitter:description" content="When we send HTTP requests to the web server, the web server responds to the request and sends the page file (usually with a .html extension) back so that we...">
+<meta name="twitter:url" content="http://localhost:4000/2021/12/static-dynamic-web.html">
 
 <meta name="keywords" content="Yuhan, blog, HuskyDev">
 
 <link rel="icon" href="/freshman21-v1/assets/images/favicon.ico">
 <link rel="stylesheet" href="/freshman21-v1/assets/css/main.css">
-<link rel="canonical" href="http://localhost:4000/2021/12/test-1.html">
+<link rel="canonical" href="http://localhost:4000/2021/12/static-dynamic-web.html">
 <link rel="alternate" type="application/atom+xml" title="HuskyDev" href="http://localhost:4000/feed.xml" />
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -108,7 +108,7 @@
       <a href="mailto:yuhan-zhao@outlook.com" title="mailto: yuhan-zhao@outlook.com" class="icon-link"><i class="fa fa-envelope"></i></a>
     
     
-      <a href="/freshman21-v1/2021/12/test-1.htmlfeed.xml" title="RSS feed" class="icon-link"><i class="fa fa-rss"></i></a>
+      <a href="/freshman21-v1/2021/12/static-dynamic-web.htmlfeed.xml" title="RSS feed" class="icon-link"><i class="fa fa-rss"></i></a>
     
   </div>
 </nav>
@@ -119,24 +119,83 @@
       <div class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 itemprop="name" class="post-title"><b>test notes 1</b></h1>
-    <meta itemprop="keywords" content="jekyll,html" />
+    <h1 itemprop="name" class="post-title"><b>Static vs Dynamic Web Pages</b></h1>
+    <meta itemprop="keywords" content="tutorial,static web,dynamic web,php" />
     <p class="post-meta">
       Posted on
-      <time itemprop="datePublished" datetime="2021-12-25">
-        Dec 25, 2021
+      <time itemprop="datePublished" datetime="2021-12-22">
+        Dec 22, 2021
       </time>
       &nbsp;in
       
-        <a href="/freshman21-v1/categories/#Notes"><b>Notes</b></a>
+        <a href="/freshman21-v1/categories/#Web"><b>Web</b></a>
          
     </p>
   </header>
 
   <article class="post-content" itemprop="articleBody">
-    <h2 id="this-is-test-1">This is test 1</h2>
+    <p>When we send HTTP requests to the web server, the web server responds to the request and sends the page file (usually with a <code class="language-plaintext highlighter-rouge">.html</code> extension) back so that we can view the entire web page in the browser. The way the web server processes and generates the web pages categorizes the web pages into <strong>static</strong> and <strong>dynamic</strong>.</p>
 
 <!--more-->
+
+<h2 id="static-web-pages">Static Web Pages</h2>
+
+<p>A static web page is a page file stored in the web server. Normally, static web pages are stored with a  <code class="language-plaintext highlighter-rouge">.html</code> file extension. Each web page has a unique URL (Uniform Resource Locator). When we request a static web page, the web server finds the page file in the file system and sends it back. The server will not do any processing of the page file.</p>
+
+<figure>
+    <img src="/freshman21-v1/assets/images/blog/2021/2021-12-22-static.png" height="130" />
+    <figcaption>Fig.1: Static web pages served by the web server.</figcaption>
+</figure>
+
+<h2 id="dynamic-web-pages">Dynamic Web Pages</h2>
+
+<p>The web server responds to dynamic web pages after pre-processing. The dynamic web page is stored in a page file with code. The code instructs the web server to pre-process the page file, generates the corresponding HTML file, and then sends it back to the user.</p>
+
+<p>The pre-processing depends on what code the web server uses. The most common programming language for web server development is <a href="https://www.php.net/">PHP</a>. There are other server-side languages such as Python and C#.</p>
+
+<p>We take PhP for example. A dynamic web page written with PhP language is stored in a page file with a  <code class="language-plaintext highlighter-rouge">.php</code> extension. When we request a dynamic web page, the web server first processes the PHP page file and generates the HTML file. Then the server sends the HTML file back to the user.</p>
+
+<figure>
+    <img src="/freshman21-v1/assets/images/blog/2021/2021-12-22-dynamic.png" height="180" />
+    <figcaption>Fig.2: Dynamic web pages served by the web server.</figcaption>
+</figure>
+
+<p>A simple dynamic web page file with PHP looks like this:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;p&gt;</span>This example shows PHP block and its processed output.<span class="nt">&lt;/p&gt;</span>
+        <span class="cp">&lt;?php
+            echo "String Output from PHP Block.";
+        ?&gt;</span>
+         
+        <span class="nt">&lt;p&gt;</span>This PHP code prints addition of two number in the 
+        processed HTML output.<span class="nt">&lt;/p&gt;</span>
+        <span class="cp">&lt;?php
+            echo 1+1;
+        ?&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h2 id="static-vs-dynamic">Static vs Dynamic</h2>
+
+<p>The user can only view the existing page content on a static web page. Therefore, it is more suitable for blogs and news websites. In addition, it is also more secure because the user cannot modify anything on the web page.</p>
+
+<p>A dynamic web page provides more interactions between the user and the website. The code adds more flexibility to the web server to process the web page. It is more suitable for interactive websites such as Google. Let’s consider two examples.</p>
+
+<p>The first example is the stock price query. If we want to check the stock price right now, we request the web server. The web server receives the request and checks the latest database for the stock price. Then the server generates the HTML page file and sends it back. If the stock price web page is static, which means they are pre-generated and stored in the server, we either cannot find the latest stock price, or the web server has to constantly update the page file to ensure the data is in time. Either way, it is not convenient.</p>
+
+<p>The second example is online computing. If we want to perform complex computation, for example, integration, on the web server, we need to input the data first on the website. The web page has to be dynamic. Otherwise, the web server cannot even know what we input on the page. Let along process the input.</p>
+
+<h2 id="resource">Resource</h2>
+
+<p>Some useful materials also introduce this topic:</p>
+
+<p>[1] <a href="https://elextutorial.com/learn-php/dynamic-vs-static-website-static-website-dynamic-website-definition/#:~:text=The%20dynamic%20web%20page%20code%20written%20in%20the%20PHP%20server,is%20served%20to%20the%20user.">Elextutorial Tutorial: Dynamic vs Static Website</a></p>
+
+<p>[2] <a href="https://about.gitlab.com/blog/2016/06/03/ssg-overview-gitlab-pages-part-1-dynamic-x-static/">GitLab SSGs Part 1: A Static vs Dynamic Website</a></p>
 
   </article>
   <hr />
@@ -146,10 +205,10 @@
 <section class="pager">
   <ul>
     
-    <li class="previous"><a href="/freshman21-v1/2021/12/ssg-jekyll.html" title="Static Site Generators and Introduction to Jelly">&laquo; Previous</a></li>
+    <li class="previous"><a href="/freshman21-v1/2021/12/jekyll-notes.html" title="jekyll notes">&laquo; Previous</a></li>
     
     
-    <li class="next"><a href="/freshman21-v1/2021/12/test-2.html" title="test notes 2">Next &raquo;</a></li>
+    <li class="next"><a href="/freshman21-v1/2021/12/blog-related.html" title="Build Up My Own Blog">Next &raquo;</a></li>
     
   </ul>
 </section>
