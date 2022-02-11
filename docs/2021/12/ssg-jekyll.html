@@ -102,7 +102,7 @@
     <a href="https://www.linkedin.com/in/yhzhao" title="LinkedIn: https://www.linkedin.com/in/yhzhao" class="icon-link"><i class="fa fa-linkedin"></i></a>
     
     
-      <a href="https://github.com/yuhan-zhao" title="GithubID: yuhan-zhao" class="icon-link"><i class="fa fa-github"></i></a>
+      <a href="https://github.com/yuhan16" title="GithubID: yuhan16" class="icon-link"><i class="fa fa-github"></i></a>
     
     
       <a href="mailto:yuhan-zhao@outlook.com" title="mailto: yuhan-zhao@outlook.com" class="icon-link"><i class="fa fa-envelope"></i></a>
@@ -235,479 +235,111 @@
 
     <p>We show an example of <code class="language-plaintext highlighter-rouge">default.html</code> as follows. The template has to include <code class="language-plaintext highlighter-rouge">&lt;html&gt;</code> element to show it is a complete HTML file. However, the template does not need to include every detail. We can use <code class="language-plaintext highlighter-rouge">include</code> command to make the template more consise.</p>
 
-    <p>```html
-&lt;!DOCTYPE html&gt;</p>
-    <html>
-<head>
-
-</head></html>
-  </li>
-</ul>
-<meta charset="utf-8" />
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-<meta name="viewport" content="width=device-width initial-scale=1" />
-
-<meta property="og:title" content="Static Site Generators and Introduction to Jelly" />
-
-<title>Static Site Generators and Introduction to Jelly</title>
-<meta property="og:description" content="I have discussed the difference between static and dynamic web pages in [xxx]. In this post, I will write some of my understanding of Jekyll and static site ..." />
-
-<meta property="og:url" content="http://localhost:4000/2021/12/ssg-jekyll.html" />
-
-<meta property="og:site_name" content="HuskyDev" />
-
-<meta property="og:locale" content="" />
-
-<meta name="twitter:card" content="summary" />
-
-<meta name="twitter:site" content="@" />
-
-<meta name="twitter:creator" content="@" />
-
-<meta name="twitter:title" content="Static Site Generators and Introduction to Jelly" />
-
-<meta name="twitter:description" content="I have discussed the difference between static and dynamic web pages in [xxx]. In this post, I will write some of my understanding of Jekyll and static site ..." />
-
-<meta name="twitter:url" content="http://localhost:4000/2021/12/ssg-jekyll.html" />
-
-<meta name="keywords" content="Yuhan, blog, HuskyDev" />
-
-<link rel="icon" href="/freshman21-v1/assets/images/favicon.ico" />
-
-<link rel="stylesheet" href="/freshman21-v1/assets/css/main.css" />
-
-<link rel="canonical" href="http://localhost:4000/2021/12/ssg-jekyll.html" />
-
-<link rel="alternate" type="application/atom+xml" title="HuskyDev" href="http://localhost:4000/feed.xml" />
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-<!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"-->
-
-<p>&lt;/head&gt;</p>
-
-<body>
-      
-    <div class="container">
-      <header class="site-header">
-  <img src="/freshman21-v1/assets/images/husky_logo_crop.png" />
-  <h1 class="site-title"><a href="/freshman21-v1/">HuskyDev</a></h1>
-  <h3 class="site-title-tagline">Yuhan's Blog</h3>
-</header>
-
-<nav class="wrapper nav-container">
-  <div class="nav-text-col">
-    
-      
-        <a class="page-link" href="/freshman21-v1/">Home</a>
-      
-      
-    
-      
-        
-        <a class="page-link" href="/freshman21-v1/blog/">Blog</a>
-      
-    
-      
-        
-        <a class="page-link" href="/freshman21-v1/categories/">Categories</a>
-      
-    
-      
-        
-        <a class="page-link" href="/freshman21-v1/research/">Research</a>
-      
-    
-      
-        
-        <a class="page-link" href="/freshman21-v1/projects/">Projects</a>
-      
-    
-      
-        <div class="dropdown">
-          <a href="javascript:void(0)" class="page-link">Topics</a>
-          <div class="dropdown-content">
-            <ul>
-            
-              <li><a href="/freshman21-v1/topics/articles">articles</a></li>
-            
-              <li><a href="/freshman21-v1/topics/notes">Notes</a></li>
-            
-              <li><a href="/freshman21-v1/topics/optimization">Optimization</a></li>
-            
-              <li><a href="/freshman21-v1/topics/web">Web</a></li>
-            
-              <li><a href="/freshman21-v1/topics/programming">Programming</a></li>
-            
-            </ul>
-          </div>
-        </div>
-      
-      
-    
-  </div>
-
-  <div class="nav-icon-col">
-    
-    <a href="https://www.linkedin.com/in/yhzhao" title="LinkedIn: https://www.linkedin.com/in/yhzhao" class="icon-link"><i class="fa fa-linkedin"></i></a>
-    
-    
-      <a href="https://github.com/yuhan-zhao" title="GithubID: yuhan-zhao" class="icon-link"><i class="fa fa-github"></i></a>
-    
-    
-      <a href="mailto:yuhan-zhao@outlook.com" title="mailto: yuhan-zhao@outlook.com" class="icon-link"><i class="fa fa-envelope"></i></a>
-    
-    
-      <a href="/freshman21-v1/2021/12/ssg-jekyll.htmlfeed.xml" title="RSS feed" class="icon-link"><i class="fa fa-rss"></i></a>
-    
-  </div>
-</nav>
-      <div class="page-content wrapper">
-        <div class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
-
-  <header class="post-header">
-    <h1 itemprop="name" class="post-title"><b>Build Up My Own Blog</b></h1>
-    <meta itemprop="keywords" content="web programming,jekyll,html,css" />
-    <p class="post-meta">
-      Posted on
-      <time itemprop="datePublished" datetime="2021-12-23">
-        Dec 23, 2021
-      </time>
-      &nbsp;in
-      
-        <a href="/freshman21-v1/categories/#Programming"><b>Programming</b></a>, 
-      
-        <a href="/freshman21-v1/categories/#Web"><b>Web</b></a>
-         
-    </p>
-  </header>
-
-  <article class="post-content" itemprop="articleBody">
-    <p>I have always been eager to build my personal blog from sketch. Now it comes true! This is not as simple as I thought before. So I think it is better take some notes about what I have learned along the way. 
-<!--more-->
-Since I have zero background in web programming, some of the notes may be too easy for experts. Also, there are aubndnat reserouces in the Internet and I will refer to the ones which helped me during the learning.</p>
-
-<p>So let me start from how to select the tools.</p>
-
-<h2 id="static-site-generators">Static Site Generators</h2>
-
-<p>When the web server processes our request to show some webpage, it returns the HTML file stored in the serve, so that our browser can display the content. The HTML file has to be complete to be displayed in the browser. Normally, an HTML file needs to follow some format rules and contains the <strong>head</strong> and <strong>body</strong> elements. For example,</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
-<span class="nt">&lt;head&gt;</span>
-<span class="nt">&lt;title&gt;</span>Page Title<span class="nt">&lt;/title&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
+{% include head.html %}
 <span class="nt">&lt;body&gt;</span>
-
-<span class="nt">&lt;h1&gt;</span>This is a Heading<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;p&gt;</span>This is a paragraph.<span class="nt">&lt;/p&gt;</span>
-
+      
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    {% include header.html %}
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-content wrapper"</span><span class="nt">&gt;</span>
+      {{ content }}
+    <span class="nt">&lt;/div&gt;</span>
+    {% include footer.html %}
+  <span class="nt">&lt;/div&gt;</span>
+      
 <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
-</code></pre></div></div>
+</code></pre></div>    </div>
 
-<p>We can refer to <a href="https://www.w3schools.com/html/">HTML Tutorial</a> to learn the HTML basics. The style sheet for display is defined in <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code>.</p>
+    <p>Other template files can inherit from <code class="language-plaintext highlighter-rouge">default.html</code>. They add more details to <code class="language-plaintext highlighter-rouge">default.html</code> to form the new template. An example of <code class="language-plaintext highlighter-rouge">post.html</code> template is shown in the following. They do <strong>not</strong> need to be a complete HTML file.</p>
 
-<p>Therefore, each webpage corresponds to an HTML file. When we open different pages, we actually receive different HTML files.</p>
-
-<p>This can be troublesome because HTML files are in general lengthy and complex. Besides, we also have to determine which element to use in <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code> and how to display them. For example, if we want to write multiple paragraph in HTML, we have to use <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code> for each paragraph. Writing HTML directly is never easy. If we want to create multiple pages, for example, writing two different blogs, then we have to create two exhausting HTML files.</p>
-
-<p>Do we have some other ways to save our work?</p>
-
-<p>The answer is positive. In fact we can use templates to manage the same layout. If we want to write two blogs, the only difference between the two is actually the content. Therefore, we can define some templates to use so that we only need to focus on writing our blogs instead of worrying about writing a complete HTML file. This is what a site generator does: automating the site generation.</p>
-
-<p>Before talking about the static site generator, we should first figure out what are static and dynamic website. There are two tutorial on GitLab talking a static and dybnamic website, which I think is useful.</p>
-
-<ul>
-  <li>
-    <p><a href="https://about.gitlab.com/blog/2016/06/03/ssg-overview-gitlab-pages-part-1-dynamic-x-static/">SSGs Part 1: A Static vs Dynamic Website</a></p>
-  </li>
-  <li>
-    <p><a href="https://about.gitlab.com/blog/2016/06/10/ssg-overview-gitlab-pages-part-2/">SSGs Part 2: What are modern static site generators</a></p>
-  </li>
-</ul>
-
-<p>In short, a dynamic website support user interactions such as online calculation and manipulating data. The user operations are processed by the web server. Then the result is generated and sent back to the user. In a static website, users simply look the pre-generated content, and there are no interactions.</p>
-
-<p>The static site generator, as the name suggests, generates pre-written HTML files for users to refer to. The SSG is very suitable for personal blog website because there are few interactions when we read blogs. The major objective of a blog website is to present the content to users. It is an automation tool that allow people only focus on the important part of write a blog: the content.</p>
-
-<p>There are many SSGs available. For example, <a href="[https://nextjs.org](https://nextjs.org/)">Next.js</a>, <a href="https://jekyllrb.com">Jekyll</a>, <a href="https://gohugo.io/">Hugo</a>. <a href="https://www.gatsbyjs.com/">Gatsby</a>, <a href="https://nuxtjs.org/">Nuxt</a>. Any of them does a good job.</p>
-
-<p><a href="https://elextutorial.com/learn-php/dynamic-vs-static-website-static-website-dynamic-website-definition/#:~:text=The%20dynamic%20web%20page%20code%20written%20in%20the%20PHP%20server,is%20served%20to%20the%20user.">Dynamic vs Static Website</a></p>
-
-<h2 id="jekyll">Jekyll</h2>
-
-<p>The reason I choose Jekyll, well…, is because the Github only support it when I do the first search. I know that WordPress has a lot of fantastic templates to choose. But I still have to buy a domain name. Why not use the free resource? Besides, it is not exciting to use template at all. I want to create my own website.</p>
-
-
-  </article>
-  <hr />
-</div>
-
-
-<section class="pager">
-  <ul>
-    
-    <li class="previous"><a href="/freshman21-v1/2021/12/static-dynamic-web.html" title="Static vs Dynamic Web Pages">&laquo; Previous</a></li>
-    
-    
-    <li class="next"><a href="/freshman21-v1/2021/12/ssg-jekyll.html" title="Static Site Generators and Introduction to Jelly">Next &raquo;</a></li>
-    
-  </ul>
-</section>
-
-<div id="disqus_thread"></div>
-
-<script type="text/javascript">
-
-  var disqus_developer = 1;
-
-var disqus_shortname ='';
-/* * * DON'T EDIT BELOW THIS LINE * * */
-(function() {
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-
-      </div>
-      <footer class="site-footer">
-
-  <p>Copyright &copy; <a href="/freshman21-v1/">HuskyDev</a></p>
-  <p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a> 
-  on 
-  <a href="https://github.com/">Github</a>
-  | Inspired by Theme <a href="https://github.com/yulijia/freshman21/">Freshman21</a> 
-  | Design by <a href="/freshman21-v1/">Yuhan</a>  
-&lt;/footer&gt;
-
-    &lt;/div&gt;
-      
-  &lt;/body&gt;
-  &lt;/html&gt;
-  ```
-
-  Other template files can inherit from `default.html`. They add more details to `default.html` to form the new template. An example of `post.html` template is shown in the following. They do **not** need to be a complete HTML file.
-
-  ```html
-  ---
-  layout: default
-  ---
-  <div class="post">
-  
-    <header class="post-header">
-      <h1 class="post-title">Static Site Generators and Introduction to Jelly</h1>
-    </header>
-  
-    <article class="post-content"> 
-      <div class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
-
-  <header class="post-header">
-    <h1 itemprop="name" class="post-title"><b>Build Up My Own Blog</b></h1>
-    <meta itemprop="keywords" content="web programming,jekyll,html,css" />
-    <p class="post-meta">
-      Posted on
-      <time itemprop="datePublished" datetime="2021-12-23">
-        Dec 23, 2021
-      </time>
-      &nbsp;in
-      
-        <a href="/freshman21-v1/categories/#Programming"><b>Programming</b></a>, 
-      
-        <a href="/freshman21-v1/categories/#Web"><b>Web</b></a>
-         
-    </p>
-  </header>
-
-  <article class="post-content" itemprop="articleBody">
-    <p>I have always been eager to build my personal blog from sketch. Now it comes true! This is not as simple as I thought before. So I think it is better take some notes about what I have learned along the way. 
-<!--more-->
-Since I have zero background in web programming, some of the notes may be too easy for experts. Also, there are aubndnat reserouces in the Internet and I will refer to the ones which helped me during the learning.</p>
-
-<p>So let me start from how to select the tools.</p>
-
-<h2 id="static-site-generators">Static Site Generators</h2>
-
-<p>When the web server processes our request to show some webpage, it returns the HTML file stored in the serve, so that our browser can display the content. The HTML file has to be complete to be displayed in the browser. Normally, an HTML file needs to follow some format rules and contains the <strong>head</strong> and <strong>body</strong> elements. For example,</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-<span class="nt">&lt;head&gt;</span>
-<span class="nt">&lt;title&gt;</span>Page Title<span class="nt">&lt;/title&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
-
-<span class="nt">&lt;h1&gt;</span>This is a Heading<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;p&gt;</span>This is a paragraph.<span class="nt">&lt;/p&gt;</span>
-
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div></div>
-
-<p>We can refer to <a href="https://www.w3schools.com/html/">HTML Tutorial</a> to learn the HTML basics. The style sheet for display is defined in <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code>.</p>
-
-<p>Therefore, each webpage corresponds to an HTML file. When we open different pages, we actually receive different HTML files.</p>
-
-<p>This can be troublesome because HTML files are in general lengthy and complex. Besides, we also have to determine which element to use in <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code> and how to display them. For example, if we want to write multiple paragraph in HTML, we have to use <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code> for each paragraph. Writing HTML directly is never easy. If we want to create multiple pages, for example, writing two different blogs, then we have to create two exhausting HTML files.</p>
-
-<p>Do we have some other ways to save our work?</p>
-
-<p>The answer is positive. In fact we can use templates to manage the same layout. If we want to write two blogs, the only difference between the two is actually the content. Therefore, we can define some templates to use so that we only need to focus on writing our blogs instead of worrying about writing a complete HTML file. This is what a site generator does: automating the site generation.</p>
-
-<p>Before talking about the static site generator, we should first figure out what are static and dynamic website. There are two tutorial on GitLab talking a static and dybnamic website, which I think is useful.</p>
-
-<ul>
-  <li>
-    <p><a href="https://about.gitlab.com/blog/2016/06/03/ssg-overview-gitlab-pages-part-1-dynamic-x-static/">SSGs Part 1: A Static vs Dynamic Website</a></p>
-  </li>
-  <li>
-    <p><a href="https://about.gitlab.com/blog/2016/06/10/ssg-overview-gitlab-pages-part-2/">SSGs Part 2: What are modern static site generators</a></p>
-  </li>
-</ul>
-
-<p>In short, a dynamic website support user interactions such as online calculation and manipulating data. The user operations are processed by the web server. Then the result is generated and sent back to the user. In a static website, users simply look the pre-generated content, and there are no interactions.</p>
-
-<p>The static site generator, as the name suggests, generates pre-written HTML files for users to refer to. The SSG is very suitable for personal blog website because there are few interactions when we read blogs. The major objective of a blog website is to present the content to users. It is an automation tool that allow people only focus on the important part of write a blog: the content.</p>
-
-<p>There are many SSGs available. For example, <a href="[https://nextjs.org](https://nextjs.org/)">Next.js</a>, <a href="https://jekyllrb.com">Jekyll</a>, <a href="https://gohugo.io/">Hugo</a>. <a href="https://www.gatsbyjs.com/">Gatsby</a>, <a href="https://nuxtjs.org/">Nuxt</a>. Any of them does a good job.</p>
-
-<p><a href="https://elextutorial.com/learn-php/dynamic-vs-static-website-static-website-dynamic-website-definition/#:~:text=The%20dynamic%20web%20page%20code%20written%20in%20the%20PHP%20server,is%20served%20to%20the%20user.">Dynamic vs Static Website</a></p>
-
-<h2 id="jekyll">Jekyll</h2>
-
-<p>The reason I choose Jekyll, well…, is because the Github only support it when I do the first search. I know that WordPress has a lot of fantastic templates to choose. But I still have to buy a domain name. Why not use the free resource? Besides, it is not exciting to use template at all. I want to create my own website.</p>
-
-
-  </article>
-  <hr />
-</div>
-
-
-<section class="pager">
-  <ul>
-    
-    <li class="previous"><a href="/freshman21-v1/2021/12/static-dynamic-web.html" title="Static vs Dynamic Web Pages">&laquo; Previous</a></li>
-    
-    
-    <li class="next"><a href="/freshman21-v1/2021/12/ssg-jekyll.html" title="Static Site Generators and Introduction to Jelly">Next &raquo;</a></li>
-    
-  </ul>
-</section>
-
-<div id="disqus_thread"></div>
-
-<script type="text/javascript">
-
-  var disqus_developer = 1;
-
-var disqus_shortname ='';
-/* * * DON'T EDIT BELOW THIS LINE * * */
-(function() {
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-
-    </article>
-  
-    
-    <div id="disqus_thread"></div>
-
-<script type="text/javascript">
-
-  var disqus_developer = 1;
-
-var disqus_shortname ='';
-/* * * DON'T EDIT BELOW THIS LINE * * */
-(function() {
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-    
-  
-  </div> 
-  ```
-
-- `_include` directory stores the frequently used HTML snippets which are used by `include` command. For example, the `footer.html` can be the following.
-
-  ```html
-  <footer class="site-footer">
-    <p>Copyright &copy; <a href="/freshman21-v1/">HuskyDev</a></p>
-    <p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a> 
-  &lt;/footer&gt;
-  ```
-
-- `_sass` directory stores the style sheets (CSS files) for HTML files. These files determine the display format of HTML file. We refer to [CSS Tutorial](https://www.w3schools.com/css/) to learn more about the CSS basics. 
-
-The above three directories are related to web page templates and display style. After completing the template, we can simple call which template to use in each post file. Jekyll will generate the corresponding HTML file with the desired template for us.
-
-- `_config.yml` is the configuration file for Jekyll. We can define user-defined variables in this file.
-- `index.html` or `index.md` is the index page. For web server, there is always an index page for each directory. By default, the web server will send the index page back to the user if the user does not specify in detail which HTML file to look for.
-
-- `_site` directory stores all the generated web pages. We can put `_site` directory to the server, for example GitHub. Then the blog website is ready to view.
-
-### Templating Language
-
-&gt; A templating language basically is a language which allows defining placeholders that should later on be replaced for the purpose of implementing designs. Obviously modern template languages not only support placeholders, but also loops and conditions which are often necessary for designing a web page.
-&gt;
-&gt; *From [Stack Overflow: What is a templating language?](https://stackoverflow.com/questions/4026597/what-is-a-templating-language)*
-
-Jekyll uses the [Liquid](https://shopify.github.io/liquid/) templating language to process templates. We can think the templating language as a "scripting language" in HTML files. It defines how Jekyll process the HTML files and generate the final version. 
-
-**Note:** The templating language is different from other real scripting language such as JavaScript and Python. The browser cannot read it. All the template statements will be replaced by HTML after Jekyll process them. So in the final versions of the generated HTML file, there is no templating Language.
-
-Liquid has ample functions such as `include` function and other string processing functions, which facilitate the static web page writing.
-
-### Front Matter and Variables
-
-The front matter is specified by `---` block at the front of each file. If we add the front matter to a file, it means that we want Jekyll to process this file. The process can be including other HTML snippets, or replacing template statements. 
-
-The front matter specifies variables for processing. For example, in `post.html`  layout, we add `layout` variable to the front matter. So Jekyll will first substitute the HTML snippets and then put every thing to back to the `default.html` template to generate the final HTML file.
-
-Some global variables are reserved by Jekyll, for example, `layout`, `content`, `site`, `page`. See [Jekyll Variables](https://jekyllrb.com/docs/variables/) for more information. These variables are useful when we write the template HTML files.
-
-We can also define local variables (user-defined variables) in the front matter and reference it. For example, we define `mylogo-link` variable in the following post file:
-
-```markdown
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: default
 ---
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"post"</span><span class="nt">&gt;</span>
+  
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"post-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"post-title"</span><span class="nt">&gt;</span>{{ page.title }}<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  
+  <span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"post-content"</span><span class="nt">&gt;</span> 
+    {{ content }}
+  <span class="nt">&lt;/article&gt;</span>
+  
+  {% if page.comments %}
+  {% include comments.html %}
+  {% endif %}
+  
+<span class="nt">&lt;/div&gt;</span> 
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">_include</code> directory stores the frequently used HTML snippets which are used by <code class="language-plaintext highlighter-rouge">include</code> command. For example, the <code class="language-plaintext highlighter-rouge">footer.html</code> can be the following.</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"site-footer"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Copyright <span class="ni">&amp;copy;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/freshman21-v1/"</span><span class="nt">&gt;</span>HuskyDev<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Powered by <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/jekyll/jekyll"</span><span class="nt">&gt;</span>Jekyll<span class="nt">&lt;/a&gt;</span> 
+<span class="nt">&lt;/footer&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">_sass</code> directory stores the style sheets (CSS files) for HTML files. These files determine the display format of HTML file. We refer to <a href="https://www.w3schools.com/css/">CSS Tutorial</a> to learn more about the CSS basics.</p>
+  </li>
+</ul>
+
+<p>The above three directories are related to web page templates and display style. After completing the template, we can simple call which template to use in each post file. Jekyll will generate the corresponding HTML file with the desired template for us.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_config.yml</code> is the configuration file for Jekyll. We can define user-defined variables in this file.</li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">index.html</code> or <code class="language-plaintext highlighter-rouge">index.md</code> is the index page. For web server, there is always an index page for each directory. By default, the web server will send the index page back to the user if the user does not specify in detail which HTML file to look for.</p>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">_site</code> directory stores all the generated web pages. We can put <code class="language-plaintext highlighter-rouge">_site</code> directory to the server, for example GitHub. Then the blog website is ready to view.</li>
+</ul>
+
+<h3 id="templating-language">Templating Language</h3>
+
+<blockquote>
+  <p>A templating language basically is a language which allows defining placeholders that should later on be replaced for the purpose of implementing designs. Obviously modern template languages not only support placeholders, but also loops and conditions which are often necessary for designing a web page.</p>
+
+  <p><em>From <a href="https://stackoverflow.com/questions/4026597/what-is-a-templating-language">Stack Overflow: What is a templating language?</a></em></p>
+</blockquote>
+
+<p>Jekyll uses the <a href="https://shopify.github.io/liquid/">Liquid</a> templating language to process templates. We can think the templating language as a “scripting language” in HTML files. It defines how Jekyll process the HTML files and generate the final version.</p>
+
+<p><strong>Note:</strong> The templating language is different from other real scripting language such as JavaScript and Python. The browser cannot read it. All the template statements will be replaced by HTML after Jekyll process them. So in the final versions of the generated HTML file, there is no templating Language.</p>
+
+<p>Liquid has ample functions such as <code class="language-plaintext highlighter-rouge">include</code> function and other string processing functions, which facilitate the static web page writing.</p>
+
+<h3 id="front-matter-and-variables">Front Matter and Variables</h3>
+
+<p>The front matter is specified by <code class="language-plaintext highlighter-rouge">---</code> block at the front of each file. If we add the front matter to a file, it means that we want Jekyll to process this file. The process can be including other HTML snippets, or replacing template statements.</p>
+
+<p>The front matter specifies variables for processing. For example, in <code class="language-plaintext highlighter-rouge">post.html</code>  layout, we add <code class="language-plaintext highlighter-rouge">layout</code> variable to the front matter. So Jekyll will first substitute the HTML snippets and then put every thing to back to the <code class="language-plaintext highlighter-rouge">default.html</code> template to generate the final HTML file.</p>
+
+<p>Some global variables are reserved by Jekyll, for example, <code class="language-plaintext highlighter-rouge">layout</code>, <code class="language-plaintext highlighter-rouge">content</code>, <code class="language-plaintext highlighter-rouge">site</code>, <code class="language-plaintext highlighter-rouge">page</code>. See <a href="https://jekyllrb.com/docs/variables/">Jekyll Variables</a> for more information. These variables are useful when we write the template HTML files.</p>
+
+<p>We can also define local variables (user-defined variables) in the front matter and reference it. For example, we define <code class="language-plaintext highlighter-rouge">mylogo-link</code> variable in the following post file:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
 mylogo_link: https://path/to/image/.png
 ---
-```
+</code></pre></div></div>
 
-Then we can reference this variable in the file by writting ``.
+<p>Then we can reference this variable in the file by writting <code class="language-plaintext highlighter-rouge">{{ mylogo_link }}</code>.</p>
 
-We can also define variables in `_config.yml`. The variables are in the `site` domain and can be accessed by ``.
+<p>We can also define variables in <code class="language-plaintext highlighter-rouge">_config.yml</code>. The variables are in the <code class="language-plaintext highlighter-rouge">site</code> domain and can be accessed by <code class="language-plaintext highlighter-rouge">{{site.my_variable}}</code>.</p>
 
-### Summary
+<h3 id="summary">Summary</h3>
 
-We have introduced the general framework of Jekyll and the idea of how Jekyll works. In the future posts, I will write more details about Jekyll usage and the problems I have met when I use Jekyll.
+<p>We have introduced the general framework of Jekyll and the idea of how Jekyll works. In the future posts, I will write more details about Jekyll usage and the problems I have met when I use Jekyll.</p>
 
+<h2 id="resources">Resources</h2>
 
+<p>There are some resources discussing the functions of SSGs:</p>
 
-## Resources
-
-There are some resources discussing the functions of SSGs:
-
- [GitLab SSGs Part 2: What are modern static site generators](https://about.gitlab.com/blog/2016/06/10/ssg-overview-gitlab-pages-part-2/) 
-</p></footer></p></footer></div></body>
+<p><a href="https://about.gitlab.com/blog/2016/06/10/ssg-overview-gitlab-pages-part-2/">GitLab SSGs Part 2: What are modern static site generators</a></p>
 
   </article>
   <hr />

@@ -5,8 +5,8 @@
     <description>HuskDev is Yuhan's personal blog.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/zfeed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Feb 2022 23:06:20 -0500</pubDate>
-    <lastBuildDate>Tue, 08 Feb 2022 23:06:20 -0500</lastBuildDate>
+    <pubDate>Thu, 10 Feb 2022 22:45:06 -0500</pubDate>
+    <lastBuildDate>Thu, 10 Feb 2022 22:45:06 -0500</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
     
       <item>
@@ -148,479 +148,111 @@
 
     &lt;p&gt;We show an example of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;default.html&lt;/code&gt; as follows. The template has to include &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;html&amp;gt;&lt;/code&gt; element to show it is a complete HTML file. However, the template does not need to include every detail. We can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;include&lt;/code&gt; command to make the template more consise.&lt;/p&gt;
 
-    &lt;p&gt;```html
-&amp;lt;!DOCTYPE html&amp;gt;&lt;/p&gt;
-    &lt;html&gt;
-&lt;head&gt;
-
-&lt;/head&gt;&lt;/html&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-&lt;meta charset=&quot;utf-8&quot; /&gt;
-
-&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
-
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width initial-scale=1&quot; /&gt;
-
-&lt;meta property=&quot;og:title&quot; content=&quot;Static Site Generators and Introduction to Jelly&quot; /&gt;
-
-&lt;title&gt;Static Site Generators and Introduction to Jelly&lt;/title&gt;
-&lt;meta property=&quot;og:description&quot; content=&quot;I have discussed the difference between static and dynamic web pages in [xxx]. In this post, I will write some of my understanding of Jekyll and static site ...&quot; /&gt;
-
-&lt;meta property=&quot;og:url&quot; content=&quot;http://localhost:4000/2021/12/ssg-jekyll.html&quot; /&gt;
-
-&lt;meta property=&quot;og:site_name&quot; content=&quot;HuskyDev&quot; /&gt;
-
-&lt;meta property=&quot;og:locale&quot; content=&quot;&quot; /&gt;
-
-&lt;meta name=&quot;twitter:card&quot; content=&quot;summary&quot; /&gt;
-
-&lt;meta name=&quot;twitter:site&quot; content=&quot;@&quot; /&gt;
-
-&lt;meta name=&quot;twitter:creator&quot; content=&quot;@&quot; /&gt;
-
-&lt;meta name=&quot;twitter:title&quot; content=&quot;Static Site Generators and Introduction to Jelly&quot; /&gt;
-
-&lt;meta name=&quot;twitter:description&quot; content=&quot;I have discussed the difference between static and dynamic web pages in [xxx]. In this post, I will write some of my understanding of Jekyll and static site ...&quot; /&gt;
-
-&lt;meta name=&quot;twitter:url&quot; content=&quot;http://localhost:4000/2021/12/ssg-jekyll.html&quot; /&gt;
-
-&lt;meta name=&quot;keywords&quot; content=&quot;Yuhan, blog, HuskyDev&quot; /&gt;
-
-&lt;link rel=&quot;icon&quot; href=&quot;/freshman21-v1/assets/images/favicon.ico&quot; /&gt;
-
-&lt;link rel=&quot;stylesheet&quot; href=&quot;/freshman21-v1/assets/css/main.css&quot; /&gt;
-
-&lt;link rel=&quot;canonical&quot; href=&quot;http://localhost:4000/2021/12/ssg-jekyll.html&quot; /&gt;
-
-&lt;link rel=&quot;alternate&quot; type=&quot;application/atom+xml&quot; title=&quot;HuskyDev&quot; href=&quot;http://localhost:4000/feed.xml&quot; /&gt;
-
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt;
-
-&lt;!--link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot;--&gt;
-
-&lt;p&gt;&amp;lt;/head&amp;gt;&lt;/p&gt;
-
-&lt;body&gt;
-      
-    &lt;div class=&quot;container&quot;&gt;
-      &lt;header class=&quot;site-header&quot;&gt;
-  &lt;img src=&quot;/freshman21-v1/assets/images/husky_logo_crop.png&quot; /&gt;
-  &lt;h1 class=&quot;site-title&quot;&gt;&lt;a href=&quot;/freshman21-v1/&quot;&gt;HuskyDev&lt;/a&gt;&lt;/h1&gt;
-  &lt;h3 class=&quot;site-title-tagline&quot;&gt;Yuhan's Blog&lt;/h3&gt;
-&lt;/header&gt;
-
-&lt;nav class=&quot;wrapper nav-container&quot;&gt;
-  &lt;div class=&quot;nav-text-col&quot;&gt;
-    
-      
-        &lt;a class=&quot;page-link&quot; href=&quot;/freshman21-v1/&quot;&gt;Home&lt;/a&gt;
-      
-      
-    
-      
-        
-        &lt;a class=&quot;page-link&quot; href=&quot;/freshman21-v1/blog/&quot;&gt;Blog&lt;/a&gt;
-      
-    
-      
-        
-        &lt;a class=&quot;page-link&quot; href=&quot;/freshman21-v1/categories/&quot;&gt;Categories&lt;/a&gt;
-      
-    
-      
-        
-        &lt;a class=&quot;page-link&quot; href=&quot;/freshman21-v1/research/&quot;&gt;Research&lt;/a&gt;
-      
-    
-      
-        
-        &lt;a class=&quot;page-link&quot; href=&quot;/freshman21-v1/projects/&quot;&gt;Projects&lt;/a&gt;
-      
-    
-      
-        &lt;div class=&quot;dropdown&quot;&gt;
-          &lt;a href=&quot;javascript:void(0)&quot; class=&quot;page-link&quot;&gt;Topics&lt;/a&gt;
-          &lt;div class=&quot;dropdown-content&quot;&gt;
-            &lt;ul&gt;
-            
-              &lt;li&gt;&lt;a href=&quot;/freshman21-v1/topics/articles&quot;&gt;articles&lt;/a&gt;&lt;/li&gt;
-            
-              &lt;li&gt;&lt;a href=&quot;/freshman21-v1/topics/notes&quot;&gt;Notes&lt;/a&gt;&lt;/li&gt;
-            
-              &lt;li&gt;&lt;a href=&quot;/freshman21-v1/topics/optimization&quot;&gt;Optimization&lt;/a&gt;&lt;/li&gt;
-            
-              &lt;li&gt;&lt;a href=&quot;/freshman21-v1/topics/web&quot;&gt;Web&lt;/a&gt;&lt;/li&gt;
-            
-              &lt;li&gt;&lt;a href=&quot;/freshman21-v1/topics/programming&quot;&gt;Programming&lt;/a&gt;&lt;/li&gt;
-            
-            &lt;/ul&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      
-      
-    
-  &lt;/div&gt;
-
-  &lt;div class=&quot;nav-icon-col&quot;&gt;
-    
-    &lt;a href=&quot;https://www.linkedin.com/in/yhzhao&quot; title=&quot;LinkedIn: https://www.linkedin.com/in/yhzhao&quot; class=&quot;icon-link&quot;&gt;&lt;i class=&quot;fa fa-linkedin&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-    
-    
-      &lt;a href=&quot;https://github.com/yuhan-zhao&quot; title=&quot;GithubID: yuhan-zhao&quot; class=&quot;icon-link&quot;&gt;&lt;i class=&quot;fa fa-github&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-    
-    
-      &lt;a href=&quot;mailto:yuhan-zhao@outlook.com&quot; title=&quot;mailto: yuhan-zhao@outlook.com&quot; class=&quot;icon-link&quot;&gt;&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-    
-    
-      &lt;a href=&quot;/freshman21-v1/2021/12/ssg-jekyll.htmlfeed.xml&quot; title=&quot;RSS feed&quot; class=&quot;icon-link&quot;&gt;&lt;i class=&quot;fa fa-rss&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-    
-  &lt;/div&gt;
-&lt;/nav&gt;
-      &lt;div class=&quot;page-content wrapper&quot;&gt;
-        &lt;div class=&quot;post&quot; itemscope=&quot;&quot; itemtype=&quot;http://schema.org/BlogPosting&quot;&gt;
-
-  &lt;header class=&quot;post-header&quot;&gt;
-    &lt;h1 itemprop=&quot;name&quot; class=&quot;post-title&quot;&gt;&lt;b&gt;Build Up My Own Blog&lt;/b&gt;&lt;/h1&gt;
-    &lt;meta itemprop=&quot;keywords&quot; content=&quot;web programming,jekyll,html,css&quot; /&gt;
-    &lt;p class=&quot;post-meta&quot;&gt;
-      Posted on
-      &lt;time itemprop=&quot;datePublished&quot; datetime=&quot;2021-12-23&quot;&gt;
-        Dec 23, 2021
-      &lt;/time&gt;
-      &amp;nbsp;in
-      
-        &lt;a href=&quot;/freshman21-v1/categories/#Programming&quot;&gt;&lt;b&gt;Programming&lt;/b&gt;&lt;/a&gt;, 
-      
-        &lt;a href=&quot;/freshman21-v1/categories/#Web&quot;&gt;&lt;b&gt;Web&lt;/b&gt;&lt;/a&gt;
-         
-    &lt;/p&gt;
-  &lt;/header&gt;
-
-  &lt;article class=&quot;post-content&quot; itemprop=&quot;articleBody&quot;&gt;
-    &lt;p&gt;I have always been eager to build my personal blog from sketch. Now it comes true! This is not as simple as I thought before. So I think it is better take some notes about what I have learned along the way. 
-&lt;!--more--&gt;
-Since I have zero background in web programming, some of the notes may be too easy for experts. Also, there are aubndnat reserouces in the Internet and I will refer to the ones which helped me during the learning.&lt;/p&gt;
-
-&lt;p&gt;So let me start from how to select the tools.&lt;/p&gt;
-
-&lt;h2 id=&quot;static-site-generators&quot;&gt;Static Site Generators&lt;/h2&gt;
-
-&lt;p&gt;When the web server processes our request to show some webpage, it returns the HTML file stored in the serve, so that our browser can display the content. The HTML file has to be complete to be displayed in the browser. Normally, an HTML file needs to follow some format rules and contains the &lt;strong&gt;head&lt;/strong&gt; and &lt;strong&gt;body&lt;/strong&gt; elements. For example,&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+    &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Page Title&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+{% include head.html %}
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;This is a Heading&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This is a paragraph.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-
+      
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;container&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    {% include header.html %}
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;page-content wrapper&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      {{ content }}
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    {% include footer.html %}
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+      
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
 
-&lt;p&gt;We can refer to &lt;a href=&quot;https://www.w3schools.com/html/&quot;&gt;HTML Tutorial&lt;/a&gt; to learn the HTML basics. The style sheet for display is defined in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+    &lt;p&gt;Other template files can inherit from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;default.html&lt;/code&gt;. They add more details to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;default.html&lt;/code&gt; to form the new template. An example of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;post.html&lt;/code&gt; template is shown in the following. They do &lt;strong&gt;not&lt;/strong&gt; need to be a complete HTML file.&lt;/p&gt;
 
-&lt;p&gt;Therefore, each webpage corresponds to an HTML file. When we open different pages, we actually receive different HTML files.&lt;/p&gt;
-
-&lt;p&gt;This can be troublesome because HTML files are in general lengthy and complex. Besides, we also have to determine which element to use in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt; and how to display them. For example, if we want to write multiple paragraph in HTML, we have to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;p&amp;gt;&lt;/code&gt; for each paragraph. Writing HTML directly is never easy. If we want to create multiple pages, for example, writing two different blogs, then we have to create two exhausting HTML files.&lt;/p&gt;
-
-&lt;p&gt;Do we have some other ways to save our work?&lt;/p&gt;
-
-&lt;p&gt;The answer is positive. In fact we can use templates to manage the same layout. If we want to write two blogs, the only difference between the two is actually the content. Therefore, we can define some templates to use so that we only need to focus on writing our blogs instead of worrying about writing a complete HTML file. This is what a site generator does: automating the site generation.&lt;/p&gt;
-
-&lt;p&gt;Before talking about the static site generator, we should first figure out what are static and dynamic website. There are two tutorial on GitLab talking a static and dybnamic website, which I think is useful.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://about.gitlab.com/blog/2016/06/03/ssg-overview-gitlab-pages-part-1-dynamic-x-static/&quot;&gt;SSGs Part 1: A Static vs Dynamic Website&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://about.gitlab.com/blog/2016/06/10/ssg-overview-gitlab-pages-part-2/&quot;&gt;SSGs Part 2: What are modern static site generators&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In short, a dynamic website support user interactions such as online calculation and manipulating data. The user operations are processed by the web server. Then the result is generated and sent back to the user. In a static website, users simply look the pre-generated content, and there are no interactions.&lt;/p&gt;
-
-&lt;p&gt;The static site generator, as the name suggests, generates pre-written HTML files for users to refer to. The SSG is very suitable for personal blog website because there are few interactions when we read blogs. The major objective of a blog website is to present the content to users. It is an automation tool that allow people only focus on the important part of write a blog: the content.&lt;/p&gt;
-
-&lt;p&gt;There are many SSGs available. For example, &lt;a href=&quot;[https://nextjs.org](https://nextjs.org/)&quot;&gt;Next.js&lt;/a&gt;, &lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;, &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;. &lt;a href=&quot;https://www.gatsbyjs.com/&quot;&gt;Gatsby&lt;/a&gt;, &lt;a href=&quot;https://nuxtjs.org/&quot;&gt;Nuxt&lt;/a&gt;. Any of them does a good job.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://elextutorial.com/learn-php/dynamic-vs-static-website-static-website-dynamic-website-definition/#:~:text=The%20dynamic%20web%20page%20code%20written%20in%20the%20PHP%20server,is%20served%20to%20the%20user.&quot;&gt;Dynamic vs Static Website&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
-
-&lt;p&gt;The reason I choose Jekyll, well…, is because the Github only support it when I do the first search. I know that WordPress has a lot of fantastic templates to choose. But I still have to buy a domain name. Why not use the free resource? Besides, it is not exciting to use template at all. I want to create my own website.&lt;/p&gt;
-
-
-  &lt;/article&gt;
-  &lt;hr /&gt;
-&lt;/div&gt;
-
-
-&lt;section class=&quot;pager&quot;&gt;
-  &lt;ul&gt;
-    
-    &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/freshman21-v1/2021/12/static-dynamic-web.html&quot; title=&quot;Static vs Dynamic Web Pages&quot;&gt;&amp;laquo; Previous&lt;/a&gt;&lt;/li&gt;
-    
-    
-    &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/freshman21-v1/2021/12/ssg-jekyll.html&quot; title=&quot;Static Site Generators and Introduction to Jelly&quot;&gt;Next &amp;raquo;&lt;/a&gt;&lt;/li&gt;
-    
-  &lt;/ul&gt;
-&lt;/section&gt;
-
-&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
-
-&lt;script type=&quot;text/javascript&quot;&gt;
-
-  var disqus_developer = 1;
-
-var disqus_shortname ='';
-/* * * DON'T EDIT BELOW THIS LINE * * */
-(function() {
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-&lt;/script&gt;
-
-&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
-
-
-
-      &lt;/div&gt;
-      &lt;footer class=&quot;site-footer&quot;&gt;
-
-  &lt;p&gt;Copyright &amp;copy; &lt;a href=&quot;/freshman21-v1/&quot;&gt;HuskyDev&lt;/a&gt;&lt;/p&gt;
-  &lt;p&gt;Powered by &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll&lt;/a&gt; 
-  on 
-  &lt;a href=&quot;https://github.com/&quot;&gt;Github&lt;/a&gt;
-  | Inspired by Theme &lt;a href=&quot;https://github.com/yulijia/freshman21/&quot;&gt;Freshman21&lt;/a&gt; 
-  | Design by &lt;a href=&quot;/freshman21-v1/&quot;&gt;Yuhan&lt;/a&gt;  
-&amp;lt;/footer&amp;gt;
-
-    &amp;lt;/div&amp;gt;
-      
-  &amp;lt;/body&amp;gt;
-  &amp;lt;/html&amp;gt;
-  ```
-
-  Other template files can inherit from `default.html`. They add more details to `default.html` to form the new template. An example of `post.html` template is shown in the following. They do **not** need to be a complete HTML file.
-
-  ```html
-  ---
-  layout: default
-  ---
-  &lt;div class=&quot;post&quot;&gt;
-  
-    &lt;header class=&quot;post-header&quot;&gt;
-      &lt;h1 class=&quot;post-title&quot;&gt;Static Site Generators and Introduction to Jelly&lt;/h1&gt;
-    &lt;/header&gt;
-  
-    &lt;article class=&quot;post-content&quot;&gt; 
-      &lt;div class=&quot;post&quot; itemscope=&quot;&quot; itemtype=&quot;http://schema.org/BlogPosting&quot;&gt;
-
-  &lt;header class=&quot;post-header&quot;&gt;
-    &lt;h1 itemprop=&quot;name&quot; class=&quot;post-title&quot;&gt;&lt;b&gt;Build Up My Own Blog&lt;/b&gt;&lt;/h1&gt;
-    &lt;meta itemprop=&quot;keywords&quot; content=&quot;web programming,jekyll,html,css&quot; /&gt;
-    &lt;p class=&quot;post-meta&quot;&gt;
-      Posted on
-      &lt;time itemprop=&quot;datePublished&quot; datetime=&quot;2021-12-23&quot;&gt;
-        Dec 23, 2021
-      &lt;/time&gt;
-      &amp;nbsp;in
-      
-        &lt;a href=&quot;/freshman21-v1/categories/#Programming&quot;&gt;&lt;b&gt;Programming&lt;/b&gt;&lt;/a&gt;, 
-      
-        &lt;a href=&quot;/freshman21-v1/categories/#Web&quot;&gt;&lt;b&gt;Web&lt;/b&gt;&lt;/a&gt;
-         
-    &lt;/p&gt;
-  &lt;/header&gt;
-
-  &lt;article class=&quot;post-content&quot; itemprop=&quot;articleBody&quot;&gt;
-    &lt;p&gt;I have always been eager to build my personal blog from sketch. Now it comes true! This is not as simple as I thought before. So I think it is better take some notes about what I have learned along the way. 
-&lt;!--more--&gt;
-Since I have zero background in web programming, some of the notes may be too easy for experts. Also, there are aubndnat reserouces in the Internet and I will refer to the ones which helped me during the learning.&lt;/p&gt;
-
-&lt;p&gt;So let me start from how to select the tools.&lt;/p&gt;
-
-&lt;h2 id=&quot;static-site-generators&quot;&gt;Static Site Generators&lt;/h2&gt;
-
-&lt;p&gt;When the web server processes our request to show some webpage, it returns the HTML file stored in the serve, so that our browser can display the content. The HTML file has to be complete to be displayed in the browser. Normally, an HTML file needs to follow some format rules and contains the &lt;strong&gt;head&lt;/strong&gt; and &lt;strong&gt;body&lt;/strong&gt; elements. For example,&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Page Title&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;This is a Heading&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This is a paragraph.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We can refer to &lt;a href=&quot;https://www.w3schools.com/html/&quot;&gt;HTML Tutorial&lt;/a&gt; to learn the HTML basics. The style sheet for display is defined in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Therefore, each webpage corresponds to an HTML file. When we open different pages, we actually receive different HTML files.&lt;/p&gt;
-
-&lt;p&gt;This can be troublesome because HTML files are in general lengthy and complex. Besides, we also have to determine which element to use in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt; and how to display them. For example, if we want to write multiple paragraph in HTML, we have to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;p&amp;gt;&lt;/code&gt; for each paragraph. Writing HTML directly is never easy. If we want to create multiple pages, for example, writing two different blogs, then we have to create two exhausting HTML files.&lt;/p&gt;
-
-&lt;p&gt;Do we have some other ways to save our work?&lt;/p&gt;
-
-&lt;p&gt;The answer is positive. In fact we can use templates to manage the same layout. If we want to write two blogs, the only difference between the two is actually the content. Therefore, we can define some templates to use so that we only need to focus on writing our blogs instead of worrying about writing a complete HTML file. This is what a site generator does: automating the site generation.&lt;/p&gt;
-
-&lt;p&gt;Before talking about the static site generator, we should first figure out what are static and dynamic website. There are two tutorial on GitLab talking a static and dybnamic website, which I think is useful.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://about.gitlab.com/blog/2016/06/03/ssg-overview-gitlab-pages-part-1-dynamic-x-static/&quot;&gt;SSGs Part 1: A Static vs Dynamic Website&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://about.gitlab.com/blog/2016/06/10/ssg-overview-gitlab-pages-part-2/&quot;&gt;SSGs Part 2: What are modern static site generators&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In short, a dynamic website support user interactions such as online calculation and manipulating data. The user operations are processed by the web server. Then the result is generated and sent back to the user. In a static website, users simply look the pre-generated content, and there are no interactions.&lt;/p&gt;
-
-&lt;p&gt;The static site generator, as the name suggests, generates pre-written HTML files for users to refer to. The SSG is very suitable for personal blog website because there are few interactions when we read blogs. The major objective of a blog website is to present the content to users. It is an automation tool that allow people only focus on the important part of write a blog: the content.&lt;/p&gt;
-
-&lt;p&gt;There are many SSGs available. For example, &lt;a href=&quot;[https://nextjs.org](https://nextjs.org/)&quot;&gt;Next.js&lt;/a&gt;, &lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;, &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;. &lt;a href=&quot;https://www.gatsbyjs.com/&quot;&gt;Gatsby&lt;/a&gt;, &lt;a href=&quot;https://nuxtjs.org/&quot;&gt;Nuxt&lt;/a&gt;. Any of them does a good job.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://elextutorial.com/learn-php/dynamic-vs-static-website-static-website-dynamic-website-definition/#:~:text=The%20dynamic%20web%20page%20code%20written%20in%20the%20PHP%20server,is%20served%20to%20the%20user.&quot;&gt;Dynamic vs Static Website&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
-
-&lt;p&gt;The reason I choose Jekyll, well…, is because the Github only support it when I do the first search. I know that WordPress has a lot of fantastic templates to choose. But I still have to buy a domain name. Why not use the free resource? Besides, it is not exciting to use template at all. I want to create my own website.&lt;/p&gt;
-
-
-  &lt;/article&gt;
-  &lt;hr /&gt;
-&lt;/div&gt;
-
-
-&lt;section class=&quot;pager&quot;&gt;
-  &lt;ul&gt;
-    
-    &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/freshman21-v1/2021/12/static-dynamic-web.html&quot; title=&quot;Static vs Dynamic Web Pages&quot;&gt;&amp;laquo; Previous&lt;/a&gt;&lt;/li&gt;
-    
-    
-    &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/freshman21-v1/2021/12/ssg-jekyll.html&quot; title=&quot;Static Site Generators and Introduction to Jelly&quot;&gt;Next &amp;raquo;&lt;/a&gt;&lt;/li&gt;
-    
-  &lt;/ul&gt;
-&lt;/section&gt;
-
-&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
-
-&lt;script type=&quot;text/javascript&quot;&gt;
-
-  var disqus_developer = 1;
-
-var disqus_shortname ='';
-/* * * DON'T EDIT BELOW THIS LINE * * */
-(function() {
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-&lt;/script&gt;
-
-&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
-
-
-
-    &lt;/article&gt;
-  
-    
-    &lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
-
-&lt;script type=&quot;text/javascript&quot;&gt;
-
-  var disqus_developer = 1;
-
-var disqus_shortname ='';
-/* * * DON'T EDIT BELOW THIS LINE * * */
-(function() {
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-&lt;/script&gt;
-
-&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
-
-    
-  
-  &lt;/div&gt; 
-  ```
-
-- `_include` directory stores the frequently used HTML snippets which are used by `include` command. For example, the `footer.html` can be the following.
-
-  ```html
-  &lt;footer class=&quot;site-footer&quot;&gt;
-    &lt;p&gt;Copyright &amp;copy; &lt;a href=&quot;/freshman21-v1/&quot;&gt;HuskyDev&lt;/a&gt;&lt;/p&gt;
-    &lt;p&gt;Powered by &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll&lt;/a&gt; 
-  &amp;lt;/footer&amp;gt;
-  ```
-
-- `_sass` directory stores the style sheets (CSS files) for HTML files. These files determine the display format of HTML file. We refer to [CSS Tutorial](https://www.w3schools.com/css/) to learn more about the CSS basics. 
-
-The above three directories are related to web page templates and display style. After completing the template, we can simple call which template to use in each post file. Jekyll will generate the corresponding HTML file with the desired template for us.
-
-- `_config.yml` is the configuration file for Jekyll. We can define user-defined variables in this file.
-- `index.html` or `index.md` is the index page. For web server, there is always an index page for each directory. By default, the web server will send the index page back to the user if the user does not specify in detail which HTML file to look for.
-
-- `_site` directory stores all the generated web pages. We can put `_site` directory to the server, for example GitHub. Then the blog website is ready to view.
-
-### Templating Language
-
-&amp;gt; A templating language basically is a language which allows defining placeholders that should later on be replaced for the purpose of implementing designs. Obviously modern template languages not only support placeholders, but also loops and conditions which are often necessary for designing a web page.
-&amp;gt;
-&amp;gt; *From [Stack Overflow: What is a templating language?](https://stackoverflow.com/questions/4026597/what-is-a-templating-language)*
-
-Jekyll uses the [Liquid](https://shopify.github.io/liquid/) templating language to process templates. We can think the templating language as a &quot;scripting language&quot; in HTML files. It defines how Jekyll process the HTML files and generate the final version. 
-
-**Note:** The templating language is different from other real scripting language such as JavaScript and Python. The browser cannot read it. All the template statements will be replaced by HTML after Jekyll process them. So in the final versions of the generated HTML file, there is no templating Language.
-
-Liquid has ample functions such as `include` function and other string processing functions, which facilitate the static web page writing.
-
-### Front Matter and Variables
-
-The front matter is specified by `---` block at the front of each file. If we add the front matter to a file, it means that we want Jekyll to process this file. The process can be including other HTML snippets, or replacing template statements. 
-
-The front matter specifies variables for processing. For example, in `post.html`  layout, we add `layout` variable to the front matter. So Jekyll will first substitute the HTML snippets and then put every thing to back to the `default.html` template to generate the final HTML file.
-
-Some global variables are reserved by Jekyll, for example, `layout`, `content`, `site`, `page`. See [Jekyll Variables](https://jekyllrb.com/docs/variables/) for more information. These variables are useful when we write the template HTML files.
-
-We can also define local variables (user-defined variables) in the front matter and reference it. For example, we define `mylogo-link` variable in the following post file:
-
-```markdown
+    &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: default
 ---
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;post&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;header&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;post-header&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;post-title&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;{{ page.title }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/header&amp;gt;&lt;/span&gt;
+  
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;article&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;post-content&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; 
+    {{ content }}
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/article&amp;gt;&lt;/span&gt;
+  
+  {% if page.comments %}
+  {% include comments.html %}
+  {% endif %}
+  
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_include&lt;/code&gt; directory stores the frequently used HTML snippets which are used by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;include&lt;/code&gt; command. For example, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;footer.html&lt;/code&gt; can be the following.&lt;/p&gt;
+
+    &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;footer&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;site-footer&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Copyright &lt;span class=&quot;ni&quot;&gt;&amp;amp;copy;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/freshman21-v1/&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;HuskyDev&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Powered by &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://github.com/jekyll/jekyll&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Jekyll&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt; 
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/footer&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_sass&lt;/code&gt; directory stores the style sheets (CSS files) for HTML files. These files determine the display format of HTML file. We refer to &lt;a href=&quot;https://www.w3schools.com/css/&quot;&gt;CSS Tutorial&lt;/a&gt; to learn more about the CSS basics.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The above three directories are related to web page templates and display style. After completing the template, we can simple call which template to use in each post file. Jekyll will generate the corresponding HTML file with the desired template for us.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; is the configuration file for Jekyll. We can define user-defined variables in this file.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.md&lt;/code&gt; is the index page. For web server, there is always an index page for each directory. By default, the web server will send the index page back to the user if the user does not specify in detail which HTML file to look for.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_site&lt;/code&gt; directory stores all the generated web pages. We can put &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_site&lt;/code&gt; directory to the server, for example GitHub. Then the blog website is ready to view.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;templating-language&quot;&gt;Templating Language&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A templating language basically is a language which allows defining placeholders that should later on be replaced for the purpose of implementing designs. Obviously modern template languages not only support placeholders, but also loops and conditions which are often necessary for designing a web page.&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;From &lt;a href=&quot;https://stackoverflow.com/questions/4026597/what-is-a-templating-language&quot;&gt;Stack Overflow: What is a templating language?&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Jekyll uses the &lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;Liquid&lt;/a&gt; templating language to process templates. We can think the templating language as a “scripting language” in HTML files. It defines how Jekyll process the HTML files and generate the final version.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The templating language is different from other real scripting language such as JavaScript and Python. The browser cannot read it. All the template statements will be replaced by HTML after Jekyll process them. So in the final versions of the generated HTML file, there is no templating Language.&lt;/p&gt;
+
+&lt;p&gt;Liquid has ample functions such as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;include&lt;/code&gt; function and other string processing functions, which facilitate the static web page writing.&lt;/p&gt;
+
+&lt;h3 id=&quot;front-matter-and-variables&quot;&gt;Front Matter and Variables&lt;/h3&gt;
+
+&lt;p&gt;The front matter is specified by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;---&lt;/code&gt; block at the front of each file. If we add the front matter to a file, it means that we want Jekyll to process this file. The process can be including other HTML snippets, or replacing template statements.&lt;/p&gt;
+
+&lt;p&gt;The front matter specifies variables for processing. For example, in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;post.html&lt;/code&gt;  layout, we add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;layout&lt;/code&gt; variable to the front matter. So Jekyll will first substitute the HTML snippets and then put every thing to back to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;default.html&lt;/code&gt; template to generate the final HTML file.&lt;/p&gt;
+
+&lt;p&gt;Some global variables are reserved by Jekyll, for example, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;layout&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;content&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;site&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;page&lt;/code&gt;. See &lt;a href=&quot;https://jekyllrb.com/docs/variables/&quot;&gt;Jekyll Variables&lt;/a&gt; for more information. These variables are useful when we write the template HTML files.&lt;/p&gt;
+
+&lt;p&gt;We can also define local variables (user-defined variables) in the front matter and reference it. For example, we define &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mylogo-link&lt;/code&gt; variable in the following post file:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
 mylogo_link: https://path/to/image/.png
 ---
-```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-Then we can reference this variable in the file by writting ``.
+&lt;p&gt;Then we can reference this variable in the file by writting &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{{ mylogo_link }}&lt;/code&gt;.&lt;/p&gt;
 
-We can also define variables in `_config.yml`. The variables are in the `site` domain and can be accessed by ``.
+&lt;p&gt;We can also define variables in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;. The variables are in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;site&lt;/code&gt; domain and can be accessed by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{{site.my_variable}}&lt;/code&gt;.&lt;/p&gt;
 
-### Summary
+&lt;h3 id=&quot;summary&quot;&gt;Summary&lt;/h3&gt;
 
-We have introduced the general framework of Jekyll and the idea of how Jekyll works. In the future posts, I will write more details about Jekyll usage and the problems I have met when I use Jekyll.
+&lt;p&gt;We have introduced the general framework of Jekyll and the idea of how Jekyll works. In the future posts, I will write more details about Jekyll usage and the problems I have met when I use Jekyll.&lt;/p&gt;
 
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
 
+&lt;p&gt;There are some resources discussing the functions of SSGs:&lt;/p&gt;
 
-## Resources
-
-There are some resources discussing the functions of SSGs:
-
- [GitLab SSGs Part 2: What are modern static site generators](https://about.gitlab.com/blog/2016/06/10/ssg-overview-gitlab-pages-part-2/) 
-&lt;/p&gt;&lt;/footer&gt;&lt;/p&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/body&gt;
+&lt;p&gt;&lt;a href=&quot;https://about.gitlab.com/blog/2016/06/10/ssg-overview-gitlab-pages-part-2/&quot;&gt;GitLab SSGs Part 2: What are modern static site generators&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 24 Dec 2021 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/2021/12/ssg-jekyll.html</link>

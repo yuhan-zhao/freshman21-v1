@@ -52,14 +52,16 @@ a:hover { color: #669900; text-decoration: underline; }
 .post-content a:hover { color: #669900; text-decoration: underline; }
 
 /** Blockquotes */
-blockquote { padding: 0 1em; margin: 14px 0; border: 2px dashed #d0dfda; border-radius: 5px; color: #828282; font-size: 18px; background: #f9f9f9; }
+blockquote::before { position: absolute; font-family: FontAwesome; content: "\f10d"; font-size: 25px; margin-left: -4px; }
 
-blockquote:hover { color: #454545; }
+blockquote { padding: 5px 1em; margin: 14px 14px; border-left: 5px solid #8cbfa5; border-radius: 3px; color: #828282; background: #f9f9f9; /* &:hover { color: #454545; } */ }
+
+blockquote p { margin-left: 30px; }
 
 blockquote > :last-child { margin-bottom: 0; }
 
 /** Code formatting */
-pre, code { font-size: 15px; border-radius: 3px; background-color: #29281e; color: #eee; }
+pre, code { font-size: 14px; border: 1px solid #e8e8e8; border-radius: 3px; background-color: #f3f5f7; color: #3b3b3b; font-family: monospace; }
 
 code { padding: 1px 5px; }
 
@@ -193,11 +195,11 @@ cite { font-style: italic; text-decoration: underline; }
 
 @media screen and (max-width: 800px) { .post-content h1 { font-size: 36px; } }
 
-.post-content h2 { font-size: 26px; line-height: 1em; padding: 10px 0; }
+.post-content h2 { font-size: 26px; line-height: 1em; padding: 10px 0 2px 0; }
 
 @media screen and (max-width: 800px) { .post-content h2 { font-size: 24px; } }
 
-.post-content h3 { font-size: 20px; padding: 10px 0; line-height: 1em; }
+.post-content h3 { font-size: 20px; padding: 10px 0 2px 0; line-height: 1em; }
 
 @media screen and (max-width: 800px) { .post-content h3 { font-size: 18px; } }
 
