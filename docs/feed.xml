@@ -5,8 +5,8 @@
     <description>HuskDev is Yuhan's personal blog.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/zfeed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 10 Feb 2022 22:45:06 -0500</pubDate>
-    <lastBuildDate>Thu, 10 Feb 2022 22:45:06 -0500</lastBuildDate>
+    <pubDate>Tue, 15 Feb 2022 23:32:30 -0500</pubDate>
+    <lastBuildDate>Tue, 15 Feb 2022 23:32:30 -0500</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
     
       <item>
@@ -235,9 +235,9 @@ layout: default
 
 &lt;p&gt;We can also define local variables (user-defined variables) in the front matter and reference it. For example, we define &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mylogo-link&lt;/code&gt; variable in the following post file:&lt;/p&gt;
 
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
-mylogo_link: https://path/to/image/.png
----
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;mylogo_link&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;https://path/to/image/.png&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Then we can reference this variable in the file by writting &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{{ mylogo_link }}&lt;/code&gt;.&lt;/p&gt;

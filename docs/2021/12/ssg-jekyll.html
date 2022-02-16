@@ -322,9 +322,9 @@ layout: default
 
 <p>We can also define local variables (user-defined variables) in the front matter and reference it. For example, we define <code class="language-plaintext highlighter-rouge">mylogo-link</code> variable in the following post file:</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-mylogo_link: https://path/to/image/.png
----
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">mylogo_link</span><span class="pi">:</span> <span class="s">https://path/to/image/.png</span>
+<span class="nn">---</span>
 </code></pre></div></div>
 
 <p>Then we can reference this variable in the file by writting <code class="language-plaintext highlighter-rouge">{{ mylogo_link }}</code>.</p>
