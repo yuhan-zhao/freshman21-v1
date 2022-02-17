@@ -5,92 +5,15 @@
     <description>HuskDev is Yuhan's personal blog.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/zfeed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 16 Feb 2022 23:34:54 -0500</pubDate>
-    <lastBuildDate>Wed, 16 Feb 2022 23:34:54 -0500</lastBuildDate>
+    <pubDate>Thu, 17 Feb 2022 16:38:49 -0500</pubDate>
+    <lastBuildDate>Thu, 17 Feb 2022 16:38:49 -0500</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
     
       <item>
-        <title>test notes 2</title>
-        <description>&lt;h2 id=&quot;this-is-test-2&quot;&gt;This is test 2&lt;/h2&gt;
+        <title>Learning Jelly Part 1: Basic Elements</title>
+        <description>&lt;p&gt;In this learning notes, I will introduce the basic elements of Jekyll including the directory structure, front matter, and Liquid templating language. Understanding the elements is the first step towards learning Jekyll.&lt;/p&gt;
 
 &lt;!--more--&gt;
-</description>
-        <pubDate>Sun, 26 Dec 2021 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/2021/12/test-2.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2021/12/test-2.html</guid>
-        
-        <category>jekyll</category>
-        
-        <category>html</category>
-        
-        
-        <category>Notes</category>
-        
-      </item>
-    
-      <item>
-        <title>test notes 1</title>
-        <description>&lt;h2 id=&quot;this-is-test-1&quot;&gt;This is test 1&lt;/h2&gt;
-
-&lt;!--more--&gt;
-</description>
-        <pubDate>Sat, 25 Dec 2021 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/2021/12/test-1.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2021/12/test-1.html</guid>
-        
-        <category>jekyll</category>
-        
-        <category>html</category>
-        
-        
-        <category>Notes</category>
-        
-      </item>
-    
-      <item>
-        <title>Static Site Generators and Introduction to Jelly</title>
-        <description>&lt;p&gt;I have discussed the difference between static and dynamic web pages in [xxx]. In this post, I will write some of my understanding of Jekyll and static site generators.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;static-site-generators&quot;&gt;Static Site Generators&lt;/h2&gt;
-
-&lt;p&gt;Static site generators (SSGs) are the software that generates and publish static HTML files from dynamic writing. In other words, they achieve two goals:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;automate static web page generation;&lt;/li&gt;
-  &lt;li&gt;publish the generated web pages locally for preview.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;some-background-of-html&quot;&gt;Some Background of HTML&lt;/h3&gt;
-
-&lt;p&gt;Every static web page is a complete HTML file. A simple example of a complete HTML file is like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Page Title&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;This is a Heading&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This is a paragraph.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The web page title and the style sheet for display are defined in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt;, and the content is written in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt;. In short, an HTML file has to follow some rules to be displayed by the browser correctly. We refer to &lt;a href=&quot;https://www.w3schools.com/html/&quot;&gt;HTML Tutorial&lt;/a&gt; to learn more about the HTML basics.&lt;/p&gt;
-
-&lt;h3 id=&quot;ssg-as-a-tool&quot;&gt;SSG as a Tool&lt;/h3&gt;
-
-&lt;p&gt;It can be tedious and troublesome to write HTML files directly, especially when the page content is long. There are so many types of websites. In blogging, what we need is the blog content. The interactions with the website and other fancy components are less required. The primary objective is to display the blog content nicely on a web page. Now SSGs can help. So the idea behind SSGs is simple: use templates to facilitate blog writing and automate web page generation.&lt;/p&gt;
-
-&lt;p&gt;In SSGs, we can first create some templates for future display. Then we only need to focus on writing the content (usually in markdown files). SSGs will put the content to the template and generate a complete HTML file for display. After SSGs generate all the page files, we can put them to some web server, for example, GitHub, so that people can access your pages from the Internet.&lt;/p&gt;
-
-&lt;p&gt;Another advantage of SSGs is that they can publish the web pages locally. It turns your computer to a local server so that you can view the web pages through the browser as if you view the page from a real server. It is extremely helpful for debugging.&lt;/p&gt;
-
-&lt;p&gt;There are many SSGs available. For example, &lt;a href=&quot;[https://nextjs.org](https://nextjs.org/)&quot;&gt;Next.js&lt;/a&gt;, &lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;, &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;. &lt;a href=&quot;https://www.gatsbyjs.com/&quot;&gt;Gatsby&lt;/a&gt;, &lt;a href=&quot;https://nuxtjs.org/&quot;&gt;Nuxt&lt;/a&gt;. Any of them does a good job.&lt;/p&gt;
 
 &lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
 
@@ -111,29 +34,29 @@
 
 &lt;p&gt;Jekyll creates a series of directories. So it is important to understand the use of each directory so that we can create the pages we want. A typical jekyll directory is like the following (from Jekyll documentation):&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-plain&quot;&gt;.
-├── _config.yml
-├── _data
-│   └── members.yml
-├── _drafts
-│   └── on-simplicity-in-technology.md
-├── _includes
-│   ├── footer.html
-│   └── header.html
-├── _layouts
-│   ├── default.html
-│   └── post.html
-├── _posts
-│   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
-│   └── 2009-04-26-barcamp-boston-4-roundup.md
-├── _sass
-│   ├── _base.scss
-│   └── _layout.scss
-├── _site
-├── .jekyll-cache
-├── .jekyll-metadata
-└── index.html # can also be an 'index.md' with valid front matter
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+|-- _config.yml
+|-- _data
+│   &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; members.yml
+|-- _drafts
+|   &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; on-simplicity-in-technology.md
+|-- _includes
+|   |-- footer.html
+|   &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; header.html
+|-- _layouts
+|   |-- default.html
+|   &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; post.html
+|-- _posts
+|   &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; 2007-10-29-why-every-programmer-should-play-nethack.md
+|   &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; 2009-04-26-barcamp-boston-4-roundup.md
+|-- _sass
+|   |-- _base.scss
+|   &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; _layout.scss
+|-- _site
+|-- .jekyll-cache
+|-- .jekyll-metadata
+|-- index.html    &lt;span class=&quot;c&quot;&gt;# can also be an 'index.md' with valid front matter&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; is the directory where we write our blog contents. The content is usually written with &lt;a href=&quot;https://www.markdownguide.org/&quot;&gt;Markdown&lt;/a&gt;. Each file corresponds to an individual post page and each filename should follow the convention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.md&lt;/code&gt;.&lt;/li&gt;
@@ -247,30 +170,16 @@ layout: default
 &lt;h3 id=&quot;summary&quot;&gt;Summary&lt;/h3&gt;
 
 &lt;p&gt;We have introduced the general framework of Jekyll and the idea of how Jekyll works. In the future posts, I will write more details about Jekyll usage and the problems I have met when I use Jekyll.&lt;/p&gt;
-
-&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
-
-&lt;p&gt;There are some resources discussing the functions of SSGs:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://about.gitlab.com/blog/2016/06/10/ssg-overview-gitlab-pages-part-2/&quot;&gt;GitLab SSGs Part 2: What are modern static site generators&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 24 Dec 2021 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/2021/12/ssg-jekyll.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2021/12/ssg-jekyll.html</guid>
+        <link>http://localhost:4000/2021/12/jekyll-1-elements.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/12/jekyll-1-elements.html</guid>
         
         <category>web programming</category>
         
-        <category>SSG</category>
-        
-        <category>static site generator</category>
-        
         <category>jekyll</category>
         
-        <category>html</category>
-        
-        <category>css</category>
-        
-        <category>github pages</category>
+        <category>templating language</category>
         
         
         <category>Programming</category>
@@ -280,79 +189,70 @@ layout: default
       </item>
     
       <item>
-        <title>Build Up My Own Blog</title>
-        <description>&lt;p&gt;I have always been eager to build my personal blog from sketch. Now it comes true! This is not as simple as I thought before. So I think it is better take some notes about what I have learned along the way. 
-&lt;!--more--&gt;
-Since I have zero background in web programming, some of the notes may be too easy for experts. Also, there are aubndnat reserouces in the Internet and I will refer to the ones which helped me during the learning.&lt;/p&gt;
+        <title>Static Site Generators</title>
+        <description>&lt;p&gt;I have discussed the difference between static and dynamic web pages in [xxx]. In this post, I will write some of my understanding of Jekyll and static site generators.&lt;/p&gt;
 
-&lt;p&gt;So let me start from how to select the tools.&lt;/p&gt;
+&lt;!--more--&gt;
 
 &lt;h2 id=&quot;static-site-generators&quot;&gt;Static Site Generators&lt;/h2&gt;
 
-&lt;p&gt;When the web server processes our request to show some webpage, it returns the HTML file stored in the serve, so that our browser can display the content. The HTML file has to be complete to be displayed in the browser. Normally, an HTML file needs to follow some format rules and contains the &lt;strong&gt;head&lt;/strong&gt; and &lt;strong&gt;body&lt;/strong&gt; elements. For example,&lt;/p&gt;
+&lt;p&gt;Static site generators (SSGs) are the software that generates and publish static HTML files from dynamic writing. In other words, they achieve two goals:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;automate static web page generation;&lt;/li&gt;
+  &lt;li&gt;publish the generated web pages locally for preview.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;some-background-of-html&quot;&gt;Some Background of HTML&lt;/h3&gt;
+
+&lt;p&gt;Every static web page is a complete HTML file. A simple example of a complete HTML file is like this:&lt;/p&gt;
 
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Page Title&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Page Title&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
 
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;This is a Heading&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This is a paragraph.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;This is a Heading&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This is a paragraph.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
 
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;We can refer to &lt;a href=&quot;https://www.w3schools.com/html/&quot;&gt;HTML Tutorial&lt;/a&gt; to learn the HTML basics. The style sheet for display is defined in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The web page title and the style sheet for display are defined in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt;, and the content is written in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt;. In short, an HTML file has to follow some rules to be displayed by the browser correctly. We refer to &lt;a href=&quot;https://www.w3schools.com/html/&quot;&gt;HTML Tutorial&lt;/a&gt; to learn more about the HTML basics.&lt;/p&gt;
 
-&lt;p&gt;Therefore, each webpage corresponds to an HTML file. When we open different pages, we actually receive different HTML files.&lt;/p&gt;
+&lt;h3 id=&quot;ssg-as-a-tool&quot;&gt;SSG as a Tool&lt;/h3&gt;
 
-&lt;p&gt;This can be troublesome because HTML files are in general lengthy and complex. Besides, we also have to determine which element to use in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt; and how to display them. For example, if we want to write multiple paragraph in HTML, we have to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;p&amp;gt;&lt;/code&gt; for each paragraph. Writing HTML directly is never easy. If we want to create multiple pages, for example, writing two different blogs, then we have to create two exhausting HTML files.&lt;/p&gt;
+&lt;p&gt;It can be tedious and troublesome to write HTML files directly, especially when the page content is long. There are so many types of websites. In blogging, what we need is the blog content. The interactions with the website and other fancy components are less required. The primary objective is to display the blog content nicely on a web page. Now SSGs can help. So the idea behind SSGs is simple: use templates to facilitate blog writing and automate web page generation.&lt;/p&gt;
 
-&lt;p&gt;Do we have some other ways to save our work?&lt;/p&gt;
+&lt;p&gt;In SSGs, we can first create some templates for future display. Then we only need to focus on writing the content (usually in markdown files). SSGs will put the content to the template and generate a complete HTML file for display. After SSGs generate all the page files, we can put them to some web server, for example, GitHub, so that people can access your pages from the Internet.&lt;/p&gt;
 
-&lt;p&gt;The answer is positive. In fact we can use templates to manage the same layout. If we want to write two blogs, the only difference between the two is actually the content. Therefore, we can define some templates to use so that we only need to focus on writing our blogs instead of worrying about writing a complete HTML file. This is what a site generator does: automating the site generation.&lt;/p&gt;
-
-&lt;p&gt;Before talking about the static site generator, we should first figure out what are static and dynamic website. There are two tutorial on GitLab talking a static and dybnamic website, which I think is useful.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://about.gitlab.com/blog/2016/06/03/ssg-overview-gitlab-pages-part-1-dynamic-x-static/&quot;&gt;SSGs Part 1: A Static vs Dynamic Website&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://about.gitlab.com/blog/2016/06/10/ssg-overview-gitlab-pages-part-2/&quot;&gt;SSGs Part 2: What are modern static site generators&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In short, a dynamic website support user interactions such as online calculation and manipulating data. The user operations are processed by the web server. Then the result is generated and sent back to the user. In a static website, users simply look the pre-generated content, and there are no interactions.&lt;/p&gt;
-
-&lt;p&gt;The static site generator, as the name suggests, generates pre-written HTML files for users to refer to. The SSG is very suitable for personal blog website because there are few interactions when we read blogs. The major objective of a blog website is to present the content to users. It is an automation tool that allow people only focus on the important part of write a blog: the content.&lt;/p&gt;
+&lt;p&gt;Another advantage of SSGs is that they can publish the web pages locally. It turns your computer to a local server so that you can view the web pages through the browser as if you view the page from a real server. It is extremely helpful for debugging.&lt;/p&gt;
 
 &lt;p&gt;There are many SSGs available. For example, &lt;a href=&quot;[https://nextjs.org](https://nextjs.org/)&quot;&gt;Next.js&lt;/a&gt;, &lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;, &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;. &lt;a href=&quot;https://www.gatsbyjs.com/&quot;&gt;Gatsby&lt;/a&gt;, &lt;a href=&quot;https://nuxtjs.org/&quot;&gt;Nuxt&lt;/a&gt;. Any of them does a good job.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://elextutorial.com/learn-php/dynamic-vs-static-website-static-website-dynamic-website-definition/#:~:text=The%20dynamic%20web%20page%20code%20written%20in%20the%20PHP%20server,is%20served%20to%20the%20user.&quot;&gt;Dynamic vs Static Website&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
 
-&lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
+&lt;p&gt;There are some resources discussing the functions of SSGs:&lt;/p&gt;
 
-&lt;p&gt;The reason I choose Jekyll, well…, is because the Github only support it when I do the first search. I know that WordPress has a lot of fantastic templates to choose. But I still have to buy a domain name. Why not use the free resource? Besides, it is not exciting to use template at all. I want to create my own website.&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&quot;https://about.gitlab.com/blog/2016/06/10/ssg-overview-gitlab-pages-part-2/&quot;&gt;GitLab SSGs Part 2: What are modern static site generators&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 23 Dec 2021 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/2021/12/blog-related.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2021/12/blog-related.html</guid>
+        <link>http://localhost:4000/2021/12/static-site-generators.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/12/static-site-generators.html</guid>
         
-        <category>web programming</category>
+        <category>SSG</category>
         
-        <category>jekyll</category>
+        <category>static site generator</category>
         
         <category>html</category>
         
         <category>css</category>
         
+        <category>github pages</category>
         
-        <category>Programming</category>
         
         <category>Web</category>
         
@@ -835,6 +735,225 @@ No link for tags. Tags appear in the last with&lt;/p&gt;
         <category>articles</category>
         
         <category>Howto</category>
+        
+      </item>
+    
+      <item>
+        <title>How to install this theme</title>
+        <description>&lt;h2 id=&quot;how-to-install-freshman-theme&quot;&gt;How to install Freshman theme?&lt;/h2&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# please make sure you have already installed git tools and ruby tools(gem)&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;sass
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/yulijia/freshman21.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then, change the folder name to you own github page name, forexample&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;mv &lt;/span&gt;freshman thisisyouname.github.io
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Thu, 18 Dec 2014 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/2014/12/how-to-install.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2014/12/how-to-install.html</guid>
+        
+        <category>sample-post</category>
+        
+        
+        <category>articles</category>
+        
+      </item>
+    
+      <item>
+        <title>Sample Post</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#heading&quot; id=&quot;markdown-toc-heading&quot;&gt;Heading&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#body-text&quot; id=&quot;markdown-toc-body-text&quot;&gt;Body text&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#blockquotes&quot; id=&quot;markdown-toc-blockquotes&quot;&gt;Blockquotes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#list-types&quot; id=&quot;markdown-toc-list-types&quot;&gt;List Types&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#ordered-lists&quot; id=&quot;markdown-toc-ordered-lists&quot;&gt;Ordered Lists&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#unordered-lists&quot; id=&quot;markdown-toc-unordered-lists&quot;&gt;Unordered Lists&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#tables&quot; id=&quot;markdown-toc-tables&quot;&gt;Tables&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#code-snippets&quot; id=&quot;markdown-toc-code-snippets&quot;&gt;Code Snippets&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#highlight-with-line-number&quot; id=&quot;markdown-toc-highlight-with-line-number&quot;&gt;highlight with line number.&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#highlight-using-triple-backticks&quot; id=&quot;markdown-toc-highlight-using-triple-backticks&quot;&gt;highlight using triple backticks&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#latex&quot; id=&quot;markdown-toc-latex&quot;&gt;\(\LaTeX\)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#q-tag&quot; id=&quot;markdown-toc-q-tag&quot;&gt;&amp;lt;q&amp;gt; tag&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is a sample post.&lt;/p&gt;
+
+&lt;p&gt;Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.&lt;/p&gt;
+
+&lt;h2 id=&quot;heading&quot;&gt;Heading&lt;/h2&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Heading 1
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;body-text&quot;&gt;Body text&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;This is strong&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is figure&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Mdc4szJl.jpg&quot; alt=&quot;Elaphurus davidianus&quot; title=&quot;Père David's deer&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This is emphasized&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;53 = 125. Water is H&lt;sub&gt;2&lt;/sub&gt;O.&lt;/p&gt;
+
+&lt;p&gt;The New York Times &lt;cite&gt;(That’s a citation)&lt;/cite&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;Underline&lt;/u&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;del&gt;HTML and CSS are our tools&lt;/del&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Justification:
+This species is listed as Extinct in the Wild, as all populations are still under captive management. The captive population in China has increased in recent years, and the possibility remains that free-ranging populations can be established some time in the near future. When that happens, its Red List status will need to be reassessed.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I follow up the quest. Despite of day and night and death and hell.&lt;/p&gt;
+  &lt;center&gt; -- Idylls of the King, Tennyson &lt;/center&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;list-types&quot;&gt;List Types&lt;/h2&gt;
+
+&lt;h3 id=&quot;ordered-lists&quot;&gt;Ordered Lists&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Item one
+    &lt;ol&gt;
+      &lt;li&gt;sub item one&lt;/li&gt;
+      &lt;li&gt;sub item two&lt;/li&gt;
+      &lt;li&gt;sub item three&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item two&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;unordered-lists&quot;&gt;Unordered Lists&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Item one&lt;/li&gt;
+  &lt;li&gt;Item two&lt;/li&gt;
+  &lt;li&gt;Item three&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;tables&quot;&gt;Tables&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Header1&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Header2&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Header3&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;cell1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;cell2&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;cell3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;cell4&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;cell5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;cell6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;cell7&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;cell8&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;cell9&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Kingdom&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Phylum&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Class&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Order&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Family&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;ANIMALIA&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;CHORDATA&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;MAMMALIA&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;CETARTIODACTYLA&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;CERVIDAE&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;code-snippets&quot;&gt;Code Snippets&lt;/h2&gt;
+
+&lt;p&gt;Syntax highlighting via Pygments&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-240px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;highlight-with-line-number&quot;&gt;highlight with line number.&lt;/h4&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo'&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;highlight-using-triple-backticks&quot;&gt;highlight using triple backticks&lt;/h4&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;latex&quot;&gt;\(\LaTeX\)&lt;/h2&gt;
+
+&lt;p&gt;you can use latex with &lt;q&gt;double $$ &lt;/q&gt;&lt;/p&gt;
+
+\[e^{i\pi}+1=0\]
+
+&lt;h2 id=&quot;q-tag&quot;&gt;&amp;lt;q&amp;gt; tag&lt;/h2&gt;
+
+&lt;p&gt;here is a &amp;lt;q&amp;gt; q tag &amp;lt;/q&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;here is a &lt;q&gt; q tag &lt;/q&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 13 Dec 2014 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/2014/12/simple-post.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2014/12/simple-post.html</guid>
+        
+        <category>sample-post</category>
+        
+        
+        <category>articles</category>
         
       </item>
     
