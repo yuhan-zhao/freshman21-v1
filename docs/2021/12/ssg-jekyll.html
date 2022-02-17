@@ -192,7 +192,7 @@
 
 <p>Since jekyll is software written in Ruby, we first need to make sure the Ruby programming language is installed in our computer. It comes with Linux distrirbutions. We can check it using the command</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>ruby <span class="nt">-v</span>		<span class="c"># display ruby version info</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>ruby <span class="nt">-v</span>	<span class="c"># display ruby version info</span>
 </code></pre></div></div>
 
 <p>We can also follow the <a href="https://jekyllrb.com/docs/">Quickstart</a> in Jekyll documentation to create a quick jekyll project and view it in the browser.</p>
@@ -201,7 +201,7 @@
 
 <p>Jekyll creates a series of directories. So it is important to understand the use of each directory so that we can create the pages we want. A typical jekyll directory is like the following (from Jekyll documentation):</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.
+<pre><code class="language-plain">.
 ├── _config.yml
 ├── _data
 │   └── members.yml
@@ -223,7 +223,7 @@
 ├── .jekyll-cache
 ├── .jekyll-metadata
 └── index.html # can also be an 'index.md' with valid front matter
-</code></pre></div></div>
+</code></pre>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">_posts</code> is the directory where we write our blog contents. The content is usually written with <a href="https://www.markdownguide.org/">Markdown</a>. Each file corresponds to an individual post page and each filename should follow the convention <code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.md</code>.</li>
