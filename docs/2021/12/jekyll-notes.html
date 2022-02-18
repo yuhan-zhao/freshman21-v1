@@ -84,13 +84,13 @@
             
               <li><a href="/freshman21-v1/topics/articles">articles</a></li>
             
-              <li><a href="/freshman21-v1/topics/notes">Notes</a></li>
-            
               <li><a href="/freshman21-v1/topics/optimization">Optimization</a></li>
             
               <li><a href="/freshman21-v1/topics/web">Web</a></li>
             
               <li><a href="/freshman21-v1/topics/programming">Programming</a></li>
+            
+              <li><a href="/freshman21-v1/topics/miscellaneous">Miscellaneous</a></li>
             
             </ul>
           </div>
@@ -131,7 +131,7 @@
       </time>
       &nbsp;in
       
-        <a href="/freshman21-v1/categories/#Notes"><b>Notes</b></a>
+        <a href="/freshman21-v1/categories/#Miscellaneous"><b>Miscellaneous</b></a>
          
     </p>
   </header>
@@ -149,9 +149,11 @@
 <!--more-->
 
 <p>In liquid, we can use composite filter. The exection order is from left to right. For example.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% assign var = site.baseurl | append: "/page" | append: 2 | string %}
 </code></pre></div></div>
-<p>Note that { int | string } convert integer to strings.</p>
+
+<p>Note that <code class="language-plaintext highlighter-rouge">{ int | string }</code> convert integer to strings.</p>
 
 <p>Also, we need to find a way to write liquid in code block.</p>
 
@@ -172,6 +174,33 @@
   <li>Set <code class="language-plaintext highlighter-rouge">z-index</code> of the dropdown menu higher than the two column layout.</li>
 </ul>
 
+<p>The superscript can be written like this<sup>[1]</sup></p>
+
+<h3 id="font-matter-settings">font matter settings</h3>
+<p>Jekyll can distinguish plural. For example,</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>category:
+- ca
+- cb
+</code></pre></div></div>
+<p>is equivalent to</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>categories: ca cb
+</code></pre></div></div>
+<p><strong>Note:</strong> there is no comma <code class="language-plaintext highlighter-rouge">,</code> when using the plural.</p>
+
+<p>The same applies for <code class="language-plaintext highlighter-rouge">tag</code> and <code class="language-plaintext highlighter-rouge">tags</code>.</p>
+
+<h3 id="link-in-markdown">link in markdown</h3>
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+
+<h3 id="for-testing">For testing</h3>
+<p><i class="fa fa-car" style="font-size:48px;"></i></p>
+
+<p>/freshman21-v1/2021/12/jekyll-notes.html</p>
+
+<p><a href="javascript:void(0)">testlink</a></p>
+
+<p>deeplearning</p>
+
   </article>
   <hr />
 </div>
@@ -180,7 +209,7 @@
 <section class="pager">
   <ul>
     
-    <li class="previous"><a href="/freshman21-v1/2021/10/wellcome.html" title="Welcome to Jekyll!">&laquo; Previous</a></li>
+    <li class="previous"><a href="/freshman21-v1/2021/10/wellcome.html" title="Build Up My Own Website!">&laquo; Previous</a></li>
     
     
     <li class="next"><a href="/freshman21-v1/2021/12/static-dynamic-web.html" title="Static vs Dynamic Web Pages">Next &raquo;</a></li>
@@ -234,7 +263,7 @@ var disqus_shortname ='';
   </li>
   
   <li>
-  <a href="/freshman21-v1/2021/10/wellcome.html" title="Welcome to Jekyll!" rel="bookmark">Welcome to Jekyll!</a>
+  <a href="/freshman21-v1/2021/10/wellcome.html" title="Build Up My Own Website!" rel="bookmark">Build Up My Own Website!</a>
   </li>
   
 </div>
@@ -243,17 +272,11 @@ var disqus_shortname ='';
 <div class="sidebar-module">
   <h4>Categories</h4>
   
-    <li><a href="/freshman21-v1/categories/#articles" title="articles" rel="5">articles (5)</a></li>
+    <li><a href="/freshman21-v1/categories/#articles" title="articles" rel="3">articles (3)</a></li>
   
     <li><a href="/freshman21-v1/categories/#Howto" title="Howto" rel="2">Howto (2)</a></li>
   
-    <li><a href="/freshman21-v1/categories/#news" title="news" rel="1">news (1)</a></li>
-  
-    <li><a href="/freshman21-v1/categories/#jekyll" title="jekyll" rel="1">jekyll (1)</a></li>
-  
-    <li><a href="/freshman21-v1/categories/#update" title="update" rel="1">update (1)</a></li>
-  
-    <li><a href="/freshman21-v1/categories/#Notes" title="Notes" rel="1">Notes (1)</a></li>
+    <li><a href="/freshman21-v1/categories/#Miscellaneous" title="Miscellaneous" rel="2">Miscellaneous (2)</a></li>
   
     <li><a href="/freshman21-v1/categories/#Web" title="Web" rel="3">Web (3)</a></li>
   
@@ -265,31 +288,13 @@ var disqus_shortname ='';
 <div class="sidebar-module">
   <h4>Tags</h4>
   
-    <a href="/freshman21-v1/tags/#Père David's deer" title="Père David's deer" rel="1">Père David's deer</a> &nbsp;
-  
-    <a href="/freshman21-v1/tags/#milu" title="milu" rel="2">milu</a> &nbsp;
-  
-    <a href="/freshman21-v1/tags/#Elaphurus davidianus" title="Elaphurus davidianus" rel="1">Elaphurus davidianus</a> &nbsp;
-  
-    <a href="/freshman21-v1/tags/#sample-post" title="sample-post" rel="2">sample-post</a> &nbsp;
+    <a href="/freshman21-v1/tags/#sample-post" title="sample-post" rel="1">sample-post</a> &nbsp;
   
     <a href="/freshman21-v1/tags/#structure" title="structure" rel="1">structure</a> &nbsp;
   
     <a href="/freshman21-v1/tags/#configure" title="configure" rel="1">configure</a> &nbsp;
   
-    <a href="/freshman21-v1/tags/#version" title="version" rel="1">version</a> &nbsp;
-  
-    <a href="/freshman21-v1/tags/#new features" title="new features" rel="1">new features</a> &nbsp;
-  
-    <a href="/freshman21-v1/tags/#google analytics" title="google analytics" rel="1">google analytics</a> &nbsp;
-  
-    <a href="/freshman21-v1/tags/#google search" title="google search" rel="1">google search</a> &nbsp;
-  
-    <a href="/freshman21-v1/tags/#back to top" title="back to top" rel="1">back to top</a> &nbsp;
-  
-    <a href="/freshman21-v1/tags/#read more" title="read more" rel="1">read more</a> &nbsp;
-  
-    <a href="/freshman21-v1/tags/#test" title="test" rel="1">test</a> &nbsp;
+    <a href="/freshman21-v1/tags/#welcome" title="welcome" rel="1">welcome</a> &nbsp;
   
     <a href="/freshman21-v1/tags/#jekyll" title="jekyll" rel="2">jekyll</a> &nbsp;
   
@@ -345,13 +350,6 @@ var disqus_shortname ='';
     
       
       
-      <li id="2015" > <a href="/freshman21-v1/archives/#2015">2015</a></li>
-    
-  
-    
-    
-      
-      
       <li id="2014" > <a href="/freshman21-v1/archives/#2014">2014</a></li>
     
   
@@ -359,16 +357,6 @@ var disqus_shortname ='';
     
   
     
-    
-  
-    
-    
-  
-    
-    
-      
-      
-      <li id="2013" > <a href="/freshman21-v1/archives/#2013">2013</a></li>
     
   
 
