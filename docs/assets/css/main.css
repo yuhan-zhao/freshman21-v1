@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /** Reset some basic elements */
-@import url("http://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("http://fonts.googleapis.com/css?family=Roboto:wght@300&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 body, h1, h2, h3, h4, p, blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
 
@@ -54,7 +54,7 @@ a:hover { color: #669900; text-decoration: underline; }
 /** Blockquotes */
 blockquote::before { position: absolute; font-family: FontAwesome; content: "\f10d"; font-size: 25px; }
 
-blockquote { padding: 10px 10px; margin: 14px 14px; border-left: 5px solid #8cbfa5; border-radius: 3px; color: #828282; background: #f9f9f9; /* &:hover { color: #454545; } */ }
+blockquote { padding: 10px 10px; margin: 10px 0; border-left: 5px solid #8cbfa5; border-radius: 3px; color: #828282; background: #f9f9f9; /* &:hover { color: #454545; } */ }
 
 blockquote p { margin-left: 35px; margin-top: 5px; }
 
@@ -148,9 +148,9 @@ cite { font-style: italic; text-decoration: underline; }
 
 /* .dropdown:after { content: ""; display: table; clear: both; } */
 /** Topic Archive header */
-.topic-archive-header { border-bottom: 1px solid #e8e8e8; margin-bottom: 20px; }
+.topic-archive-header { border-bottom: 1px solid #e8e8e8; margin-bottom: 30px; }
 
-.topic-archive-header h3 { font-size: 20px; font-weight: bold; color: #111; }
+.topic-archive-header h3 { font-size: 18px; font-weight: bold; color: #111; line-height: 1; }
 
 /** Sidebar */
 .sidebar-module { padding: 0 15px 15px 15px; margin: 0 -20px 15px; font-size: 14px; }
@@ -178,7 +178,11 @@ cite { font-style: italic; text-decoration: underline; }
 
 .post-header time { margin-left: 0px; font-style: normal; text-decoration: underline dotted; }
 
-.post-title { font-size: 32px; line-height: 1; /* @include media-query($on-laptop) { font-size: 36px; }*/ }
+/* 
+post-title class controls the post title font style in all pages.
+It does not affect the titles in the post contents.
+*/
+.post-title { font-size: 28px; line-height: 1; }
 
 #markdown-toc { float: right; width: 50%; background: #f4f7f8; padding: 20px 15px; }
 
@@ -188,21 +192,21 @@ cite { font-style: italic; text-decoration: underline; }
 
 .post-content p { padding: 3px 0; }
 
-.post-content h1 { font-size: 38px; line-height: 1em; }
+.post-content h1 { font-size: 28px; line-height: 1em; }
 
-@media screen and (max-width: 800px) { .post-content h1 { font-size: 36px; } }
+@media screen and (max-width: 800px) { .post-content h1 { font-size: 26px; } }
 
-.post-content h2 { font-size: 26px; line-height: 1em; padding: 10px 0 2px 0; }
+.post-content h2 { font-size: 24px; line-height: 1em; padding: 10px 0 2px 0; }
 
-@media screen and (max-width: 800px) { .post-content h2 { font-size: 24px; } }
+@media screen and (max-width: 800px) { .post-content h2 { font-size: 22px; } }
 
 .post-content h3 { font-size: 20px; padding: 10px 0 2px 0; line-height: 1em; }
 
 @media screen and (max-width: 800px) { .post-content h3 { font-size: 18px; } }
 
-.post-content h4 { font-size: 20px; line-height: 1em; }
+.post-content h4 { font-size: 16px; line-height: 1em; }
 
-@media screen and (max-width: 800px) { .post-content h4 { font-size: 18px; } }
+@media screen and (max-width: 800px) { .post-content h4 { font-size: 16px; } }
 
 /** Pagination Style */
 .pager { margin-bottom: 60px; text-align: center; }
@@ -266,5 +270,22 @@ time { margin-left: 15px; font-style: italic; }
 q:before { content: '『'; color: #DD1144; font-weight: bold; }
 
 q:after { content: '』'; color: #DD1144; font-weight: bold; }
+
+/** New style for theorem and remark blocks */
+.theorem-block { border-left: 5px solid #2583ad; border-radius: 3px; color: #828282; background: #f9f9f9; margin: 10px 0; padding: 10px 15px; }
+
+.theorem-block p { margin: 0; }
+
+.theorem-block ol { list-style-type: none; }
+
+.theorem-block li:before { content: "(" counter(section, decimal) ")  "; }
+
+.theorem-block li { counter-increment: section; }
+
+.remark-block { border-left: 5px solid #979797; border-radius: 3px; color: #828282; background: #f9f9f9; margin: 10px 0; padding: 10px 15px; }
+
+.remark-block p { margin: 0; }
+
+.quote-source { text-align: right; font-size: 14px; margin: 0; }
 
 /*# sourceMappingURL=main.css.map */

@@ -13,14 +13,8 @@
 <meta property="og:url" content="http://localhost:4000/topics/articles/">
 <meta property="og:site_name" content="HuskyDev">
 <meta property="og:locale" content="">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@">
-<meta name="twitter:creator" content="@">
-<meta name="twitter:title" content="articles">
-<meta name="twitter:description" content="HuskDev is Yuhan's personal blog.">
-<meta name="twitter:url" content="http://localhost:4000/topics/articles/">
 
-<meta name="keywords" content="Yuhan, blog, HuskyDev">
+<meta name="keywords" content="YuhanHuskyDev">
 
 <link rel="icon" href="/freshman21-v1/assets/images/favicon.ico">
 <link rel="stylesheet" href="/freshman21-v1/assets/css/main.css">
@@ -33,6 +27,17 @@
 <link rel="stylesheet" href="/freshman21-v1/assets/css/github.min.css">
 <script src="/freshman21-v1/assets/js/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    
 </head>
 
 
@@ -82,7 +87,7 @@
           <div class="dropdown-content">
             <ul>
             
-              <li><a href="/freshman21-v1/topics/articles">articles</a></li>
+              <li><a href="/freshman21-v1/topics/probability">Probability</a></li>
             
               <li><a href="/freshman21-v1/topics/optimization">Optimization</a></li>
             
@@ -127,129 +132,12 @@
     
     
       <header class="topic-archive-header">
-        <h3 class="post-title">Archive | articles</h3>
+        <h3>Archive | articles</h3>
       </header>
     
   
 
   <!--step 2: print pagination post title-->
-   
-    
-      
-      
-      
-      <img src="/freshman21-v1/assets/images/blog/2014/2014-12-19-logo.png" height="100" width="100" style="float: left; margin-right: 15px;">
-    
-    
-    <header class="post-header">
-      <h1 itemprop="name" class="post-title">
-        <a itemprop="url" class="post-link" href="/freshman21-v1/2014/12/how-to-set-the-config-file.html"><b>How to set the config.yml file</b></a>
-      </h1>
-      <meta itemprop="keywords" content="configure" />
-      <p class="post-meta">
-        Posted on
-        <time itemprop="datePublished" datetime="2014-12-19">
-          Dec 19, 2014
-        </time>
-        &nbsp;in
-        
-          <a href="/freshman21-v1/categories/#articles"><b>articles</b></a>, 
-        
-          <a href="/freshman21-v1/categories/#Howto"><b>Howto</b></a>
-        
-      </p>
-    </header>
-
-    <p>For page-paginate test only (temporary)</p>
-    <!--step 3: print pagination post excerpt content-->
-    <article class="post-content" itemprop="articleBody">
-      <p>The <a href="https://github.com/yulijia/freshman21/blob/master/_config.yml">config.yml file</a> in the Freshman21 theme includes five parts.</p>
-
-<p><strong>First part</strong> is the site info.</p>
-
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">Freshman21</span> <span class="c1"># blog title</span>
-<span class="na">tagline</span><span class="pi">:</span> <span class="s">Another Jekyll theme, Freshman twenty-first</span> <span class="c1"># blog sub-titile</span>
-<span class="na">author</span><span class="pi">:</span> <span class="s">Lijia YU</span> <span class="c1"># author name</span>
-<span class="na">email</span><span class="pi">:</span> <span class="s">yu@lijiayu.net</span> <span class="c1"># author email</span>
-<span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Freshman21</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Jekyll</span><span class="nv"> </span><span class="s">blog</span><span class="nv"> </span><span class="s">theme."</span> <span class="c1"># You can edit this line in _config.yml. It will appear in your document head meta and in </span>
-<span class="s">your feed.xml site description</span>
-<span class="na">keywords</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Jekyll,</span><span class="nv"> </span><span class="s">theme,</span><span class="nv"> </span><span class="s">Freshman21"</span> <span class="c1"># html meta keywords</span>
-<span class="na">baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/freshman21"</span> <span class="c1"># the subpath of your site, e.g. /blog</span>
-<span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http://yulijia.net/freshman21"</span> <span class="c1"># the base hostname &amp; protocol for your site</span>
-</code></pre></div></div>
-
-      <p><a href="/freshman21-v1/2014/12/how-to-set-the-config-file.html">(Continue reading ...)</a></p>
-    </article> <br><br><!--hr /-->
-   
-    
-      
-      
-      
-      <img src="/freshman21-v1/assets/images/blog/2014/2014-12-19-logo.png" height="100" width="100" style="float: left; margin-right: 15px;">
-    
-    
-    <header class="post-header">
-      <h1 itemprop="name" class="post-title">
-        <a itemprop="url" class="post-link" href="/freshman21-v1/2014/12/freshman21-structure.html"><b>Theme structure</b></a>
-      </h1>
-      <meta itemprop="keywords" content="structure" />
-      <p class="post-meta">
-        Posted on
-        <time itemprop="datePublished" datetime="2014-12-19">
-          Dec 19, 2014
-        </time>
-        &nbsp;in
-        
-          <a href="/freshman21-v1/categories/#articles"><b>articles</b></a>, 
-        
-          <a href="/freshman21-v1/categories/#Howto"><b>Howto</b></a>
-        
-      </p>
-    </header>
-
-    <p>For page-paginate test only (temporary)</p>
-    <!--step 3: print pagination post excerpt content-->
-    <article class="post-content" itemprop="articleBody">
-      <h2 id="1the-structure-of-freshman21-theme">1.The structure of freshman21 theme</h2>
-
-<p>You can see the simplest way of adding a page is just to add an HTML ( or markdown ) file in the root directory with a suitable name for the page you want to create. For example, aahome.md is the homepage link, about.md is the about page.</p>
-
-<p>All sidebar boxes html files are in the <code>_include</code> directory, their name begin with upper case. You can chose which sidebar boxes appears in the main page on the <q>sidebar.html</q> in the <code>_includes</code> directory.</p>
-
-
-      <p><a href="/freshman21-v1/2014/12/freshman21-structure.html">(Continue reading ...)</a></p>
-    </article> <br><br><!--hr /-->
-   
-    
-      
-      
-      
-      <img src="/freshman21-v1/assets/images/blog/2014/2014-12-13-logo.png" height="100" width="100" style="float: left; margin-right: 15px;">
-    
-    
-    <header class="post-header">
-      <h1 itemprop="name" class="post-title">
-        <a itemprop="url" class="post-link" href="/freshman21-v1/2014/12/simple-post.html"><b>Sample Post</b></a>
-      </h1>
-      <meta itemprop="keywords" content="sample-post" />
-      <p class="post-meta">
-        Posted on
-        <time itemprop="datePublished" datetime="2014-12-13">
-          Dec 13, 2014
-        </time>
-        &nbsp;in
-        
-          <a href="/freshman21-v1/categories/#articles"><b>articles</b></a>
-        
-      </p>
-    </header>
-
-    <p>For page-paginate test only (temporary)</p>
-    <!--step 3: print pagination post excerpt content-->
-    <article class="post-content" itemprop="articleBody">
-      Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more.
-      <p><a href="/freshman21-v1/2014/12/simple-post.html">(Continue reading ...)</a></p>
-    </article> <br><br><!--hr /-->
   
 
 </div> 
@@ -310,11 +198,9 @@
 <div class="sidebar-module">
   <h4>Categories</h4>
   
-    <li><a href="/freshman21-v1/categories/#articles" title="articles" rel="3">articles (3)</a></li>
+    <li><a href="/freshman21-v1/categories/#Miscellaneous" title="Miscellaneous" rel="5">Miscellaneous (5)</a></li>
   
-    <li><a href="/freshman21-v1/categories/#Howto" title="Howto" rel="2">Howto (2)</a></li>
-  
-    <li><a href="/freshman21-v1/categories/#Miscellaneous" title="Miscellaneous" rel="2">Miscellaneous (2)</a></li>
+    <li><a href="/freshman21-v1/categories/#Probability" title="Probability" rel="3">Probability (3)</a></li>
   
     <li><a href="/freshman21-v1/categories/#Web" title="Web" rel="3">Web (3)</a></li>
   
@@ -331,6 +217,10 @@
     <a href="/freshman21-v1/tags/#structure" title="structure" rel="1">structure</a> &nbsp;
   
     <a href="/freshman21-v1/tags/#configure" title="configure" rel="1">configure</a> &nbsp;
+  
+    <a href="/freshman21-v1/tags/#notes" title="notes" rel="3">notes</a> &nbsp;
+  
+    <a href="/freshman21-v1/tags/#math" title="math" rel="2">math</a> &nbsp;
   
     <a href="/freshman21-v1/tags/#welcome" title="welcome" rel="1">welcome</a> &nbsp;
   
@@ -376,6 +266,19 @@
     
   
     
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+      <li id="2019" > <a href="/freshman21-v1/archives/#2019">2019</a></li>
     
   
     

@@ -9,18 +9,12 @@
 
 <meta property="og:title" content="Theme structure">
 <title>Theme structure</title>
-<meta property="og:description" content="1.The structure of freshman21 themeYou can see the simplest way of adding a page is just to add an HTML ( or markdown ) file in the root directory with a sui...">
+<meta property="og:description" content="This post introduces the structure of freshman21 theme. It also introduces how to use pygments to highlight the code.">
 <meta property="og:url" content="http://localhost:4000/2014/12/freshman21-structure.html">
 <meta property="og:site_name" content="HuskyDev">
 <meta property="og:locale" content="">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@">
-<meta name="twitter:creator" content="@">
-<meta name="twitter:title" content="Theme structure">
-<meta name="twitter:description" content="1.The structure of freshman21 themeYou can see the simplest way of adding a page is just to add an HTML ( or markdown ) file in the root directory with a sui...">
-<meta name="twitter:url" content="http://localhost:4000/2014/12/freshman21-structure.html">
 
-<meta name="keywords" content="Yuhan, blog, HuskyDev">
+<meta name="keywords" content="YuhanHuskyDev">
 
 <link rel="icon" href="/freshman21-v1/assets/images/favicon.ico">
 <link rel="stylesheet" href="/freshman21-v1/assets/css/main.css">
@@ -33,6 +27,17 @@
 <link rel="stylesheet" href="/freshman21-v1/assets/css/github.min.css">
 <script src="/freshman21-v1/assets/js/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    
 </head>
 
 
@@ -82,7 +87,7 @@
           <div class="dropdown-content">
             <ul>
             
-              <li><a href="/freshman21-v1/topics/articles">articles</a></li>
+              <li><a href="/freshman21-v1/topics/probability">Probability</a></li>
             
               <li><a href="/freshman21-v1/topics/optimization">Optimization</a></li>
             
@@ -131,9 +136,7 @@
       </time>
       &nbsp;in
       
-        <a href="/freshman21-v1/categories/#articles"><b>articles</b></a>, 
-      
-        <a href="/freshman21-v1/categories/#Howto"><b>Howto</b></a>
+        <a href="/freshman21-v1/categories/#Miscellaneous"><b>Miscellaneous</b></a>
          
     </p>
   </header>
@@ -144,8 +147,6 @@
 <p>You can see the simplest way of adding a page is just to add an HTML ( or markdown ) file in the root directory with a suitable name for the page you want to create. For example, aahome.md is the homepage link, about.md is the about page.</p>
 
 <p>All sidebar boxes html files are in the <code>_include</code> directory, their name begin with upper case. You can chose which sidebar boxes appears in the main page on the <q>sidebar.html</q> in the <code>_includes</code> directory.</p>
-
-<!--more-->
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">.</span>
 |-- a_home.md                 <span class="c"># home page link at navigation bar</span>
@@ -342,11 +343,9 @@ var disqus_shortname ='';
 <div class="sidebar-module">
   <h4>Categories</h4>
   
-    <li><a href="/freshman21-v1/categories/#articles" title="articles" rel="3">articles (3)</a></li>
+    <li><a href="/freshman21-v1/categories/#Miscellaneous" title="Miscellaneous" rel="5">Miscellaneous (5)</a></li>
   
-    <li><a href="/freshman21-v1/categories/#Howto" title="Howto" rel="2">Howto (2)</a></li>
-  
-    <li><a href="/freshman21-v1/categories/#Miscellaneous" title="Miscellaneous" rel="2">Miscellaneous (2)</a></li>
+    <li><a href="/freshman21-v1/categories/#Probability" title="Probability" rel="3">Probability (3)</a></li>
   
     <li><a href="/freshman21-v1/categories/#Web" title="Web" rel="3">Web (3)</a></li>
   
@@ -363,6 +362,10 @@ var disqus_shortname ='';
     <a href="/freshman21-v1/tags/#structure" title="structure" rel="1">structure</a> &nbsp;
   
     <a href="/freshman21-v1/tags/#configure" title="configure" rel="1">configure</a> &nbsp;
+  
+    <a href="/freshman21-v1/tags/#notes" title="notes" rel="3">notes</a> &nbsp;
+  
+    <a href="/freshman21-v1/tags/#math" title="math" rel="2">math</a> &nbsp;
   
     <a href="/freshman21-v1/tags/#welcome" title="welcome" rel="1">welcome</a> &nbsp;
   
@@ -408,6 +411,19 @@ var disqus_shortname ='';
     
   
     
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+      <li id="2019" > <a href="/freshman21-v1/archives/#2019">2019</a></li>
     
   
     

@@ -5,8 +5,8 @@
     <description>HuskDev is Yuhan's personal blog.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/zfeed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Feb 2022 21:54:02 -0500</pubDate>
-    <lastBuildDate>Thu, 17 Feb 2022 21:54:02 -0500</lastBuildDate>
+    <pubDate>Fri, 04 Mar 2022 22:38:29 -0500</pubDate>
+    <lastBuildDate>Fri, 04 Mar 2022 22:38:29 -0500</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
     
       <item>
@@ -139,7 +139,7 @@ layout: default
 &lt;blockquote&gt;
   &lt;p&gt;A templating language basically is a language which allows defining placeholders that should later on be replaced for the purpose of implementing designs. Obviously modern template languages not only support placeholders, but also loops and conditions which are often necessary for designing a web page.&lt;/p&gt;
 
-  &lt;p&gt;&lt;em&gt;From &lt;a href=&quot;https://stackoverflow.com/questions/4026597/what-is-a-templating-language&quot;&gt;Stack Overflow: What is a templating language?&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;em&gt;—From &lt;a href=&quot;https://stackoverflow.com/questions/4026597/what-is-a-templating-language&quot;&gt;Stack Overflow: What is a templating language?&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Jekyll uses the &lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;Liquid&lt;/a&gt; templating language to process templates. We can think the templating language as a “scripting language” in HTML files. It defines how Jekyll process the HTML files and generate the final version.&lt;/p&gt;
@@ -397,6 +397,21 @@ layout: default
 &lt;h3 id=&quot;link-in-markdown&quot;&gt;link in markdown&lt;/h3&gt;
 &lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
 
+&lt;h3 id=&quot;for-excerpt&quot;&gt;For excerpt&lt;/h3&gt;
+&lt;p&gt;We have two ways to display partial posts in the blog pages:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;excerpt&lt;/code&gt; in the front matter&lt;/li&gt;
+  &lt;li&gt;use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;excerpt_separator&lt;/code&gt; in the front matter&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For example,&lt;/p&gt;
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;excerpt&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;These&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;pre-written&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;contents&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;will&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;be&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;displayed&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;the&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;blog&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;instead&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;any&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;the&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;post.&quot;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# or&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;excerpt_separator&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The second methods displays the post content before &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
 &lt;h3 id=&quot;for-testing&quot;&gt;For testing&lt;/h3&gt;
 &lt;p&gt;&lt;i class=&quot;fa fa-car&quot; style=&quot;font-size:48px;&quot;&gt;&lt;/i&gt;&lt;/p&gt;
 
@@ -438,6 +453,437 @@ layout: default
         
         
         <category>Miscellaneous</category>
+        
+      </item>
+    
+      <item>
+        <title>Randon Variables</title>
+        <description>&lt;h2 id=&quot;random-variables&quot;&gt;Random variables&lt;/h2&gt;
+&lt;div class=&quot;theorem-block&quot;&gt;
+&lt;p&gt;&lt;b&gt;Definition 1.&lt;/b&gt; A &lt;b&gt;random variable&lt;/b&gt; is a function $X: \Omega \to \mathbb{R}$ with the property that $\{ \omega\in \Omega \;\vert\; X(\omega) \leq x\} \in \mathcal{F}$ for each $x \in \mathbb{R}$. Such a function is said to be $\mathbf{\mathcal{F}}$-measurable. 
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;remark-block&quot;&gt;
+&lt;p&gt;&lt;b&gt;Example 1.&lt;/b&gt; Tossing two dice. We define
+$$
+    X = \begin{cases} 1 &amp;amp; \text{get double ($i=j$)} \\ 0 &amp;amp; \text{not double $(i\neq j)$} \end{cases}.
+$$
+Then $X = (i,j) \in \mathbb{R}$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;remark-block&quot;&gt;
+&lt;p&gt;&lt;b&gt;Remark.&lt;/b&gt; We are interested in $g(x) = \mathbf{P}\{ \omega \;\vert\; X(\omega) = x \}$. But sometimes it doesn't work very well. Probability triplet is defined as $\{ \Omega, \mathcal{F}, \mathbf{P} \}$. If $\Omega$ is countable, then $g(x)$ is okay. But if $\Omega$ is uncountable like intervals, then $\mathbf{P}(X=x)$ doesn't make much sense because the cardinality is too large.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem-block&quot;&gt;
+&lt;p&gt;&lt;b&gt;Definition 2.&lt;/b&gt; The &lt;b&gt;distribution function&lt;/b&gt; of a random variable $X$ is the function $F: \mathbb{R} \to 
+[0, 1]$ given by $F(x) = \mathbf{P}(X \leq x)$. &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;remark-block&quot;&gt;
+&lt;p&gt;&lt;b&gt;Example 2.&lt;/b&gt; The distribution function of preceeding example is
+$$
+    F(x) = \begin{cases} 0 &amp;amp; x \leq 0, \\ \frac{30}{36} &amp;amp; 0 &amp;lt; x \leq 1, \\ 1 &amp;amp; x &amp;gt; 1. \end{cases}
+$$
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Notice that ${ \omega \;\vert\; X(\omega) \leq x}$ defines an event. It is an element in the corresponding $\sigma$-field. Denote $A(x) = { \omega \;\vert\; X(\omega) \leq x }$. Along with $A(x)$, we can define
+\(A^c(x) = \{ \omega \;\vert\; X(\omega) &amp;gt; x \}, \quad A(x, y) = A^c(x) \cap A(y) = \{ \omega \;\vert\; x &amp;lt; X(\omega) \leq y \}.\)
+Tow points worth noting:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;$F$ must be defined for &lt;strong&gt;all&lt;/strong&gt; $x \in \mathbb{R}$.&lt;/li&gt;
+  &lt;li&gt;$A(x)$ should &lt;strong&gt;belongs to&lt;/strong&gt; $\mathcal{F}$. Otherwise, we cannot talk about the probability of $\mathbf{P}(A(x))$. Then the definition of distribution function is meaningless.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;theorem-block&quot;&gt;
+&lt;p&gt;&lt;b&gt;Lemma 1.&lt;/b&gt; A distribution function $F$ has the following properties:&lt;/p&gt;
+&lt;ol&gt;
+    &lt;li&gt;$\lim_{x \to -\infty}F(x) = 0$, $\lim_{x\to\infty} F(x) = 1$,&lt;/li&gt;
+    &lt;li&gt;if $x &amp;lt; y$, then $F(x) \leq F(y)$,&lt;/li&gt;
+    &lt;li&gt;$F$ is right-continuous, that is $F(x+h) \to F(x)$ as $h \downarrow 0$. (left-continuous is not necessary)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;remark-block&quot;&gt;
+&lt;p&gt;&lt;b&gt;Example 3.&lt;/b&gt; &lt;b&gt;Indicator functions.&lt;/b&gt; A particular class of Bernoulli variables is very useful in probability theory. Let $A$ be an event and let $I_A : \Omega \to \mathbb{R}$ be the indicator function of $A$; that is,
+$$
+    I_A(\omega) = \begin{cases} 1 &amp;amp; \text{if $\omega \in A$}, \\ 0 &amp;amp; \text{if $\omega \in A^c$}. \end{cases}
+$$
+Then $I_A$ is a Bernoulli random variable taking the values 1 and 0 with probabilities $\mathbf{P}(A)$ and $\mathbf{P}(A^c)$ respectively. Suppose $\{B_i \;\vert\; i \in I\}$ is a family of disjoint events with $A \subseteq \bigcup_{i\in I} B_i$. Then
+$$
+    I_A = \sum_{i} = I_{A\cap B_i},
+$$
+an identity which is often useful.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem-block&quot;&gt;
+&lt;p&gt;&lt;b&gt;Lemma 2.&lt;/b&gt; Let $F$ be the distribution function of $X$. Then&lt;/p&gt;
+&lt;ol&gt;
+    &lt;li&gt; $\mathbf{P}(X&amp;gt;x) = 1-F(x)$,&lt;/li&gt; 
+    &lt;li&gt; $\mathbf{P}(x &amp;lt; X \leq y) = F(y) - F(x)$,&lt;/li&gt;
+    &lt;li&gt; $\mathbf{P}(X = x) = F(x) - \lim_{y \uparrow x} F(y)$.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A random variable $X$ with distribution function $F$ is said to have two “tails” given by 
+\(T_1 (X) = \mathbf{P}(X &amp;gt; x) = 1 - F(x), \quad T_2(X) = \mathbf{P}(X \leq -x) = F(-x),\)
+where $x$ is large and positive. The rates at which the $T_i$ decay to zero as $x\to\infty$ have a substantial effect on the existence or non-existence of certain associated quantities called the “moments” of the distribution.&lt;/p&gt;
+
+&lt;h2 id=&quot;different-random-variables&quot;&gt;Different random variables&lt;/h2&gt;
+&lt;h3 id=&quot;discrete-random-variables&quot;&gt;Discrete random variables&lt;/h3&gt;
+&lt;div class=&quot;theorem-block&quot;&gt;
+&lt;p&gt;&lt;b&gt;Definition 3.&lt;/b&gt; The random variable $X$ is called &lt;b&gt;discrete&lt;/b&gt; if it takes values in some &lt;b&gt;countable&lt;/b&gt; subset $\{ x_1, x_2, \dots \}$, only, of $\mathbb{R}$. The discrete random variable $X$ has &lt;b&gt;(probability) mass function&lt;/b&gt; $f : \mathbb{R} \to [0, 1]$ given by $f(x) = \mathbf{P}(X = x)$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We shall see that the distribution function of a discrete variable has jump discontinuities 
+at the values $x_1 , x_2, \dots$ and is constant in between; such a distribution is called &lt;em&gt;atomic&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;continuous-random-variables&quot;&gt;Continuous random variables&lt;/h3&gt;
+&lt;div class=&quot;theorem-block&quot;&gt;
+&lt;p&gt;&lt;b&gt;Definition 4.&lt;/b&gt; The random variable $X$ is called &lt;b&gt;continuous&lt;/b&gt; if its distribution function can 
+be expressed as 
+$$
+    F(x) = \int_{-\infty}^x f(u) du \qquad x \in \mathbb{R}
+$$
+for some &lt;b&gt;integrable&lt;/b&gt; function $f : \mathbb{R} \to [0, \infty)$ called the **(probability) density function** of $X$.
+&lt;/p&gt; 
+&lt;/div&gt;
+
+&lt;p&gt;Some point worth noting:&lt;/p&gt;
+&lt;ol&gt;
+    &lt;li&gt; The density function $f(x)$ is not unique. We can add some separate points to $f$, and it doesn't affect the integration.&lt;/li&gt;
+    &lt;li&gt; $F$ must be **absolutely continuous**. This implies $F$ is continuous. We can also deduce that the probability at certain point must be zero. \emph{i.e.}, $\mathbf{P}(X=x) = 0$.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;There is another sort of random variable, called “singular”.&lt;/p&gt;
+
+&lt;h2 id=&quot;random-vectors&quot;&gt;Random vectors&lt;/h2&gt;
+&lt;h3 id=&quot;definition&quot;&gt;Definition&lt;/h3&gt;
+&lt;p&gt;The random vector is a function $X : \Omega \to \mathbb{R}^n$. For example, $\mathbf{X} = (X, Y)$ for $n=2$. We can also define the distribution function for such $X$. But we need to first introduce the ordering in $\mathbb{R}^n$.&lt;/p&gt;
+&lt;div class=&quot;theorem-block&quot;&gt;
+&lt;p&gt;&lt;b&gt;Definition 5.&lt;/b&gt; 
+    By definition, $(x_1, y_1) &amp;lt; (x_2, y_2)$ if and only if $x_1 &amp;lt; x_2$  **AND**  $y_1 &amp;lt; y_2$.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;remark-block&quot;&gt; 
+&lt;p&gt;&lt;b&gt;Definition 6.&lt;/b&gt;
+The &lt;b&gt;joint distribution function&lt;/b&gt; of a random vector $\mathbf{X} = (X_1, X_2 \dots, X_n)$ on the probability space $\{ \Omega, \mathcal{F}, \mathbf{P} \}$ is the function $F_{\mathbf{X}} : \mathbb{R}^n \to [0, 1]$ given by $F_{\mathbf{X}}(x) = \mathbf{P}(\mathbf{X} \leq \mathbf{x})$ for $\mathbf{x} \in \mathbb{R}^n$. 
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;remark-block&quot;&gt;
+&lt;p&gt;&lt;b&gt;Remark .&lt;/b&gt; 
+The joint probability $\mathbf{P}(\mathbf{X} \leq \mathbf{x}) = \mathbf{P}(X_1 \leq x_1, \dots, X_n \leq x_n)$. $\{\mathbf{X} \leq \mathbf{x} \}$ is an abbreviation for the event $\{\omega \in \Omega \;\vert\; \mathbf{X}(w) \leq \mathbf{x}\}$.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem-block&quot;&gt;
+&lt;p&gt;&lt;b&gt;Lemma 3.&lt;/b&gt;
+The joint distribution function $F_{X, Y}$ of the random vector $(X, Y)$ has the following properties:&lt;/p&gt;
+&lt;ol&gt;
+    &lt;li&gt; $\lim_{x, y\to -\infty} F_{X, Y}(x, y) = 0, \lim_{x,y\to\infty} F_{X, Y}(x,y) = 1$,&lt;/li&gt;
+    &lt;li&gt; if $(x_1, y_1) \leq (x_2, y_2)$, then $F_{X,Y}(x_1, y_1) \leq F_{X, Y}(x_2, y_2)$,&lt;/li&gt;
+    &lt;li&gt; $F_{X,Y}$ is continuous from above, in that
+    $$
+        F_{X,Y}(x+u, y+v) \to F_{X,Y}(x,y) \quad as \quad u, v \downarrow 0.
+    $$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;marginalization&quot;&gt;Marginalization&lt;/h3&gt;
+&lt;p&gt;\(\begin{align}
+    \lim_{y\to\infty} F_{X,Y} &amp;amp;= F_X(x) = \mathbf{P}(X \leq x), \\
+    \lim_{x\to\infty} F_{X,Y} &amp;amp;= F_Y(y) = \mathbf{P}(Y \leq y).
+\end{align}\)&lt;/p&gt;
+
+&lt;p&gt;The functions $F_X$ and $F_Y$ are called the “marginal” distribution functions of $F_{X,Y}$. $F_{X,Y}$ can determine two marginals $F_X$ and $F_Y$, but &lt;strong&gt;converse is NOT true&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;discrete-and-continuous-distribution&quot;&gt;Discrete and continuous distribution&lt;/h3&gt;
+&lt;div class=&quot;theorem-block&quot;&gt;
+&lt;p&gt;&lt;b&gt;Definition 7.&lt;/b&gt; The random variables $X$ and $Y$ on the probability space $\{ \Omega, \mathcal{F}, \mathbf{P} \}$ are called **(jointly) discrete** if the vector $(X, Y)$ takes values in some **countable** subset of $\mathbb{R}^2$ only. The jointly discrete random variables $X, Y$ have **joint (probability) mass function** $f : \mathbb{R}^2 \to [0,1]$ given by $f(x, y) = \mathbf{P}(X = x, Y = y)$. 
+&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class=&quot;theorem-block&quot;&gt;
+&lt;p&gt;&lt;b&gt;Definition 8.&lt;/b&gt;
+The random variables $X$ and $Y$ on the probability space $\{ \Omega, \mathcal{F}, \mathbf{P} \}$ are called **(jointly) continuous** if their joint distribution function can be expressed as 
+$$
+    F_{X,Y}(x,y) = \int_{u = -\infty}^x \int_{v = -\infty}^y f(u,v)du dv \qquad x, y\in\mathbb{R},
+$$
+for some **integrable** function $f : \mathbb{R}^2 \to [0, \infty)$ called the **joint (probability) density function** of the pair $(X, Y)$. 
+&lt;/p&gt;&lt;/div&gt;
+</description>
+        <pubDate>Mon, 07 Oct 2019 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/2019/10/notes-2.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/10/notes-2.html</guid>
+        
+        <category>notes</category>
+        
+        <category>math</category>
+        
+        
+        <category>Probability</category>
+        
+      </item>
+    
+      <item>
+        <title>Sets and Probability Measures</title>
+        <description>&lt;h2 id=&quot;event-as-sets&quot;&gt;Event as sets&lt;/h2&gt;
+&lt;p&gt;Probability studies the &lt;strong&gt;repeatable (or ideal) experiments&lt;/strong&gt;. The result of an experiment is called an &lt;strong&gt;outcome&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;theorem-block&quot;&gt;
+&lt;p&gt;&lt;b&gt;Definition 1.&lt;/b&gt; The set of all possible outcomes of an experiment is called the &lt;b&gt;sample space&lt;/b&gt; and is denoted by $\Omega$.&lt;/p&gt;  
+&lt;/div&gt;
+
+&lt;h3 id=&quot;cardinality-of-sets&quot;&gt;Cardinality of sets&lt;/h3&gt;
+&lt;p&gt;The cardinality of a set $\Omega$ refers to the number of the number of elements in this set, and is denoted by $\mathbf{carf}(\Omega)$ or $\vert \Omega \vert$.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;For finite sets, $\mathbf{card}(\Omega)$ is a natural number.&lt;/li&gt;
+  &lt;li&gt;For the integer set, $\mathbf{card}(\mathbb{Z}) = \aleph_0$, which is countable.&lt;/li&gt;
+  &lt;li&gt;For the real number set, $\mathbf{card}(\mathbb{R}) = \aleph_1 &amp;gt; \aleph_0$.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The &lt;strong&gt;power set&lt;/strong&gt; of a set $\Omega$ is the set of all subsets, which is denoted by $2^\Omega$.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;For $\mathbb{Z}$, $\mathbf{card}(2^\mathbb{Z}) = \aleph_1 = \mathbf{card}(\mathbb{R})$.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In practical, sets in probability are: &lt;strong&gt;finite&lt;/strong&gt;, &lt;strong&gt;countable&lt;/strong&gt;, &lt;strong&gt;reals&lt;/strong&gt; and their variants.&lt;/p&gt;
+
+&lt;p&gt;When we conduct an experiment, we want to know whether a subset occurs or not. For example, if we take a number from $\mathbb{R}$, the probability will be 0 because $\card(\mathbb{R})$ is very large. Therefore,
+\begin{center}
+\emph{we are interested in $A \subset \Omega$ in probability, where $A$ is a collection of subsets in probability.}
+\end{center}&lt;/p&gt;
+
+&lt;p&gt;\subsection{Events and fields}
+\begin{definition}
+The \textbf{events} are subsets of the sample space $\Omega$. 
+\end{definition}&lt;/p&gt;
+
+&lt;p&gt;\begin{remark}
+$\varnothing$ is called the \emph{impossible event}. The set $\Omega$ is called the \emph{certain event}. Events $A$ and $B$ are called \emph{disjoint} if their intersection is the empty set.
+\end{remark}&lt;/p&gt;
+
+&lt;p&gt;We do \textbf{NOT} need all the subsets of $\Omega$ be events. It suffices for us to think of the collection of events as a subcollection $\mathcal{F}$ of the set of all subsets of $\Omega$.
+\begin{definition}
+Any collection $\mathcal{F}$ of subsets of $\Omega$ which satisfies the following three conditions is called a field:
+\begin{enumerate}[(a)]
+    \item if $A, B \in \mathcal{F}$, then $A \cup B \in \mathcal{F}$ and $A \cap B \in \mathcal{F}$ (actually $A\cap B \in \mathcal{F}$ is redundant); 
+    \item if $A \in \mathcal{F}$, then $A^c \in \mathcal{F}$;
+    \item the empty set $\varnothing$ belongs to $\mathcal{F}$.
+\end{enumerate}
+\end{definition}&lt;/p&gt;
+
+&lt;p&gt;\begin{remark}
+Some implications from the properties of a filed $\mathcal{F}$:
+\begin{itemize}
+    \item if $A_1, \dots, A_n \in \mathcal{F}$, then $\bigcup_{i=1}^n A_i \in \mathcal{F}$;
+    \item $\varnothing^C = \Omega \in \mathcal{F}$;
+    \item $A \cap B = (A^c \cup B^c)^C \in \mathcal{F}$.
+\end{itemize}
+\end{remark}&lt;/p&gt;
+
+&lt;p&gt;\begin{question}
+what if we have an $\Omega$ such that $\card(\Omega) = \aleph_0$? In this case, we may need $2^\Omega$ to study the probability. 
+\end{question}&lt;/p&gt;
+
+&lt;p&gt;\begin{definition}
+A collection $\mathcal{F}$ of subsets of $\Omega$ is called a $\sigma$-field if it satisfies the following conditions: 
+\begin{enumerate}[(a)]
+    \item $\varnothing \in \mathcal{F}$;
+    \item if $A \in \mathcal{F}$, then $A^c \in \mathcal{F}$;
+    \item if $A_1, A_2, \dots \in \mathcal{F}$, then $\bigcup_{i=1}^\infty A_i \in \mathcal{F}$.
+\end{enumerate}
+\end{definition}&lt;/p&gt;
+
+&lt;p&gt;\begin{remark}
+$\sigma$-fields are closed under the operation of taking countable intersections.
+\end{remark}&lt;/p&gt;
+
+&lt;p&gt;\begin{example}
+The smallest $\sigma$-field associated with $\Omega$ is the collection $\mathcal{F} = {\varnothing, \Omega }$.
+\end{example}&lt;/p&gt;
+
+&lt;p&gt;\begin{example}
+If $A \subset \Omega$, then $\mathcal{F} = {\varnothing, A, A^c, \Omega }$ is a $\sigma$-field. 
+\end{example}&lt;/p&gt;
+
+&lt;p&gt;\begin{example}
+The power set of $\Omega$ is a $\sigma$-field.
+\end{example}&lt;/p&gt;
+
+&lt;p&gt;With any experiment we may associate a pair ${\Omega, \mathcal{F}}$, where $\Omega$ is the set of all possible outcomes or elementary events and $\mathcal{F}$ is a $\sigma$-field of subsets of $\Omega$ which contains \emph{all the events in whose occurrences we may be interested}; henceforth, to call a set $A$ an event is equivalent to asserting that $A$ belongs to the $\sigma$-field in question.&lt;/p&gt;
+
+&lt;p&gt;\section{Probability}
+Assume we have a ``repeatable” experiment and we repeat the experiment a large number $N$ of times. Let $A \in \Omega$ and $N(A)$ be the number of $A$ occurs in the $N$ trails. Intuitively, the ratio $N(A)/ N$ appears to converge to a constant limit as $N$ increases. In practice, we have 
+\begin{itemize}
+    \item $0 \leq N(A)/ N \leq 1$;
+    \item if $A, B$ are disjoint, then $N(A \cup B) = N(A) + N(B)$. (finite additive and countably additive)
+\end{itemize}&lt;/p&gt;
+
+&lt;p&gt;\begin{definition}
+A \textbf{probability measure} $\Prob$ on ${ \Omega, \mathcal{F} }$ is a function $\Prob : \mathcal{F} \to [0,1]$ satisfying
+\begin{enumerate}[(a)]
+    \item $\Prob(\varnothing) = 0$;
+    \item $\Prob(\Omega) = 1$;
+    \item  if $A_1, A2, \dots$ is a collection of disjoint members of $\mathcal{F}$, in that $A_i \cap A_j = \varnothing$ for all pairs $i, j$ satisfying $i \neq j$, then
+    \begin{equation&lt;em&gt;}
+        \Prob\left( \bigcup_{i=1}^\infty A_i \right) = \sum_{i=1}^\infty \Prob (A_i).
+    \end{equation&lt;/em&gt;}
+\end{enumerate}
+\end{definition}
+The triple ${ \Omega, \mathcal{F}, \Prob }$, comprising a set $\Omega$, a $\sigma$-field $\mathcal{F}$ of subsets of $\Omega$, and a probability measure $\Prob$ on ${\Omega, \mathcal{F}}$, is called a \textbf{probability space}. We can associate a probability space ${ \Omega, \mathcal{F}, \Prob }$ with any experiment, and all questions associated with the experiment can be reformulated in terms of this space.&lt;/p&gt;
+
+&lt;p&gt;\begin{remark}
+A probability measure is a special example of what is called a \emph{measure} on the pair ${\Omega, \mathcal{F}}$. A measure is a function $\mu: \mathcal{F} \to [0, \infty)$ satisfying $\mu(\varnothing) = 0$ together with (c) above. A measure $\mu$ is a probability measure if $\mu(\Omega) = 1$. 
+\end{remark}&lt;/p&gt;
+
+&lt;p&gt;\begin{lemma}
+We can deduce some lemmas from the definition.
+\begin{enumerate}[(a)]
+    \item $\Prob(A^c) = 1 - \Prob(A)$;
+    \item if $A \subseteq B$, then $\Prob(B) = \Prob(A) + \Prob(B\backslash A) \geq \Prob(A)$;
+    \item $\Prob(A \cup B) = \Prob(A) + \Prob(B) - \Prob(A \cap B)$;
+    \item more generally, if $A_1, A_2, \dots, A_n$ are events, then 
+    \begin{equation&lt;em&gt;}
+        \begin{split}
+        \Prob\left( \bigcup_{i=1}^n A_i \right) =&amp;amp; \sum_{i}\Prob(A_i) - \sum_{i &amp;lt; j} \Prob(A_i \cap A_j) + \sum_{i&amp;lt;j&amp;lt;k} \Prob(A_i \cap A_j \cap A_k) - \cdots &lt;br /&gt;
+        &amp;amp; +(-1)^{n+1} \Prob(A_1 \cap A_2 \cap \cdots \cap A_n)
+        \end{split}
+    \end{equation&lt;/em&gt;}
+\end{enumerate}
+\end{lemma}&lt;/p&gt;
+
+&lt;p&gt;\begin{lemma}
+Let $A_1, A_2, \dots$ be an increasing sequence of events, so that $A_1 \subset A_2 \subset A_3 \subset \cdots$, and write $A$ for their limit:
+\begin{equation&lt;em&gt;}
+    A = \bigcup_{i=1}^\infty A_i = \lim_{i \to \infty} A_i.
+\end{equation&lt;/em&gt;}
+Then $\Prob(A) = \lim_{i\to\infty} \Prob(A_i)$.&lt;/p&gt;
+
+&lt;p&gt;Similarly, if $B_1, B_2, \dots$ is a decreasing sequence of events, so that $B_1 \supseteq  B_2 \supseteq B_3 \supseteq \cdots$, then 
+\begin{equation&lt;em&gt;}
+    B = \bigcap_{i=1}^\infty B_i = \lim_{i \to \infty} B_i
+\end{equation&lt;/em&gt;}
+satisfies $\Prob(B) = \lim_{i\to\infty} \Prob(B_i)$
+\end{lemma}&lt;/p&gt;
+
+&lt;p&gt;\section{Some useful concepts}
+\subsection{Conditional probability}
+What if we only care how many times does $A$ occur only when $B$ occurs? $N(A\cap B) / N(B)$, the universe is changed. 
+\begin{definition}
+If $\Prob(B) &amp;gt; 0$, then the \textbf{conditional probability} that $A$ occurs given that $B$ occurs is defined to be
+\begin{equation&lt;em&gt;}
+    \Prob(A \spacevert B) = \frac{\Prob(A \cap B)}{\Prob(B)}.
+\end{equation&lt;/em&gt;}
+\end{definition}&lt;/p&gt;
+
+&lt;p&gt;\begin{definition}
+Suppose ${B_i}$ is a finite set. If $B_i$ are all disjoint and $\bigcup_{i=1}^n B_i = \Omega$, then ${B_i}$ is called a \textbf{partition} of $\Omega$.
+\end{definition}&lt;/p&gt;
+
+&lt;p&gt;\begin{lemma}
+For any events $A$ and $B$ such that $0 &amp;lt; \Prob(B) &amp;lt; 1$,
+\begin{equation&lt;em&gt;}
+    \Prob(A) = \Prob(A \spacevert B) \Prob(B) + \Prob(A \spacevert B^c) \Prob(B^c).
+\end{equation&lt;/em&gt;}
+More generally, let $B_1,  B_2, \dots, B_n$ be a partition of $\Omega$ such that $\Prob(B_i) &amp;gt; O$ for all $i$. Then 
+\begin{equation&lt;em&gt;}
+    \Prob(A) = \sum_i \Prob(A \spacevert B_i) \Prob(B_i).
+\end{equation&lt;/em&gt;}
+\end{lemma}&lt;/p&gt;
+
+&lt;p&gt;\subsection{Independence}
+Intuition: an event $A$ occurs doesn’t affect the probability of $A$ occurs when $B$ occurs, which means $\Prob(A) = \Prob(A\spacevert B)$.&lt;/p&gt;
+
+&lt;p&gt;\begin{definition}
+Events $A$ and $B$ are called \textbf{independent} if 
+\begin{equation&lt;em&gt;}
+    \Prob(A \cap B) = \Prob(A) \Prob(B).
+\end{equation&lt;/em&gt;}
+More generally, a family ${A_i \spacevert i \in I}$ is called independent if
+\begin{equation&lt;em&gt;}
+    \Prob \left( \bigcap_{i \in J} A_i \right) = \prod_{i\in J} \Prob(A_i)
+\end{equation&lt;/em&gt;}
+for all finite subsets $J$ of $I$. 
+\end{definition}&lt;/p&gt;
+
+&lt;p&gt;\begin{caution}
+A common \emph{student error} is to make the fallacious statement that $A$ and $B$ are independent if $A \cap B = \varnothing$.
+\end{caution}&lt;/p&gt;
+
+&lt;p&gt;\begin{remark}
+If the family ${A_i \spacevert i \in I}$ has the property that 
+for all 
+\begin{equation&lt;em&gt;}
+    \Prob(A_i \cap A_j) = \Prob(A_i) \Prob(A_j) \quad \forall i\neq j, 
+\end{equation&lt;/em&gt;}
+then it is called \emph{pairwise independent}. \textbf{Pairwise-independent families are not necessarily independent.} 
+\end{remark}&lt;/p&gt;
+
+&lt;p&gt;\section{Completeness and product space}
+\begin{lemma}
+If $\mathcal{F}$ and $\mathcal{G}$ are two $\sigma$-fields of subsets of $\Omega$, then their intersection $\mathcal{F} \cap \mathcal{G}$ is a $\sigma$-field also. More generally, if ${ \mathcal{F}&lt;em&gt;i \spacevert  i \in I }$ is a family of $\sigma$-fields of subsets of $\Omega$, then $\mathcal{G} = \bigcap&lt;/em&gt;{i\in I} \mathcal{F}_i $ is a $\sigma$-field also. 
+\end{lemma}&lt;/p&gt;
+
+&lt;p&gt;\begin{newnotion}{Completeness}
+Let ${\Omega, \mathcal{F}, \Prob}$ be a probability space. Any event $A$ which has zero probability, that is $\Prob(A) = 0$, is called \emph{null}. It may seem reasonable to suppose that any subset $B$ of a null set $A$ will itself be null, but this may be without meaning since $B$ may not be an event, and thus $\Prob(B)$ may not be defined. 
+\end{newnotion}&lt;/p&gt;
+
+&lt;p&gt;\begin{definition}
+A probability space ${\Omega, \mathcal{F}, \Prob}$ is called \textbf{complete} if all subsets of null sets are events. 
+\end{definition}&lt;/p&gt;
+
+&lt;p&gt;Any incomplete space can be completed thus. Let $\mathcal{N}$ be the collection of all subsets of null sets in $\mathcal{F}$ and let $\mathcal{G} = \sigma (\mathcal{F} \cup \mathcal{N})$ be the smallest $\sigma$-field which contains all sets in $\mathcal{F}$ 
+and $\mathcal{N}$. It can be shown that the domain of $\Prob$ may be extended in an obvious way from $\mathcal{F}$ to $\mathcal{G}$; ${\Omega, \mathcal{G}, \Prob}$ is called the completion of ${\Omega, \mathcal{F}, \Prob}$.&lt;/p&gt;
+
+&lt;p&gt;\begin{newnotion}{Product space}
+Suppose two experiments have associated probability spaces ${ \Omega_1, \mathcal{F}_1, \Prob_1 }$ and  ${ \Omega_2, \mathcal{F}_2, \Prob_2 }$ respectively. The sample space of the pair of experiments, considered jointly, is the collection $\Omega_1 \times \Omega_2 = { (\omega_1 , \omega_2) \spacevert w_1 \in \Omega_1, \omega_2 \in \Omega_2 }$ of ordered pairs. The appropriate $\sigma$-field of events is \textbf{more complicated} to construct. \textbf{The family of all such sets, $\mathcal{F}_1 \times \mathcal{F}_2 = {A_1 \times A_2 \spacevert A_1 \in \mathcal{F}_1 , A_1 \in \mathcal{F}_2 }$, is NOT in general a $\sigma$-field.}
+\end{newnotion}&lt;/p&gt;
+
+&lt;p&gt;\begin{remark}
+There exists a unique smallest $\sigma$-field $\mathcal{G} = \sigma(\mathcal{F}&lt;em&gt;1 \times \mathcal{F}_2)$ of subsets of $\Omega_1 \times \Omega_2$ which contains $\mathcal{F}_1 \times \mathcal{F}_2$. All we require now is a suitable probability function on $( \Omega1 \times \Omega_2, \mathcal{G} )$. Let $\Prob&lt;/em&gt;{12}: \mathcal{F}&lt;em&gt;1 \times \mathcal{F}_2 \to [0, 1]$ be given by: 
+\begin{equation*}
+    \Prob(A_1 \times A_2) = \Prob_1(A_1) \times \Prob_2(A_2) \quad \text{for $A_1 \in \mathcal{F}_1, A_2 \in \mathcal{F}_2$}.
+\end{equation*}
+It can be shown that the domain of $\Prob&lt;/em&gt;{12}$ can be extended from $\mathcal{F}_1 \times \mathcal{F}_2$ to the whole of $\mathcal{G} = \sigma(\mathcal{F}_1 \times \mathcal{F}_2)$.
+\end{remark}&lt;/p&gt;
+
+&lt;p&gt;\begin{definition}
+The probability space $(\mathcal{F}&lt;em&gt;1 \times \mathcal{F}_2, \mathcal{G}, \Prob&lt;/em&gt;{12})$ is called the \textbf{product space} of $(\Omega_1, \mathcal{F}&lt;em&gt;1, \Prob_1)$ and  $(\Omega_2, \mathcal{F}_2, \Prob_2)$. The measure $\Prob&lt;/em&gt;{12}$ is sometimes called the `product measure’. 
+\end{definition}&lt;/p&gt;
+
+&lt;p&gt;\end{document}&lt;/p&gt;
+</description>
+        <pubDate>Wed, 02 Oct 2019 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/2019/10/notes-1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/10/notes-1.html</guid>
+        
+        <category>notes</category>
+        
+        <category>math</category>
+        
+        
+        <category>Probability</category>
+        
+      </item>
+    
+      <item>
+        <title>Notes in Probability</title>
+        <description>&lt;p&gt;I will post a series of notes from the Elements of Probability course which I took in 2019. The notes review the basic concepts in probability. I write them for quick review prupose.&lt;/p&gt;
+
+&lt;p&gt;The notes are mainly based on the book xxx. There are also some other great books in probability theory. For example, xxx&lt;/p&gt;
+</description>
+        <pubDate>Wed, 25 Sep 2019 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/2019/09/probability-intro.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/09/probability-intro.html</guid>
+        
+        <category>notes</category>
+        
+        
+        <category>Probability</category>
         
       </item>
     
@@ -518,9 +964,7 @@ layout: default
         <category>configure</category>
         
         
-        <category>articles</category>
-        
-        <category>Howto</category>
+        <category>Miscellaneous</category>
         
       </item>
     
@@ -531,8 +975,6 @@ layout: default
 &lt;p&gt;You can see the simplest way of adding a page is just to add an HTML ( or markdown ) file in the root directory with a suitable name for the page you want to create. For example, aahome.md is the homepage link, about.md is the about page.&lt;/p&gt;
 
 &lt;p&gt;All sidebar boxes html files are in the &lt;code&gt;_include&lt;/code&gt; directory, their name begin with upper case. You can chose which sidebar boxes appears in the main page on the &lt;q&gt;sidebar.html&lt;/q&gt; in the &lt;code&gt;_includes&lt;/code&gt; directory.&lt;/p&gt;
-
-&lt;!--more--&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
 |-- a_home.md                 &lt;span class=&quot;c&quot;&gt;# home page link at navigation bar&lt;/span&gt;
@@ -665,200 +1107,7 @@ layout: default
         <category>structure</category>
         
         
-        <category>articles</category>
-        
-        <category>Howto</category>
-        
-      </item>
-    
-      <item>
-        <title>Sample Post</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#heading&quot; id=&quot;markdown-toc-heading&quot;&gt;Heading&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#body-text&quot; id=&quot;markdown-toc-body-text&quot;&gt;Body text&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#blockquotes&quot; id=&quot;markdown-toc-blockquotes&quot;&gt;Blockquotes&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#list-types&quot; id=&quot;markdown-toc-list-types&quot;&gt;List Types&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#ordered-lists&quot; id=&quot;markdown-toc-ordered-lists&quot;&gt;Ordered Lists&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#unordered-lists&quot; id=&quot;markdown-toc-unordered-lists&quot;&gt;Unordered Lists&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#tables&quot; id=&quot;markdown-toc-tables&quot;&gt;Tables&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#code-snippets&quot; id=&quot;markdown-toc-code-snippets&quot;&gt;Code Snippets&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#highlight-with-line-number&quot; id=&quot;markdown-toc-highlight-with-line-number&quot;&gt;highlight with line number.&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#highlight-using-triple-backticks&quot; id=&quot;markdown-toc-highlight-using-triple-backticks&quot;&gt;highlight using triple backticks&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#latex&quot; id=&quot;markdown-toc-latex&quot;&gt;\(\LaTeX\)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#q-tag&quot; id=&quot;markdown-toc-q-tag&quot;&gt;&amp;lt;q&amp;gt; tag&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This is a sample post.&lt;/p&gt;
-
-&lt;p&gt;Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.&lt;/p&gt;
-
-&lt;h2 id=&quot;heading&quot;&gt;Heading&lt;/h2&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Heading 1
-
-## Heading 2
-
-### Heading 3
-
-#### Heading 4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;body-text&quot;&gt;Body text&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;This is strong&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;This is figure&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Mdc4szJl.jpg&quot; alt=&quot;Elaphurus davidianus&quot; title=&quot;Père David's deer&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;This is emphasized&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;53 = 125. Water is H&lt;sub&gt;2&lt;/sub&gt;O.&lt;/p&gt;
-
-&lt;p&gt;The New York Times &lt;cite&gt;(That’s a citation)&lt;/cite&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;u&gt;Underline&lt;/u&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;del&gt;HTML and CSS are our tools&lt;/del&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Justification:
-This species is listed as Extinct in the Wild, as all populations are still under captive management. The captive population in China has increased in recent years, and the possibility remains that free-ranging populations can be established some time in the near future. When that happens, its Red List status will need to be reassessed.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I follow up the quest. Despite of day and night and death and hell.&lt;/p&gt;
-  &lt;center&gt; -- Idylls of the King, Tennyson &lt;/center&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;list-types&quot;&gt;List Types&lt;/h2&gt;
-
-&lt;h3 id=&quot;ordered-lists&quot;&gt;Ordered Lists&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Item one
-    &lt;ol&gt;
-      &lt;li&gt;sub item one&lt;/li&gt;
-      &lt;li&gt;sub item two&lt;/li&gt;
-      &lt;li&gt;sub item three&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Item two&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;unordered-lists&quot;&gt;Unordered Lists&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Item one&lt;/li&gt;
-  &lt;li&gt;Item two&lt;/li&gt;
-  &lt;li&gt;Item three&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;tables&quot;&gt;Tables&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Header1&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Header2&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Header3&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;cell1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;cell2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;cell3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;cell4&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;cell5&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;cell6&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;cell7&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;cell8&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;cell9&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Kingdom&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Phylum&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Class&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Order&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Family&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;ANIMALIA&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;CHORDATA&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;MAMMALIA&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;CETARTIODACTYLA&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;CERVIDAE&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;code-snippets&quot;&gt;Code Snippets&lt;/h2&gt;
-
-&lt;p&gt;Syntax highlighting via Pygments&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-240px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h4 id=&quot;highlight-with-line-number&quot;&gt;highlight with line number.&lt;/h4&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h4 id=&quot;highlight-using-triple-backticks&quot;&gt;highlight using triple backticks&lt;/h4&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;latex&quot;&gt;\(\LaTeX\)&lt;/h2&gt;
-
-&lt;p&gt;you can use latex with &lt;q&gt;double $$ &lt;/q&gt;&lt;/p&gt;
-
-\[e^{i\pi}+1=0\]
-
-&lt;h2 id=&quot;q-tag&quot;&gt;&amp;lt;q&amp;gt; tag&lt;/h2&gt;
-
-&lt;p&gt;here is a &amp;lt;q&amp;gt; q tag &amp;lt;/q&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;here is a &lt;q&gt; q tag &lt;/q&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 13 Dec 2014 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/2014/12/simple-post.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2014/12/simple-post.html</guid>
-        
-        <category>sample-post</category>
-        
-        
-        <category>articles</category>
+        <category>Miscellaneous</category>
         
       </item>
     
